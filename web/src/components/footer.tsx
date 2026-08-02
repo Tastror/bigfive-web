@@ -51,8 +51,25 @@ export default function Footer({ footerLinks }: FooterProps) {
         </ul>
       </div>
 
-      <div className='flex text-sm text-gray-500 sm:ml-4 sm:pl-4 sm:py-2 mt-14 justify-center'>
-        © {year} — Tastror
+      <div className='flex flex-col items-center gap-2 text-center text-sm text-gray-500 sm:py-2 mt-14'>
+        <div>© 2024 B5 Holding AS · © {year} Tastror</div>
+        <div className='flex flex-wrap justify-center gap-x-2'>
+          <NextUILink
+            isExternal
+            href='https://bigfive-test.com/zh-cn'
+            className='text-sm text-gray-500 hover:underline'
+          >
+            BigFive Test
+          </NextUILink>
+          <span aria-hidden='true'>·</span>
+          <NextUILink
+            isExternal
+            href={`${siteConfig.links.github}/blob/master/LICENSE`}
+            className='text-sm text-gray-500 hover:underline'
+          >
+            MIT License
+          </NextUILink>
+        </div>
       </div>
     </footer>
   );
