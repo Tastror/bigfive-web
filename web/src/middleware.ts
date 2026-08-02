@@ -19,7 +19,7 @@ export default function middleware(request: NextRequest) {
       request,
       `/${canonicalLocale}${segments.length ? `/${segments.join('/')}` : ''}`
     );
-    return NextResponse.redirect(url, 308);
+    return NextResponse.redirect(url, 307);
   }
 
   const hasLocalePrefix = locales.some(
@@ -30,7 +30,7 @@ export default function middleware(request: NextRequest) {
 
   return NextResponse.redirect(
     getPublicUrl(request, `/zh-hans${pathname === '/' ? '' : pathname}`),
-    308
+    307
   );
 }
 
