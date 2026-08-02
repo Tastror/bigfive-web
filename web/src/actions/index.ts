@@ -42,6 +42,7 @@ export async function getTestResult(
     if (error instanceof B5Error) {
       throw error;
     }
+    console.error(error);
     throw new Error('Something wrong happend. Failed to get test result!');
   }
 }

@@ -4,24 +4,30 @@ import { Button, ButtonGroup, Select, SelectItem } from '@nextui-org/react';
 import { Domain } from '@bigfive-org/results';
 import { useState } from 'react';
 import { DomainPage } from './domain';
-import { useTranslations } from 'next-intl';
 
 interface DomainTabsProps {
   results: Domain[];
   showExpanded: boolean;
   scoreText: string;
+  allText: string;
+  selectDomainText: string;
+  moreText: string;
+  lessText: string;
 }
 
 export const DomainTabs = ({
   results,
   showExpanded,
-  scoreText
+  scoreText,
+  allText,
+  selectDomainText,
+  moreText,
+  lessText
 }: DomainTabsProps) => {
-  const t = useTranslations('results');
   const [active, setActive] = useState('all');
 
   const domains = [
-    { title: t('all'), domain: 'all' },
+    { title: allText, domain: 'all' },
     ...results.map((result) => ({ title: result.title, domain: result.domain }))
   ];
 
@@ -49,7 +55,7 @@ export const DomainTabs = ({
         </ButtonGroup>
 
         <Select
-          label={t('selectDomain')}
+          label={selectDomainText}
           className='max-w-xs md:hidden'
           items={domains}
           selectedKeys={[active]}
@@ -63,6 +69,8 @@ export const DomainTabs = ({
           key={index}
           domain={result}
           scoreText={scoreText}
+          moreText={moreText}
+          lessText={lessText}
           showExpanded={showExpanded}
         />
       ))}

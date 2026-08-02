@@ -16,6 +16,8 @@ import thai from '../../../packages/questions/src/data/th/questions';
 import ukrainian from '../../../packages/questions/src/data/uk/questions';
 import simplifiedChinese from '../../../packages/questions/src/data/zh-cn/questions';
 import traditionalChinese from '../../../packages/questions/src/data/zh-hk/questions';
+import simplifiedChineseChoices from '../../../packages/questions/src/data/zh-cn/choices';
+import traditionalChineseChoices from '../../../packages/questions/src/data/zh-hk/choices';
 
 type QuestionText = {
   domain: string;
@@ -48,4 +50,13 @@ const localizedQuestions: Record<string, QuestionText[]> = {
 
 export function getLocalizedQuestions(language: string) {
   return localizedQuestions[language];
+}
+
+const localizedChoices = {
+  'zh-cn': simplifiedChineseChoices,
+  'zh-hk': traditionalChineseChoices
+};
+
+export function getLocalizedChoices(language: string) {
+  return localizedChoices[language as keyof typeof localizedChoices];
 }

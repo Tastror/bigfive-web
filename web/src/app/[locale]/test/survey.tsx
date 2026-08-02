@@ -14,6 +14,7 @@ import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
 import { type Answer } from '@/types';
 import { Card, CardHeader } from '@nextui-org/card';
+import { saveResultToHistory } from '@/lib/result-history';
 
 interface SurveyProps {
   questions: Question[];
@@ -162,7 +163,7 @@ export const Survey = ({
     localStorage.removeItem('inProgress');
     localStorage.removeItem('b5data');
     console.log(result);
-    localStorage.setItem('resultId', result.id);
+    saveResultToHistory(result.id);
     router.push(`/result/${result.id}`);
   }
 

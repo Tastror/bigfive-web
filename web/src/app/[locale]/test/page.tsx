@@ -9,7 +9,10 @@ import { Survey } from './survey';
 import { useTranslations } from 'next-intl';
 import { saveTest } from '@/actions';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { getLocalizedQuestions } from '@/lib/localized-questions';
+import {
+  getLocalizedChoices,
+  getLocalizedQuestions
+} from '@/lib/localized-questions';
 
 const questionLanguages = getInfo().languages;
 
@@ -44,7 +47,8 @@ function getQuestions(language: string): Question[] {
   const questions = getLocalizedQuestions(language);
   if (!questions) return getItems(language);
 
-  const choices = getChoices(language) as unknown as Record<
+  const choices = (getLocalizedChoices(language) ??
+    getChoices(language)) as unknown as Record<
     'plus' | 'minus',
     Choice[]
   >;

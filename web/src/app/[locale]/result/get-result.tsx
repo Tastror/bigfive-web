@@ -9,19 +9,22 @@ import { formatAndValidateId, formatId } from '@/lib/helpers';
 import { useEffect, useMemo, useState } from 'react';
 import { Input } from '@nextui-org/input';
 import { ResultIcon } from '@/components/icons';
+import { getResultHistory, type SavedResult } from '@/lib/result-history';
 
 interface GetResultPageProps {
   viewPreviousText: string;
   getResultsText: string;
+  locale: string;
 }
 
 export const GetResultPage = ({
   viewPreviousText,
-  getResultsText
+  getResultsText,
+  locale
 }: GetResultPageProps) => {
   const router = useRouter();
 
-  const [previousResultId, setPreviousResultId] = useState<string | null>(null);
+  const [resultHistory, setResultHistory] = useState<SavedResult[]>([]);
   const [id, setId] = useState('');
 
   const isInvalidId = useMemo(() => {
@@ -31,10 +34,7 @@ export const GetResultPage = ({
   }, [id]);
 
   useEffect(() => {
-    const resultId = localStorage.getItem('resultId');
-    if (resultId) {
-      setPreviousResultId(resultId);
-    }
+    setResultHistory(getResultHistory());
   }, []);
 
   const handleGetResults = () => {
@@ -61,17 +61,6 @@ export const GetResultPage = ({
         />
       </div>
       <div className='flex justify-end gap-3'>
-        {previousResultId && (
-          <Link
-            className={clsx(
-              buttonStyles({ color: 'danger', size: 'lg' }),
-              'w-full md:w-auto'
-            )}
-            href={`/result/${previousResultId}`}
-          >
-            {viewPreviousText}
-          </Link>
-        )}
         <Button
           color='primary'
           size='lg'
@@ -82,6 +71,30 @@ export const GetResultPage = ({
           {getResultsText}
         </Button>
       </div>
+      {resultHistory.length > 0 && (
+        <div className='mt-10' aria-label={viewPreviousText}>
+          <h2 className='text-xl font-semibold mb-3'>{viewPreviousText}</h2>
+          <div className='grid gap-3'>
+            {resultHistory.map((result) => (
+              <Link
+                key={result.id}
+                className={clsx(
+                  buttonStyles({ variant: 'bordered', size: 'lg' }),
+                  'h-auto min-h-12 justify-between gap-3 px-4 py-3'
+                )}
+                href={`/result/${result.id}`}
+              >
+                <code className='text-xs sm:text-sm break-all'>
+                  {result.id}
+                </code>
+                <span className='shrink-0 text-sm text-default-500'>
+                  {new Intl.DateTimeFormat(locale).format(result.createdAt)}
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </>
   );
 };

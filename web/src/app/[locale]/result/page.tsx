@@ -18,6 +18,7 @@ export default function ResultPage({ params: { locale } }: Props) {
       <GetResultPage
         viewPreviousText={t('viewPrevious')}
         getResultsText={t('getResult')}
+        locale={locale}
       />
     </div>
   );
