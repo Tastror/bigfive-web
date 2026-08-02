@@ -59,6 +59,16 @@ export const Survey = ({
     restoreData();
   }, []);
 
+  useEffect(() => {
+    if (answers.length === 0) return;
+
+    localStorage.setItem('inProgress', 'true');
+    localStorage.setItem(
+      'b5data',
+      JSON.stringify({ answers, currentQuestionIndex })
+    );
+  }, [answers, currentQuestionIndex]);
+
   const currentQuestions = useMemo(
     () =>
       questions.slice(
@@ -110,7 +120,6 @@ export const Survey = ({
       window.scrollTo(0, 0);
       setInProgress(false);
     }
-    populateDataInLocalStorage();
   }
 
   function handlePreviousQuestions() {
@@ -159,14 +168,6 @@ export const Survey = ({
 
   function dataInLocalStorage() {
     return !!localStorage.getItem('inProgress');
-  }
-
-  function populateDataInLocalStorage() {
-    localStorage.setItem('inProgress', 'true');
-    localStorage.setItem(
-      'b5data',
-      JSON.stringify({ answers, currentQuestionIndex })
-    );
   }
 
   function restoreDataFromLocalStorage() {
