@@ -3,10 +3,13 @@ import { getTestResult } from '@/actions';
 import { title } from '@/components/primitives';
 import { DomainComparePage } from './domain';
 import { BarChartCompare } from '@/components/bar-chart-generic';
+import { getReportLanguage } from '@/lib/localized-results';
+import { getTranslations } from 'next-intl/server';
 
 interface ComparePageProps {
   params: {
     id: string;
+    locale: string;
   };
 }
 
@@ -16,12 +19,14 @@ type Person = {
 };
 
 export default async function ComparePage({
-  params: { id }
+  params: { id, locale }
 }: ComparePageProps) {
+  const t = await getTranslations({ locale, namespace: 'results' });
+  const reportLanguage = getReportLanguage(locale);
   const people: Person[] = base64url.decode(id);
   const reports = await Promise.all(
     people.map(async (person) => {
-      const report = await getTestResult(person.id);
+      const report = await getTestResult(person.id, reportLanguage);
       if (!report) throw new Error('No report found');
       return {
         name: person.name,
@@ -51,7 +56,7 @@ export default async function ComparePage({
 
   return (
     <>
-      <h1 className={title()}>Overview</h1>
+      <h1 className={title()}>{t('overview')}</h1>
       <BarChartCompare max={120} categories={categories} series={series} />
       {reports[0].report.results.map((domain) => (
         <DomainComparePage

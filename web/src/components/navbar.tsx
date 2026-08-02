@@ -48,8 +48,12 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
       position='sticky'
       isMenuOpen={isMenuOpen}
       onMenuOpenChange={setIsMenuOpen}
+      classNames={{ wrapper: 'px-3 sm:px-6' }}
     >
-      <NavbarContent className='basis-1/5 sm:basis-full' justify='start'>
+      <NavbarContent
+        className='basis-auto flex-none md:basis-1/5 md:flex-1'
+        justify='start'
+      >
         <NavbarBrand as='li' className='gap-3 max-w-fit'>
           <NextLink
             className='flex justify-start items-center gap-1'
@@ -93,7 +97,10 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className='md:hidden basis-1 pl-1 gap-1' justify='end'>
+      <NavbarContent
+        className='md:hidden ml-auto basis-auto flex-none gap-2'
+        justify='end'
+      >
         <NavbarItem>
           <LocaleSwitcherFull compact />
         </NavbarItem>
@@ -105,7 +112,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
         <NavbarItem>
           <ThemeSwitch />
         </NavbarItem>
-        <NavbarItem className='w-10 h-full'>
+        <NavbarItem className='w-6 h-full'>
           <NavbarMenuToggle
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           />

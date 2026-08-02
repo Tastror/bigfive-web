@@ -57,7 +57,7 @@ const questions = [
   },
   {
     id: '0cf79e27-e702-45c2-9471-04ac96b58e0e',
-    text: 'Colaboro con otros solo si obtengo algún beneficio propio',
+    text: 'Uso a los demás para conseguir lo que quiero',
     keyed: 'minus',
     domain: 'A',
     facet: 2
@@ -85,7 +85,7 @@ const questions = [
   },
   {
     id: '0727def6-3d18-4221-bf38-86b58f9f3eed',
-    text: 'Considero que soy muy sentimental',
+    text: 'Experimento mis emociones intensamente',
     keyed: 'plus',
     domain: 'O',
     facet: 3
@@ -113,7 +113,7 @@ const questions = [
   },
   {
     id: '48a761ef-438e-409b-ae59-ea2ce8f84414',
-    text: 'Estoy ocupado/a todo el tiempo',
+    text: 'Siempre tengo muchas cosas que hacer',
     keyed: 'plus',
     domain: 'E',
     facet: 4
@@ -127,7 +127,7 @@ const questions = [
   },
   {
     id: 'e2028ad3-b128-4f76-be57-398bfe2aff22',
-    text: 'Me gusta pelear',
+    text: 'Me gusta una buena confrontación',
     keyed: 'minus',
     domain: 'A',
     facet: 4
@@ -141,7 +141,7 @@ const questions = [
   },
   {
     id: '481efd08-c810-43b1-a952-f8ac9052f96b',
-    text: 'A menudo voy de borracheras',
+    text: 'Tiendo a excederme',
     keyed: 'plus',
     domain: 'N',
     facet: 5
@@ -155,7 +155,7 @@ const questions = [
   },
   {
     id: 'e1e804c7-4a1d-498f-8610-f95147af9d1d',
-    text: 'Me gusta mucho leer',
+    text: 'Me encanta leer materiales exigentes',
     keyed: 'plus',
     domain: 'O',
     facet: 5
@@ -183,7 +183,7 @@ const questions = [
   },
   {
     id: '899c3f66-51d0-46ea-963a-6fc36d3b3cb9',
-    text: 'Soy una persona muy alegre',
+    text: 'Irradio alegría',
     keyed: 'plus',
     domain: 'E',
     facet: 6
@@ -204,7 +204,7 @@ const questions = [
   },
   {
     id: 'bd9eec0a-b68b-472c-8803-7db29c308cdb',
-    text: 'Hago las cosas sin razonar mucho sobre ellas',
+    text: 'Me lanzo a hacer cosas sin pensar',
     keyed: 'minus',
     domain: 'C',
     facet: 6
@@ -281,7 +281,7 @@ const questions = [
   },
   {
     id: 'f0a14e16-d726-47e9-a2c1-647fd3d7d52e',
-    text: 'No me siento bien conmigo mismo',
+    text: 'No me agrado',
     keyed: 'plus',
     domain: 'N',
     facet: 3
@@ -323,7 +323,7 @@ const questions = [
   },
   {
     id: 'd07b6c67-0d02-4948-a997-bb84ac234cd8',
-    text: 'Creo que soy una persona activa y vigorosa',
+    text: 'Siempre estoy en movimiento',
     keyed: 'plus',
     domain: 'E',
     facet: 4
@@ -372,7 +372,7 @@ const questions = [
   },
   {
     id: '7df44711-4cd4-4b05-8830-73fcc3ebdab5',
-    text: 'Espero mucho de mí mismo',
+    text: 'Tengo muy buen concepto de mí mismo',
     keyed: 'minus',
     domain: 'A',
     facet: 5
@@ -393,7 +393,7 @@ const questions = [
   },
   {
     id: '961376e0-16a1-4c14-b059-789e63d11b63',
-    text: 'Pienso que soy una persona muy divertida',
+    text: 'Me divierto mucho',
     keyed: 'plus',
     domain: 'E',
     facet: 6
@@ -456,7 +456,7 @@ const questions = [
   },
   {
     id: 'da8e6ed1-2296-4c58-8fdb-66f2f591989b',
-    text: 'A veces pierdo los estribos',
+    text: 'Pierdo los estribos',
     keyed: 'plus',
     domain: 'N',
     facet: 2
@@ -519,7 +519,7 @@ const questions = [
   },
   {
     id: '4e6e3a34-176f-4e6e-8730-1341611f972b',
-    text: 'Las reglas fueron hechas para romperse',
+    text: 'Rompo las reglas',
     keyed: 'minus',
     domain: 'C',
     facet: 3
@@ -547,7 +547,7 @@ const questions = [
   },
   {
     id: '0de0f900-cede-4538-9c00-5da4f830b028',
-    text: 'No tengo recelo en insultar a la gente',
+    text: 'Insulto a la gente',
     keyed: 'minus',
     domain: 'A',
     facet: 4
@@ -582,14 +582,14 @@ const questions = [
   },
   {
     id: '1d686958-6fe7-432f-85e6-186b99e4e232',
-    text: 'Tengo altas expectativas de mí mismo',
+    text: 'Tengo una opinión muy alta de mí mismo',
     keyed: 'minus',
     domain: 'A',
     facet: 5
   },
   {
     id: 'c7db0ed8-df7d-49bf-942f-59e46ef743c4',
-    text: 'No hago mucho en mi tiempo libre',
+    text: 'Pierdo el tiempo',
     keyed: 'minus',
     domain: 'C',
     facet: 5
@@ -617,7 +617,7 @@ const questions = [
   },
   {
     id: '77f54ab4-0fba-4efb-8700-066c7490eb87',
-    text: 'No me suelo implicar en los problemas de los demás',
+    text: 'No me interesan los problemas de los demás',
     keyed: 'minus',
     domain: 'A',
     facet: 6
@@ -687,7 +687,7 @@ const questions = [
   },
   {
     id: '11b20adb-abed-4363-894c-3dd823ae0540',
-    text: 'Sería capaz de sabotear los planes de otros',
+    text: 'Obstaculizo los planes de otros',
     keyed: 'minus',
     domain: 'A',
     facet: 2
@@ -729,7 +729,7 @@ const questions = [
   },
   {
     id: '54423933-0ebb-44a7-bdd9-2a9b100c70f2',
-    text: 'No suelo cumplir mis promesas',
+    text: 'Rompo mis promesas',
     keyed: 'minus',
     domain: 'C',
     facet: 3
@@ -750,14 +750,14 @@ const questions = [
   },
   {
     id: 'a7f43928-8982-4ed5-8656-7a80346fe979',
-    text: 'Soy una persona mayormente conservadora',
+    text: 'Me apego a las formas convencionales',
     keyed: 'minus',
     domain: 'O',
     facet: 4
   },
   {
     id: '17910a55-a64a-4ed0-8b46-293e2fa2fe03',
-    text: 'No suelo apoyar a los otros',
+    text: 'Me vengo de los demás',
     keyed: 'minus',
     domain: 'A',
     facet: 4
@@ -778,7 +778,7 @@ const questions = [
   },
   {
     id: '10f90fa9-649c-4631-ac4c-3dd3f751597d',
-    text: 'Creo que soy una persona activa y vigorosa',
+    text: 'Me comporto de forma desenfrenada y alocada',
     keyed: 'plus',
     domain: 'E',
     facet: 5
@@ -806,7 +806,7 @@ const questions = [
   },
   {
     id: '88a3c2fe-3aa4-4f46-9322-da656332268a',
-    text: 'Me mantengo tranquilo/a bajo presión',
+    text: 'Mantengo la calma bajo presión',
     keyed: 'minus',
     domain: 'N',
     facet: 6

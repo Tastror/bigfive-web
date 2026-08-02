@@ -22,8 +22,7 @@ const english = {
       title: 'Compare yourself to others',
       text1:
         'Compare yourself with your partner, colleagues, friends or family.',
-      text2: 'Learn how you differ from other people in the five domains:',
-      action: 'See it live in action'
+      text2: 'Learn how you differ from other people in the five domains:'
     },
     share: 'Share with your friends and find out how compatible you are',
     cards: {
@@ -126,7 +125,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   test: {
     next: 'next',
-    back: 'back',
+    back: 'previous',
     more: 'more',
     seeResults: 'see results'
   },
@@ -189,6 +188,11 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'Name'
   },
   results: {
+    overview: 'Overview',
+    all: 'All',
+    selectDomain: 'Select a trait',
+    readMore: 'Read more',
+    readLess: 'Read less',
     theBigFive: 'The Big Five',
     score: 'score',
     important: 'Important!',

@@ -21,8 +21,7 @@ const japanese = {
       title: '自分を他の人と比較する',
       text1:
         'あなたのパートナー、同僚、友人または家族とあなた自身を比較してください。',
-      text2: '5つのドメインで他の人とどのように違うかを学びましょう。',
-      action: '実際に動作するのを見る'
+      text2: '5つのドメインで他の人とどのように違うかを学びましょう。'
     },
     share: '友達と共有して、あなたがどれだけ互換性があるかを調べてください',
     cards: {
@@ -126,7 +125,7 @@ const japanese = {
   },
   test: {
     next: '次',
-    back: 'バック',
+    back: '前の質問',
     more: 'もっと',
     seeResults: '結果を見る'
   },
@@ -187,6 +186,11 @@ const japanese = {
     name: '名前'
   },
   results: {
+    overview: '概要',
+    all: 'すべて',
+    selectDomain: '特性を選択',
+    readMore: '続きを読む',
+    readLess: '折りたたむ',
     theBigFive: 'ビッグファイブ',
     score: 'スコア',
     important: '重要！',

@@ -372,7 +372,7 @@ const questions = [
   },
   {
     id: '7df44711-4cd4-4b05-8830-73fcc3ebdab5',
-    text: 'Tenker høyt om meg selv',
+    text: 'Har høye tanker om meg selv',
     keyed: 'minus',
     domain: 'A',
     facet: 5
@@ -498,7 +498,7 @@ const questions = [
   },
   {
     id: '2452f034-8273-4f71-9122-a40f5ead31ba',
-    text: 'Tar kontroll på ting',
+    text: 'Tar kontroll over ting',
     keyed: 'plus',
     domain: 'E',
     facet: 3
@@ -736,7 +736,7 @@ const questions = [
   },
   {
     id: '7317848c-3e1b-422f-bb16-02efc504f677',
-    text: 'Føler meg ikke brydd i vanskelige sosiale situasjoner',
+    text: 'Blir ikke plaget av vanskelige sosiale situasjoner',
     keyed: 'minus',
     domain: 'N',
     facet: 4

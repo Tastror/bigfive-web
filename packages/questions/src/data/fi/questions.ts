@@ -127,7 +127,7 @@ const questions = [
   },
   {
     id: 'e2028ad3-b128-4f76-be57-398bfe2aff22',
-    text: 'Rakastan hyvää taistelua',
+    text: 'Pidän kunnon väittelystä',
     keyed: 'minus',
     domain: 'A',
     facet: 4
@@ -155,7 +155,7 @@ const questions = [
   },
   {
     id: 'e1e804c7-4a1d-498f-8610-f95147af9d1d',
-    text: 'Rakastan vaikean aineiston lukemisesta',
+    text: 'Rakastan haastavan aineiston lukemista',
     keyed: 'plus',
     domain: 'O',
     facet: 5
@@ -386,7 +386,7 @@ const questions = [
   },
   {
     id: '13c58810-3864-42ba-aa87-d4166f858756',
-    text: 'Tapahtumat saavat minut ymmälleni',
+    text: 'Tapahtumat kuormittavat minut helposti',
     keyed: 'plus',
     domain: 'N',
     facet: 6
@@ -736,7 +736,7 @@ const questions = [
   },
   {
     id: '7317848c-3e1b-422f-bb16-02efc504f677',
-    text: 'En ole vaivautunut vaikeissa sosiaalisissa tilanteissa',
+    text: 'En häiriinny vaikeista sosiaalisista tilanteista',
     keyed: 'minus',
     domain: 'N',
     facet: 4

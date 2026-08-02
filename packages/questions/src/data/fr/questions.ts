@@ -281,7 +281,7 @@ const questions = [
   },
   {
     id: 'f0a14e16-d726-47e9-a2c1-647fd3d7d52e',
-    text: 'Je n\'ai pas beaucoup d\'estime pour moi',
+    text: 'Je ne m\'aime pas',
     keyed: 'plus',
     domain: 'N',
     facet: 3
@@ -316,7 +316,7 @@ const questions = [
   },
   {
     id: 'acd8fadc-5399-4a67-b5ff-9d1ada049c01',
-    text: 'J\'ai peur d\'attirer l\'attention',
+    text: 'J\'ai peur d\'attirer l\'attention sur moi',
     keyed: 'plus',
     domain: 'N',
     facet: 4
@@ -680,7 +680,7 @@ const questions = [
   },
   {
     id: '87c5b27e-59a8-4c48-8ba8-f5413d735693',
-    text: 'Je n\'apprécie pas visiter des musées d\'art',
+    text: 'Je n\'aime pas aller dans les musées d\'art',
     keyed: 'minus',
     domain: 'O',
     facet: 2
@@ -694,7 +694,7 @@ const questions = [
   },
   {
     id: '50418d86-712c-45d9-adc4-ea0231c93cf5',
-    text: 'Je laisse traîner les choses',
+    text: 'Je laisse traîner mes affaires',
     keyed: 'minus',
     domain: 'C',
     facet: 2
@@ -757,7 +757,7 @@ const questions = [
   },
   {
     id: '17910a55-a64a-4ed0-8b46-293e2fa2fe03',
-    text: 'Je m\'en prends aux autres',
+    text: 'Je me venge des autres',
     keyed: 'minus',
     domain: 'A',
     facet: 4
@@ -778,7 +778,7 @@ const questions = [
   },
   {
     id: '10f90fa9-649c-4631-ac4c-3dd3f751597d',
-    text: 'J\'agis de façon téméraire',
+    text: 'Je me comporte de façon débridée et extravagante',
     keyed: 'plus',
     domain: 'E',
     facet: 5
@@ -834,7 +834,7 @@ const questions = [
   },
   {
     id: 'ea3327ea-3529-4be4-8e2d-2174731ae4d7',
-    text: 'J\'agis sans penser',
+    text: 'J\'agis sans réfléchir',
     keyed: 'minus',
     domain: 'C',
     facet: 6

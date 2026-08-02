@@ -169,7 +169,7 @@ const questions = [
   },
   {
     id: 'f6076eea-56ae-4b46-97f1-5f94a7676c96',
-    text: 'Estou sempre preparado(a)',
+    text: 'Estou sempre em movimento',
     keyed: 'plus',
     domain: 'C',
     facet: 5

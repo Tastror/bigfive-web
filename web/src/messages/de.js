@@ -22,8 +22,7 @@ const deutsh = {
       text1:
         'Vergleichen Sie sich mit Ihrem Partner, Kollegen, Freunden oder Familie.',
       text2:
-        'Erfahren Sie, wie Sie sich in den fünf Dimensionen von anderen unterscheiden:',
-      action: 'Sehen Sie selbst'
+        'Erfahren Sie, wie Sie sich in den fünf Dimensionen von anderen unterscheiden:'
     },
     share:
       'Teilen Sie Ihre Ergebnisse mit Freunden und finden Sie heraus wie kompatibel Sie sind',
@@ -128,7 +127,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   test: {
     next: 'Weiter',
-    back: 'Zurück',
+    back: 'Vorherige',
     more: 'Mehr',
     seeResults: 'Ergebnisse sehen'
   },
@@ -194,6 +193,11 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'Name'
   },
   results: {
+    overview: 'Übersicht',
+    all: 'Alle',
+    selectDomain: 'Merkmal auswählen',
+    readMore: 'Mehr lesen',
+    readLess: 'Weniger anzeigen',
     theBigFive: 'Die BigFive',
     score: 'Punkte',
     important: 'Wichtig!',

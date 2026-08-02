@@ -141,7 +141,7 @@ const questions = [
   },
   {
     id: '481efd08-c810-43b1-a952-f8ac9052f96b',
-    text: 'Gör (eller konsumerar) för mycket av saker jag inte borde',
+    text: 'Går ofta till överdrift',
     keyed: 'plus',
     domain: 'N',
     facet: 5
@@ -337,7 +337,7 @@ const questions = [
   },
   {
     id: 'd9a9a180-29c9-4ec5-8621-2256d411def7',
-    text: 'Gapar/skriker på andra',
+    text: 'Skriker åt andra',
     keyed: 'minus',
     domain: 'A',
     facet: 4
@@ -351,7 +351,7 @@ const questions = [
   },
   {
     id: '9891b7ba-a494-4307-aafe-301d8db506c6',
-    text: 'Ger sällan oaktat utlopp för mina begär',
+    text: 'Ger sällan efter för mina begär',
     keyed: 'minus',
     domain: 'N',
     facet: 5
@@ -393,7 +393,7 @@ const questions = [
   },
   {
     id: '961376e0-16a1-4c14-b059-789e63d11b63',
-    text: 'Har roligt ofta',
+    text: 'Har ofta väldigt roligt',
     keyed: 'plus',
     domain: 'E',
     facet: 6
@@ -645,7 +645,7 @@ const questions = [
   },
   {
     id: '935a7413-abac-4f54-9169-d1fbd39da752',
-    text: 'Tycker om att försvinna i tankar',
+    text: 'Tycker om att förlora mig i tankar',
     keyed: 'plus',
     domain: 'O',
     facet: 1
@@ -701,7 +701,7 @@ const questions = [
   },
   {
     id: 'f40e421f-6c24-4be2-bd9f-28d33358d8c6',
-    text: 'Känner mig bekväm i mig själv',
+    text: 'Känner mig trygg med mig själv',
     keyed: 'minus',
     domain: 'N',
     facet: 3

@@ -21,9 +21,7 @@ const norsk = {
       title: 'Sammenlign deg med andre',
       text1:
         'Sammenlign deg med partneren din, kollegaer, venner eller familie.',
-      text2:
-        'Lær hvordan du skiller deg fra andre mennesker i de fem domenene:',
-      action: 'Se sammenligning i aksjon'
+      text2: 'Lær hvordan du skiller deg fra andre mennesker i de fem domenene:'
     },
     share: 'Del med vennene dine og finn ut hvor kompatible dere er.',
     cards: {
@@ -126,7 +124,7 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   test: {
     next: 'neste',
-    back: 'tilbake',
+    back: 'forrige',
     more: 'fler',
     seeResults: 'Se resultater'
   },
@@ -188,6 +186,11 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'Navn'
   },
   results: {
+    overview: 'Oversikt',
+    all: 'Alle',
+    selectDomain: 'Velg et personlighetstrekk',
+    readMore: 'Les mer',
+    readLess: 'Vis mindre',
     theBigFive: 'De fem store',
     score: 'Score',
     important: 'Viktig!',

@@ -15,7 +15,7 @@ const questions = [
   },
   {
     id: '888dd864-7449-4e96-8d5c-7a439603ea91',
-    text: 'أتمتع بقدرة تخيلية صافية',
+    text: 'لدي خيال خصب',
     keyed: 'plus',
     domain: 'O',
     facet: 1
@@ -176,7 +176,7 @@ const questions = [
   },
   {
     id: '2f519935-92e8-48ad-9746-4a0f8b38466a',
-    text: 'أهلع/أفزع بسهولة',
+    text: 'أفزع بسهولة',
     keyed: 'plus',
     domain: 'N',
     facet: 6

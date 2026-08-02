@@ -21,8 +21,7 @@ const indonesian = {
       title: 'Bandingkan diri Anda dengan orang lain',
       text1:
         'Bandingkan diri Anda dengan pasangan, kolega, teman, atau keluarga Anda.',
-      text2: 'Pelajari bagaimana Anda berbeda dari orang lain di lima domain:',
-      action: 'Lihat langsung beraksi'
+      text2: 'Pelajari bagaimana Anda berbeda dari orang lain di lima domain:'
     },
     share:
       'Bagikan dengan teman-teman Anda dan cari tahu seberapa kompatibel Anda',
@@ -127,7 +126,7 @@ const indonesian = {
   },
   test: {
     next: 'lanjut',
-    back: 'kembali',
+    back: 'sebelumnya',
     more: 'lebih',
     seeResults: 'lihat hasilnya'
   },
@@ -192,6 +191,11 @@ const indonesian = {
     name: 'Nama'
   },
   results: {
+    overview: 'Ringkasan',
+    all: 'Semua',
+    selectDomain: 'Pilih sifat',
+    readMore: 'Baca selengkapnya',
+    readLess: 'Tampilkan lebih sedikit',
     theBigFive: 'Lima Besar',
     score: 'skor',
     important: 'Penting!',

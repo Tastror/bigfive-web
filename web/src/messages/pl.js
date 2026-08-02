@@ -22,8 +22,7 @@ const polish = {
       text1:
         'Porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.',
       text2:
-        'Dowiedz się, jak różnisz się od innych ludzi pod względem pięciu czynników:',
-      action: 'Zobacz'
+        'Dowiedz się, jak różnisz się od innych ludzi pod względem pięciu czynników:'
     },
     share:
       'Udostępnij test przyjaciołom i dowiedz się jak bardzo jesteście kompatybilni',
@@ -128,7 +127,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   test: {
     next: 'następne',
-    back: 'poprzednie',
+    back: 'poprzednie pytanie',
     more: 'więcej',
     seeResults: 'zobacz wyniki'
   },
@@ -193,6 +192,11 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'Imię'
   },
   results: {
+    overview: 'Przegląd',
+    all: 'Wszystkie',
+    selectDomain: 'Wybierz cechę',
+    readMore: 'Czytaj więcej',
+    readLess: 'Pokaż mniej',
     theBigFive: 'Wielka Piątka',
     score: 'punktacja',
     important: 'Ważne!',

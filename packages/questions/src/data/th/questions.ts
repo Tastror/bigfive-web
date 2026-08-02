@@ -323,7 +323,7 @@ const questions = [
   },
   {
     id: 'd07b6c67-0d02-4948-a997-bb84ac234cd8',
-    text: 'ชีพจรลงเท้า',
+    text: 'กระตือรือร้นและทำอะไรอยู่เสมอ',
     keyed: 'plus',
     domain: 'E',
     facet: 4

@@ -78,7 +78,7 @@ const questions = [
   },
   {
     id: '8af754f2-68e9-48f3-8c5d-2e6633d4472c',
-    text: '会主动做主',
+    text: '承担责任',
     keyed: 'plus',
     domain: 'E',
     facet: 3
@@ -183,7 +183,7 @@ const questions = [
   },
   {
     id: '899c3f66-51d0-46ea-963a-6fc36d3b3cb9',
-    text: '会流露出喜悦',
+    text: '我的快乐会感染周围的人',
     keyed: 'plus',
     domain: 'E',
     facet: 6
@@ -498,7 +498,7 @@ const questions = [
   },
   {
     id: '2452f034-8273-4f71-9122-a40f5ead31ba',
-    text: '会掌控局面',
+    text: '掌控局面',
     keyed: 'plus',
     domain: 'E',
     facet: 3
@@ -778,7 +778,7 @@ const questions = [
   },
   {
     id: '10f90fa9-649c-4631-ac4c-3dd3f751597d',
-    text: '会表现得狂野疯狂',
+    text: '我的行为狂放不羁',
     keyed: 'plus',
     domain: 'E',
     facet: 5
@@ -813,7 +813,7 @@ const questions = [
   },
   {
     id: 'e7b31bdc-5f6b-40ec-ba91-f5919b0f170e',
-    text: '凡事都看好的一面',
+    text: '看到生活中好的一面',
     keyed: 'plus',
     domain: 'E',
     facet: 6

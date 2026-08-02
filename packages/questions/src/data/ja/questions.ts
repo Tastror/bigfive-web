@@ -78,7 +78,7 @@ const questions = [
   },
   {
     id: '8af754f2-68e9-48f3-8c5d-2e6633d4472c',
-    text: '世話を焼きがちだ',
+    text: '主導権を握るほうだ',
     keyed: 'plus',
     domain: 'E',
     facet: 3
@@ -498,7 +498,7 @@ const questions = [
   },
   {
     id: '2452f034-8273-4f71-9122-a40f5ead31ba',
-    text: '物事を支配しようとしがちだ',
+    text: '物事を自分で取り仕切るほうだ',
     keyed: 'plus',
     domain: 'E',
     facet: 3
@@ -736,7 +736,7 @@ const questions = [
   },
   {
     id: '7317848c-3e1b-422f-bb16-02efc504f677',
-    text: '困難な社会情勢に悩まされないほうだ',
+    text: '難しい社交の場でも動じないほうだ',
     keyed: 'minus',
     domain: 'N',
     facet: 4
@@ -778,7 +778,7 @@ const questions = [
   },
   {
     id: '10f90fa9-649c-4631-ac4c-3dd3f751597d',
-    text: '無謀に行動するほうだ',
+    text: '羽目を外して大騒ぎするほうだ',
     keyed: 'plus',
     domain: 'E',
     facet: 5

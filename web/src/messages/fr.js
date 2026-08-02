@@ -22,8 +22,7 @@ const french = {
       text1:
         'Comparez-vous avec votre partenaire, vos collègues, vos amis ou votre famille.',
       text2:
-        'Découvrez en quoi vous vous différenciez des autres dans les cinq domaines:',
-      action: 'Regardez-le en direct en action'
+        'Découvrez en quoi vous vous différenciez des autres dans les cinq domaines:'
     },
     share: 'Partagez avec vos amis et découvrez votre compatibilité',
     cards: {
@@ -126,7 +125,7 @@ const french = {
   },
   test: {
     next: 'prochain',
-    back: 'retour',
+    back: 'précédent',
     more: 'plus',
     seeResults: 'see results'
   },
@@ -190,6 +189,11 @@ const french = {
     name: 'Nom'
   },
   results: {
+    overview: 'Vue d’ensemble',
+    all: 'Tous',
+    selectDomain: 'Choisir un trait',
+    readMore: 'Lire la suite',
+    readLess: 'Réduire',
     theBigFive: 'Les cinq grands',
     score: 'But',
     important: 'Important!',

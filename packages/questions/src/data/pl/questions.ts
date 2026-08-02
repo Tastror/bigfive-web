@@ -386,7 +386,7 @@ const questions = [
   },
   {
     id: '13c58810-3864-42ba-aa87-d4166f858756',
-    text: 'Przytłaczają mnie spotkania/przyjęcia',
+    text: 'Przytłacza mnie natłok wydarzeń',
     keyed: 'plus',
     domain: 'N',
     facet: 6

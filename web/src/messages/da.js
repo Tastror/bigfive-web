@@ -22,8 +22,7 @@ const dansk = {
       text1:
         'Sammenlign dig selv med din partner, kolleger, venner eller familie.',
       text2:
-        'Lær hvordan du kan differentiere dig fra andre mennesker på de fem domæner:',
-      action: 'Se sammenligning i handling'
+        'Lær hvordan du kan differentiere dig fra andre mennesker på de fem domæner:'
     },
     share: 'Del med dine venner, og find ud af hvor kompatibel du er.',
     cards: {
@@ -126,7 +125,7 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   test: {
     next: 'Næste',
-    back: 'tilbage',
+    back: 'forrige',
     more: 'mere',
     seeResults: 'Se resultater'
   },
@@ -188,6 +187,11 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'Navn'
   },
   results: {
+    overview: 'Oversigt',
+    all: 'Alle',
+    selectDomain: 'Vælg et personlighedstræk',
+    readMore: 'Læs mere',
+    readLess: 'Læs mindre',
     theBigFive: 'De fem store',
     score: 'Score',
     important: 'Vigtig!',

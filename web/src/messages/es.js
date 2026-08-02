@@ -21,8 +21,7 @@ const spanish = {
       title: 'Compárese con los demás',
       text1: 'Compárese con su pareja, colegas, amigos o familiares.',
       text2:
-        'Descubra en qué se diferencia de otras personas en los cinco dominios:',
-      action: 'Míralo en vivo en acción'
+        'Descubra en qué se diferencia de otras personas en los cinco dominios:'
     },
     share: 'Comparte con tus amigos y descubre qué tan compatible eres',
     cards: {
@@ -125,7 +124,7 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
   },
   test: {
     next: 'siguiente',
-    back: 'atrás',
+    back: 'anterior',
     more: 'más',
     seeResults: 'ver resultados'
   },
@@ -188,6 +187,11 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
     name: 'Nombre'
   },
   results: {
+    overview: 'Resumen',
+    all: 'Todos',
+    selectDomain: 'Selecciona un rasgo',
+    readMore: 'Leer más',
+    readLess: 'Leer menos',
     theBigFive: 'Los Big Five',
     score: 'Puntuación',
     important: 'Importante!',

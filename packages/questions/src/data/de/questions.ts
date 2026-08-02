@@ -64,7 +64,7 @@ const questions = [
   },
   {
     id: 'cda1ca17-b599-4561-a6cd-ff9d36062d27',
-    text: 'Ich mag keine Unordnung - Ich räume gern auf',
+    text: 'Ich räume gern auf',
     keyed: 'plus',
     domain: 'C',
     facet: 2
@@ -295,7 +295,7 @@ const questions = [
   },
   {
     id: '5631b856-ff34-4f76-a0cd-edc7104c3bfa',
-    text: 'Ich bin ein sehr einfühlsamer Mensch und ich spüre die Gefühle anderer',
+    text: 'Ich spüre die Gefühle anderer',
     keyed: 'plus',
     domain: 'O',
     facet: 3
@@ -484,7 +484,7 @@ const questions = [
   },
   {
     id: 'f4891687-0ff0-47af-a4f6-d1202c8f6676',
-    text: 'Ich lasse immer Unordnung zurück',
+    text: 'Ich hinterlasse Unordnung in meinem Zimmer',
     keyed: 'minus',
     domain: 'C',
     facet: 2
@@ -694,7 +694,7 @@ const questions = [
   },
   {
     id: '50418d86-712c-45d9-adc4-ea0231c93cf5',
-    text: 'Ich lasse meinen Krimskrams herumliegen',
+    text: 'Ich lasse meine Sachen herumliegen',
     keyed: 'minus',
     domain: 'C',
     facet: 2
@@ -708,7 +708,7 @@ const questions = [
   },
   {
     id: '8791f37b-686f-47c3-9db7-74c009951321',
-    text: 'Ich warte darauf, dass andere Verantwortung übernehmen',
+    text: 'Ich warte darauf, dass andere die Führung übernehmen',
     keyed: 'minus',
     domain: 'E',
     facet: 3

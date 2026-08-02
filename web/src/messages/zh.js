@@ -20,8 +20,7 @@ const chinese = {
     compare: {
       title: '拿自己和别人比较',
       text1: '拿自己和伴侣、同事、朋友或家人进行比较',
-      text2: '了解您与五个域中的其他人有何不同：',
-      action: '看到它在行动现场'
+      text2: '了解您与五个域中的其他人有何不同：'
     },
     share: '与朋友分享，了解您的兼容性',
     cards: {
@@ -116,7 +115,7 @@ const chinese = {
   },
   test: {
     next: '下一个',
-    back: '返回',
+    back: '上一个',
     more: '更多',
     seeResults: '查看结果'
   },
@@ -176,7 +175,12 @@ const chinese = {
     name: '姓名'
   },
   results: {
-    theBigFive: '五大',
+    overview: '概览',
+    all: '全部',
+    selectDomain: '选择特质',
+    readMore: '展开',
+    readLess: '收起',
+    theBigFive: '五大性格特质',
     score: '分数',
     important: '重要！',
     saveResults: '保存以下 ID 以查看以后的结果或',

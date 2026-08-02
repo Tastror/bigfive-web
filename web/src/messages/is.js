@@ -21,8 +21,7 @@ const icelandic = {
       title: 'Berðu þig saman við aðra',
       text1:
         'Berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.',
-      text2: 'Lærðu hvernig þú ert frábrugðin öðru fólki á lénunum fimm:',
-      action: 'Sjáðu það í beinni útsendingu'
+      text2: 'Lærðu hvernig þú ert frábrugðin öðru fólki á lénunum fimm:'
     },
     share: 'Deildu með vinum þínum og komdu að því hversu samhæfur þú ert',
     cards: {
@@ -125,7 +124,7 @@ const icelandic = {
   },
   test: {
     next: 'næst',
-    back: 'aftur',
+    back: 'fyrri spurning',
     more: 'meira',
     seeResults: 'sjá niðurstöður'
   },
@@ -187,6 +186,11 @@ const icelandic = {
     name: 'Nafn'
   },
   results: {
+    overview: 'Yfirlit',
+    all: 'Allt',
+    selectDomain: 'Veldu persónueinkenni',
+    readMore: 'Lesa meira',
+    readLess: 'Sýna minna',
     theBigFive: 'Fimm stóru',
     score: 'mark',
     important: 'Mikilvægt!',

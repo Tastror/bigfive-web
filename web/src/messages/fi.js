@@ -21,8 +21,7 @@ const finnish = {
     compare: {
       title: 'Vertaa itseäsi muihin',
       text1: 'Vertaa itseäsi kumppaniin, kollegoihin, ystäviin tai perheeseen.',
-      text2: 'Opi, miten erotat muista viidestä verkkotunnuksesta:',
-      action: 'Näe se toiminnassa'
+      text2: 'Opi, miten erotat muista viidestä verkkotunnuksesta:'
     },
     share: 'jaaYstävillesiJaSelvitä,kuinkaYhteensopivaOlet',
     cards: {
@@ -125,7 +124,7 @@ const finnish = {
   },
   test: {
     next: 'Seuraava',
-    back: 'takaisin',
+    back: 'edellinen',
     more: 'lisää',
     seeResults: 'katso tulokset'
   },
@@ -186,6 +185,11 @@ const finnish = {
     name: 'Nimi'
   },
   results: {
+    overview: 'Yhteenveto',
+    all: 'Kaikki',
+    selectDomain: 'Valitse piirre',
+    readMore: 'Lue lisää',
+    readLess: 'Näytä vähemmän',
     theBigFive: 'Iso viisi',
     score: 'pisteet',
     important: 'Tärkeä!',

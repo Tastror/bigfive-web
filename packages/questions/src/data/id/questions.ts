@@ -15,7 +15,7 @@ const questions = [
   },
   {
     id: '888dd864-7449-4e96-8d5c-7a439603ea91',
-    text: 'Memiliki khayalan yang menyala jelas',
+    text: 'Memiliki imajinasi yang kuat',
     keyed: 'plus',
     domain: 'O',
     facet: 1
@@ -295,7 +295,7 @@ const questions = [
   },
   {
     id: '5631b856-ff34-4f76-a0cd-edc7104c3bfa',
-    text: 'Merasakan perasaan/emosi orang lain',
+    text: 'Merasakan emosi orang lain',
     keyed: 'plus',
     domain: 'O',
     facet: 3
@@ -568,7 +568,7 @@ const questions = [
   },
   {
     id: '7dd6cf2d-5c14-48c2-8ae5-633a7a596c71',
-    text: 'Suka ugal-ugalan/sembrono',
+    text: 'Suka bertindak sembrono',
     keyed: 'plus',
     domain: 'E',
     facet: 5
@@ -694,7 +694,7 @@ const questions = [
   },
   {
     id: '50418d86-712c-45d9-adc4-ea0231c93cf5',
-    text: 'Meninggalkan barang-barangku di sekitar',
+    text: 'Meninggalkan barang-barang saya di sembarang tempat',
     keyed: 'minus',
     domain: 'C',
     facet: 2

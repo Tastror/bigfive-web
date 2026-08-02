@@ -22,8 +22,7 @@ const portuguese = {
       title: 'Compare-se com outros',
       text1:
         'Compare-se com o seu parceiro ou parceira, colegas, amigos ou família.',
-      text2: 'Saiba como você difere de outras pessoas em cinco domínios:',
-      action: 'Veja ao vivo em ação'
+      text2: 'Saiba como você difere de outras pessoas em cinco domínios:'
     },
     share:
       'Compartilhe com seus amigos e descubra o quão compatíveis vocês são',
@@ -128,7 +127,7 @@ inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   test: {
     next: 'avançar',
-    back: 'voltar',
+    back: 'anterior',
     more: 'mais',
     seeResults: 'ver resultados'
   },
@@ -191,6 +190,11 @@ inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'Nome'
   },
   results: {
+    overview: 'Visão geral',
+    all: 'Todos',
+    selectDomain: 'Selecione um traço',
+    readMore: 'Ler mais',
+    readLess: 'Mostrar menos',
     theBigFive: 'Os Cinco Grandes',
     score: 'pontuação',
     important: 'Importante!',

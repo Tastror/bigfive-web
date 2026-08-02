@@ -98,7 +98,7 @@ export default async function RootLayout({
       <head />
       <body
         className={clsx(
-          'min-h-screen bg-background font-sans antialiased',
+          'min-h-screen overflow-x-hidden bg-background font-sans antialiased',
           fontSans.variable
         )}
       >
@@ -109,7 +109,7 @@ export default async function RootLayout({
         >
           <div className='relative flex flex-col h-screen'>
             <Navbar navItems={navItems} navMenuItems={navMenuItems} />
-            <main className='container mx-auto max-w-7xl pt-16 px-6 flex-grow'>
+            <main className='container mx-auto max-w-7xl pt-10 sm:pt-16 px-4 sm:px-6 flex-grow'>
               {children}
               <CookieBanner />
             </main>

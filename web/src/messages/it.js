@@ -21,8 +21,7 @@ const italian = {
       title: 'Confronta te stesso con gli altri',
       text1:
         'Confronta te stesso con il tuo partner, colleghi, amici o familiari.',
-      text2: 'Scopri come ti differenzi dalle altre persone nei cinque domini:',
-      action: 'Guardalo dal vivo in azione'
+      text2: 'Scopri come ti differenzi dalle altre persone nei cinque domini:'
     },
     share: 'Condividi con i tuoi amici e scopri quanto sei compatibile',
     cards: {
@@ -125,7 +124,7 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
   },
   test: {
     next: 'prossimo',
-    back: 'indietro',
+    back: 'precedente',
     more: 'di più',
     seeResults: 'vedi risultati'
   },
@@ -191,6 +190,11 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     name: 'Nome'
   },
   results: {
+    overview: 'Panoramica',
+    all: 'Tutti',
+    selectDomain: 'Seleziona un tratto',
+    readMore: 'Leggi di più',
+    readLess: 'Mostra meno',
     theBigFive: 'The Big Five',
     score: 'puntazione',
     important: 'Importante!',

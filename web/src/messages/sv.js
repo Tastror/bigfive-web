@@ -21,8 +21,7 @@ const svenska = {
       title: 'Jämför dig med andra',
       text1: 'Jämför dig själv med din partner, kollegor, vänner eller familj.',
       text2:
-        'Lär dig hur du kan skilja dig från andra människor inom de fem domänerna:',
-      action: 'Se jämförelse i praktiken'
+        'Lär dig hur du kan skilja dig från andra människor inom de fem domänerna:'
     },
     share: 'Dela med dina vänner och ta reda på hur kompatibel du är.',
     cards: {
@@ -125,7 +124,7 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   test: {
     next: 'nästa',
-    back: 'tillbaka',
+    back: 'föregående',
     more: 'mer',
     seeResults: 'Se resultat'
   },
@@ -187,6 +186,11 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'Namn'
   },
   results: {
+    overview: 'Översikt',
+    all: 'Alla',
+    selectDomain: 'Välj ett personlighetsdrag',
+    readMore: 'Läs mer',
+    readLess: 'Visa mindre',
     theBigFive: 'De fem stora',
     score: 'Värdering',
     important: 'Viktigt!',

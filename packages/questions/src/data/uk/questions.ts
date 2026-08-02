@@ -85,7 +85,7 @@ const questions = [
   },
   {
     id: '0727def6-3d18-4221-bf38-86b58f9f3eed',
-    text: 'Сильно емоцій(ний)/на',
+    text: 'Сильно переживаю свої емоції',
     keyed: 'plus',
     domain: 'O',
     facet: 3

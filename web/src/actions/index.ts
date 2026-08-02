@@ -4,26 +4,19 @@ import { connectToDatabase } from '@/db';
 import { ObjectId } from 'mongodb';
 import { B5Error, DbResult, Feedback } from '@/types';
 import calculateScore from '@bigfive-org/score';
-import generateResult, {
-  getInfo,
-  Language,
-  Domain
-} from '@bigfive-org/results';
+import { Domain } from '@bigfive-org/results';
+import { getLocalizedResults } from '@/lib/localized-results';
 
 const collectionName = process.env.DB_COLLECTION || 'results';
-const resultLanguages = getInfo().languages;
-
 export type Report = {
   id: string;
   timestamp: number;
-  availableLanguages: Language[];
-  language: string;
   results: Domain[];
 };
 
 export async function getTestResult(
   id: string,
-  language?: string
+  language: string
 ): Promise<Report | undefined> {
   'use server';
   try {
@@ -38,16 +31,11 @@ export async function getTestResult(
         message: `The test results with id ${id} is not found in the database!`
       });
     }
-    const selectedLanguage =
-      language ||
-      (!!resultLanguages.find((l) => l.id == report.lang) ? report.lang : 'en');
     const scores = calculateScore({ answers: report.answers });
-    const results = generateResult({ lang: selectedLanguage, scores });
+    const results = getLocalizedResults(language, scores);
     return {
       id: report._id.toString(),
       timestamp: report.dateStamp,
-      availableLanguages: resultLanguages,
-      language: selectedLanguage,
       results
     };
   } catch (error) {

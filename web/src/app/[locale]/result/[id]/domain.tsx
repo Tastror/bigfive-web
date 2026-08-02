@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Facet, Domain } from '@bigfive-org/results';
 import { BarChart } from '@/components/bar-chart';
 import ReadMore from '@/components/read-more';
+import { useTranslations } from 'next-intl';
 
 interface DomainProps {
   domain: Domain;
@@ -17,6 +18,8 @@ export const DomainPage = ({
   scoreText,
   showExpanded
 }: DomainProps) => {
+  const t = useTranslations('results');
+
   return (
     <>
       <div className='mt-5'>
@@ -26,7 +29,11 @@ export const DomainPage = ({
           </h2>
         </Link>
         <p>{domain.shortDescription}</p>
-        <ReadMore showExpanded={showExpanded}>
+        <ReadMore
+          showExpanded={showExpanded}
+          moreLabel={t('readMore')}
+          lessLabel={t('readLess')}
+        >
           <p dangerouslySetInnerHTML={{ __html: domain.description }} />
         </ReadMore>
         <br />

@@ -4,9 +4,16 @@ import { useState } from 'react';
 interface ReadMoreProps {
   children: React.ReactNode;
   showExpanded?: boolean;
+  moreLabel: string;
+  lessLabel: string;
 }
 
-const ReadMore = ({ children, showExpanded = false }: ReadMoreProps) => {
+const ReadMore = ({
+  children,
+  showExpanded = false,
+  moreLabel,
+  lessLabel
+}: ReadMoreProps) => {
   const text = children;
   const [isReadMoreShown, setReadMoreShown] = useState(false);
 
@@ -23,7 +30,7 @@ const ReadMore = ({ children, showExpanded = false }: ReadMoreProps) => {
           size='sm'
           variant='bordered'
         >
-          {isReadMoreShown ? 'Read less' : 'Read more'}
+          {isReadMoreShown ? lessLabel : moreLabel}
         </Button>
       )}
       {(isReadMoreShown || showExpanded) && text}

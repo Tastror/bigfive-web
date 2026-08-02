@@ -1,7 +1,7 @@
 const questions = [
   {
     id: '43c98ce8-a07a-4dc2-80f6-c1b2a2485f06',
-    text: '經常擔憂',
+    text: '經常為許多事情擔心',
     keyed: 'plus',
     domain: 'N',
     facet: 1
@@ -22,14 +22,14 @@ const questions = [
   },
   {
     id: 'ce2fbbf8-7a97-4199-bda5-117e4ecdf3b6',
-    text: '容易信人',
+    text: '信任別人',
     keyed: 'plus',
     domain: 'A',
     facet: 1
   },
   {
     id: 'c7f53c3c-2e77-432f-bb71-7470b67d3aa9',
-    text: '一不做二不休',
+    text: '能成功完成任務',
     keyed: 'plus',
     domain: 'C',
     facet: 1
@@ -43,21 +43,21 @@ const questions = [
   },
   {
     id: '458f3957-2359-4077-ade1-34525d633063',
-    text: '喜歡熱鬧派對',
+    text: '喜歡參加大型聚會',
     keyed: 'plus',
     domain: 'E',
     facet: 2
   },
   {
     id: '58d571e5-d725-4cf8-a438-32c16ee28eb6',
-    text: '相信藝術的重要性',
+    text: '認為藝術很重要',
     keyed: 'plus',
     domain: 'O',
     facet: 2
   },
   {
     id: '0cf79e27-e702-45c2-9471-04ac96b58e0e',
-    text: '懂得利用人達到自己目的',
+    text: '會利用別人來達成自己的目的',
     keyed: 'minus',
     domain: 'A',
     facet: 2
@@ -78,14 +78,14 @@ const questions = [
   },
   {
     id: '8af754f2-68e9-48f3-8c5d-2e6633d4472c',
-    text: '話事',
+    text: '承擔責任',
     keyed: 'plus',
     domain: 'E',
     facet: 3
   },
   {
     id: '0727def6-3d18-4221-bf38-86b58f9f3eed',
-    text: '情緒上容易有十分強烈的感受',
+    text: '能強烈感受到自己的情緒',
     keyed: 'plus',
     domain: 'O',
     facet: 3
@@ -106,7 +106,7 @@ const questions = [
   },
   {
     id: 'b2d9ef74-73f5-4ea8-b00c-7aaca15937df',
-    text: '難主動地接觸人',
+    text: '覺得很難主動接近別人',
     keyed: 'plus',
     domain: 'N',
     facet: 4
@@ -120,28 +120,28 @@ const questions = [
   },
   {
     id: 'cae55842-8957-4e3b-83b3-ceff98fb9dcf',
-    text: '喜歡變化多端過於例行公事',
+    text: '喜歡變化，不喜歡一成不變',
     keyed: 'plus',
     domain: 'O',
     facet: 4
   },
   {
     id: 'e2028ad3-b128-4f76-be57-398bfe2aff22',
-    text: '喜歡據理力爭',
+    text: '喜歡與人爭個高下',
     keyed: 'minus',
     domain: 'A',
     facet: 4
   },
   {
     id: 'b7fc949b-02b6-4cb9-a3e2-dbb3d824b55f',
-    text: '勤勞工作',
+    text: '工作努力',
     keyed: 'plus',
     domain: 'C',
     facet: 4
   },
   {
     id: '481efd08-c810-43b1-a952-f8ac9052f96b',
-    text: '自制力低、暴飲暴食',
+    text: '有時會無節制地吃喝玩樂',
     keyed: 'plus',
     domain: 'N',
     facet: 5
@@ -155,21 +155,21 @@ const questions = [
   },
   {
     id: 'e1e804c7-4a1d-498f-8610-f95147af9d1d',
-    text: '喜歡讀有挑戰性的閱物',
+    text: '喜歡閱讀有挑戰性的內容',
     keyed: 'plus',
     domain: 'O',
     facet: 5
   },
   {
     id: '71029381-3908-4c68-91e1-e41fb45542a2',
-    text: '相信自己比別人優勝',
+    text: '認為自己比別人優秀',
     keyed: 'minus',
     domain: 'A',
     facet: 5
   },
   {
     id: 'f6076eea-56ae-4b46-97f1-5f94a7676c96',
-    text: '時刻有準備',
+    text: '總是有所準備',
     keyed: 'plus',
     domain: 'C',
     facet: 5
@@ -183,7 +183,7 @@ const questions = [
   },
   {
     id: '899c3f66-51d0-46ea-963a-6fc36d3b3cb9',
-    text: '散發著喜樂的氣息',
+    text: '我的快樂會感染周圍的人',
     keyed: 'plus',
     domain: 'E',
     facet: 6
@@ -204,7 +204,7 @@ const questions = [
   },
   {
     id: 'bd9eec0a-b68b-472c-8803-7db29c308cdb',
-    text: '不假思索便去做',
+    text: '會不假思索地著手做事',
     keyed: 'minus',
     domain: 'C',
     facet: 6
@@ -218,7 +218,7 @@ const questions = [
   },
   {
     id: 'af55f014-788c-4b6e-92c4-b2b59dc8a28d',
-    text: '在人群中間感到自在',
+    text: '和其他人待在一起時，我覺得很自在',
     keyed: 'plus',
     domain: 'E',
     facet: 1
@@ -232,14 +232,14 @@ const questions = [
   },
   {
     id: '6f66cdc0-9044-457b-b40d-501ecae15ee7',
-    text: '相信别人總有好的意圖',
+    text: '相信別人的出發點是好的',
     keyed: 'plus',
     domain: 'A',
     facet: 1
   },
   {
     id: 'f110fc66-2e9e-413c-920b-19f05e63d7ac',
-    text: '擅長我的工作',
+    text: '在所做的事情上表現出色',
     keyed: 'plus',
     domain: 'C',
     facet: 1
@@ -260,14 +260,14 @@ const questions = [
   },
   {
     id: 'b5919f2f-cded-4745-a9ce-c02703cee807',
-    text: '從別人不為意的事物中看到個中的美',
+    text: '能發現別人可能沒注意到的美',
     keyed: 'plus',
     domain: 'O',
     facet: 2
   },
   {
     id: '5a5fa975-d024-4ac8-8845-2823f957c21b',
-    text: '為了贏會不擇手段',
+    text: '為了領先別人，我會採用欺騙手段',
     keyed: 'minus',
     domain: 'A',
     facet: 2
@@ -288,7 +288,7 @@ const questions = [
   },
   {
     id: '0b38e3d3-c15c-454c-b034-f4eb7ae1580a',
-    text: '希望或嘗試領導別人',
+    text: '會嘗試帶領別人',
     keyed: 'plus',
     domain: 'E',
     facet: 3
@@ -309,14 +309,14 @@ const questions = [
   },
   {
     id: 'c55e3958-00c4-4fc3-9118-47d8f31bfde1',
-    text: '誠實說真話',
+    text: '會說實話',
     keyed: 'plus',
     domain: 'C',
     facet: 3
   },
   {
     id: 'acd8fadc-5399-4a67-b5ff-9d1ada049c01',
-    text: '害怕別人的注意力在自己身上',
+    text: '害怕引起別人的注意',
     keyed: 'plus',
     domain: 'N',
     facet: 4
@@ -330,7 +330,7 @@ const questions = [
   },
   {
     id: '33b81fd0-7e32-4cd8-a13a-d5f5f754f998',
-    text: '寧願維持自己習慣而熟悉的事情',
+    text: '更喜歡做自己熟悉的事情',
     keyed: 'minus',
     domain: 'O',
     facet: 4
@@ -344,7 +344,7 @@ const questions = [
   },
   {
     id: 'f12c3d9d-1d12-4aa6-ad2e-009cd0651cbb',
-    text: '做事總會做過於別人期望的更多',
+    text: '會做超出別人期望的事',
     keyed: 'plus',
     domain: 'C',
     facet: 4
@@ -372,7 +372,7 @@ const questions = [
   },
   {
     id: '7df44711-4cd4-4b05-8830-73fcc3ebdab5',
-    text: '自我感覺良好',
+    text: '覺得自己很了不起',
     keyed: 'minus',
     domain: 'A',
     facet: 5
@@ -393,7 +393,7 @@ const questions = [
   },
   {
     id: '961376e0-16a1-4c14-b059-789e63d11b63',
-    text: '能夠玩得開心',
+    text: '常常玩得很開心',
     keyed: 'plus',
     domain: 'E',
     facet: 6
@@ -449,14 +449,14 @@ const questions = [
   },
   {
     id: '02ee1930-36a7-4caa-b10c-c93efb682a44',
-    text: '能夠把事情打理得妥妥當當',
+    text: '能順利處理任務',
     keyed: 'plus',
     domain: 'C',
     facet: 1
   },
   {
     id: 'da8e6ed1-2296-4c58-8fdb-66f2f591989b',
-    text: '容易發脾氣',
+    text: '會發脾氣',
     keyed: 'plus',
     domain: 'N',
     facet: 2
@@ -477,7 +477,7 @@ const questions = [
   },
   {
     id: '982e83c2-d34e-48da-9c71-78494ab05c85',
-    text: '利用別人',
+    text: '佔別人的便宜',
     keyed: 'minus',
     domain: 'A',
     facet: 2
@@ -498,7 +498,7 @@ const questions = [
   },
   {
     id: '2452f034-8273-4f71-9122-a40f5ead31ba',
-    text: '要掌控一切',
+    text: '掌控局面',
     keyed: 'plus',
     domain: 'E',
     facet: 3
@@ -512,14 +512,14 @@ const questions = [
   },
   {
     id: 'cd54bd76-ca9c-4030-b325-bb8d896bcb3f',
-    text: '對別人的感受沒有什麼感覺或想法',
+    text: '對別人的感受漠不關心',
     keyed: 'minus',
     domain: 'A',
     facet: 3
   },
   {
     id: '4e6e3a34-176f-4e6e-8730-1341611f972b',
-    text: '打破規則',
+    text: '違反規則',
     keyed: 'minus',
     domain: 'C',
     facet: 3
@@ -533,7 +533,7 @@ const questions = [
   },
   {
     id: 'b2a077d5-1fe0-4b06-ab63-35455e001e54',
-    text: '工餘時作很多的事',
+    text: '空閒時間裡會做很多事情',
     keyed: 'plus',
     domain: 'E',
     facet: 4
@@ -554,21 +554,21 @@ const questions = [
   },
   {
     id: 'a9c97d6b-6721-4150-8d84-64ef3082f164',
-    text: '得過且過',
+    text: '工作或學習只做到過得去就算了',
     keyed: 'minus',
     domain: 'C',
     facet: 4
   },
   {
     id: '9f2e7f90-0ca5-4ed0-9fe5-e060238a9b5e',
-    text: '容易抵抗誘惑',
+    text: '能輕鬆抵抗誘惑',
     keyed: 'minus',
     domain: 'N',
     facet: 5
   },
   {
     id: '7dd6cf2d-5c14-48c2-8ae5-633a7a596c71',
-    text: '魯莽不羈',
+    text: '喜歡不計後果地行事',
     keyed: 'plus',
     domain: 'E',
     facet: 5
@@ -589,7 +589,7 @@ const questions = [
   },
   {
     id: 'c7db0ed8-df7d-49bf-942f-59e46ef743c4',
-    text: '浪費光陰',
+    text: '浪費時間',
     keyed: 'minus',
     domain: 'C',
     facet: 5
@@ -603,7 +603,7 @@ const questions = [
   },
   {
     id: '79d956e8-1118-402a-a0e2-9380af18243e',
-    text: '熱愛生命',
+    text: '熱愛生活',
     keyed: 'plus',
     domain: 'E',
     facet: 6
@@ -617,21 +617,21 @@ const questions = [
   },
   {
     id: '77f54ab4-0fba-4efb-8700-066c7490eb87',
-    text: '對別人的問題不感興趣',
+    text: '對別人遇到的麻煩不感興趣',
     keyed: 'minus',
     domain: 'A',
     facet: 6
   },
   {
     id: 'a354cf7c-8d11-46ac-acc5-da90d2048637',
-    text: '衝動',
+    text: '倉促行事',
     keyed: 'minus',
     domain: 'C',
     facet: 6
   },
   {
     id: '43b03992-3f32-4ed1-a6f8-5d6d3e7ed246',
-    text: '容易感到大壓力',
+    text: '很容易感到壓力',
     keyed: 'plus',
     domain: 'N',
     facet: 1
@@ -645,14 +645,14 @@ const questions = [
   },
   {
     id: '935a7413-abac-4f54-9169-d1fbd39da752',
-    text: '喜歡沉醉於自己的思想之中',
+    text: '喜歡陷入沉思',
     keyed: 'plus',
     domain: 'O',
     facet: 1
   },
   {
     id: '432dbde8-8756-4ff0-80d5-f47018235139',
-    text: '不容易信人',
+    text: '不相信別人',
     keyed: 'minus',
     domain: 'A',
     facet: 1
@@ -666,49 +666,49 @@ const questions = [
   },
   {
     id: 'd32bd062-4eb2-401b-99b2-e7afea39ca9b',
-    text: '不容易生氣',
+    text: '不會輕易被惹惱',
     keyed: 'minus',
     domain: 'N',
     facet: 2
   },
   {
     id: '9a47184f-6046-4e68-a61b-3d9b357b86ea',
-    text: '避免群眾',
+    text: '避開人多的地方',
     keyed: 'minus',
     domain: 'E',
     facet: 2
   },
   {
     id: '87c5b27e-59a8-4c48-8ba8-f5413d735693',
-    text: '不享受參觀藝術博物館',
+    text: '不喜歡去美術館',
     keyed: 'minus',
     domain: 'O',
     facet: 2
   },
   {
     id: '11b20adb-abed-4363-894c-3dd823ae0540',
-    text: '會阻止別人的計劃',
+    text: '妨礙別人的計劃',
     keyed: 'minus',
     domain: 'A',
     facet: 2
   },
   {
     id: '50418d86-712c-45d9-adc4-ea0231c93cf5',
-    text: '隨處遺下自己的東西',
+    text: '把自己的東西放得到處都是',
     keyed: 'minus',
     domain: 'C',
     facet: 2
   },
   {
     id: 'f40e421f-6c24-4be2-bd9f-28d33358d8c6',
-    text: '對自己感覺自在',
+    text: '對自己感到自在',
     keyed: 'minus',
     domain: 'N',
     facet: 3
   },
   {
     id: '8791f37b-686f-47c3-9db7-74c009951321',
-    text: '等待他人作領帶路',
+    text: '等著別人帶頭',
     keyed: 'minus',
     domain: 'E',
     facet: 3
@@ -722,7 +722,7 @@ const questions = [
   },
   {
     id: 'b68af20d-24f9-4c27-85cc-fe0858994888',
-    text: '對別人沒有耐性',
+    text: '不願為別人花時間',
     keyed: 'minus',
     domain: 'A',
     facet: 3
@@ -736,7 +736,7 @@ const questions = [
   },
   {
     id: '7317848c-3e1b-422f-bb16-02efc504f677',
-    text: '不會為複雜的人際關係而感到困擾',
+    text: '不會被複雜的社交情境困擾',
     keyed: 'minus',
     domain: 'N',
     facet: 4
@@ -750,21 +750,21 @@ const questions = [
   },
   {
     id: 'a7f43928-8982-4ed5-8656-7a80346fe979',
-    text: '循規蹈矩',
+    text: '習慣採用傳統做法',
     keyed: 'minus',
     domain: 'O',
     facet: 4
   },
   {
     id: '17910a55-a64a-4ed0-8b46-293e2fa2fe03',
-    text: '以牙還牙',
+    text: '報復別人',
     keyed: 'minus',
     domain: 'A',
     facet: 4
   },
   {
     id: '3890bb43-2695-4b8d-b289-ee10d11cc884',
-    text: '做事求求其其',
+    text: '對工作或學業不怎麼投入時間和精力',
     keyed: 'minus',
     domain: 'C',
     facet: 4
@@ -778,7 +778,7 @@ const questions = [
   },
   {
     id: '10f90fa9-649c-4631-ac4c-3dd3f751597d',
-    text: '狂野',
+    text: '我的行為狂放不羈',
     keyed: 'plus',
     domain: 'E',
     facet: 5
@@ -813,21 +813,21 @@ const questions = [
   },
   {
     id: 'e7b31bdc-5f6b-40ec-ba91-f5919b0f170e',
-    text: '凡事往好的方面想',
+    text: '看到生活中好的一面',
     keyed: 'plus',
     domain: 'E',
     facet: 6
   },
   {
     id: '580b08d1-3c94-46e9-9d07-d6d80c698127',
-    text: '相信我們應當嚴懲罪惡',
+    text: '認為我們應該嚴懲犯罪',
     keyed: 'minus',
     domain: 'O',
     facet: 6
   },
   {
     id: '48bee420-60c0-45cd-be43-3893dbc1969a',
-    text: '盡量不去想世界上有需要的人',
+    text: '盡量不去想那些需要幫助的人',
     keyed: 'minus',
     domain: 'A',
     facet: 6

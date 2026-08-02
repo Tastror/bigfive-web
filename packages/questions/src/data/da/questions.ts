@@ -155,7 +155,7 @@ const questions = [
   },
   {
     id: 'e1e804c7-4a1d-498f-8610-f95147af9d1d',
-    text: 'Elsker at læse udforende materiale',
+    text: 'Elsker at læse udfordrende materiale',
     keyed: 'plus',
     domain: 'O',
     facet: 5
@@ -232,7 +232,7 @@ const questions = [
   },
   {
     id: '6f66cdc0-9044-457b-b40d-501ecae15ee7',
-    text: 'Tror på at andre mennesket har gode intentioner',
+    text: 'Tror på, at andre mennesker har gode intentioner',
     keyed: 'plus',
     domain: 'A',
     facet: 1
@@ -582,7 +582,7 @@ const questions = [
   },
   {
     id: '1d686958-6fe7-432f-85e6-186b99e4e232',
-    text: 'Har stor tiltro til mig selv',
+    text: 'Har høje tanker om mig selv',
     keyed: 'minus',
     domain: 'A',
     facet: 5

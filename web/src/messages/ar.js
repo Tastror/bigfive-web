@@ -21,8 +21,7 @@ const arabic = {
     compare: {
       title: 'قارن شخصيتك بشخصية غيرك',
       text1: 'قارن شخصيتك بشخصية شريكك أو زميلك أو صديقك',
-      text2: 'اعرف ما يميّزك عن غيرك في السمات الخمسة',
-      action: 'شاهد عينة'
+      text2: 'اعرف ما يميّزك عن غيرك في السمات الخمسة'
     },
     share: 'شاركها مع أصدقائك واكتشف مدى التوافق بينكم',
     cards: {
@@ -125,7 +124,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   },
   test: {
     next: 'التالي',
-    back: 'السابق',
+    back: 'السؤال السابق',
     more: 'أكثر',
     seeResults: 'شاهد النتيجة'
   },
@@ -188,6 +187,11 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     name: 'الاسم'
   },
   results: {
+    overview: 'نظرة عامة',
+    all: 'الكل',
+    selectDomain: 'اختر سمة',
+    readMore: 'اقرأ المزيد',
+    readLess: 'اقرأ أقل',
     theBigFive: 'السمات الخمسة الكبرى',
     score: 'الدرجة',
     important: '!مهم',

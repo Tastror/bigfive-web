@@ -20,8 +20,7 @@ const traditionalChinese = {
     compare: {
       title: '與他人比較',
       text1: '將自己的結果與伴侶、同事、朋友或家人比較。',
-      text2: '了解您與他人在五個性格領域中的差異：',
-      action: '查看比較示例'
+      text2: '了解您與他人在五個性格領域中的差異：'
     },
     share: '與朋友分享，了解彼此的契合程度',
     cards: {
@@ -115,7 +114,7 @@ const traditionalChinese = {
   },
   test: {
     next: '下一題',
-    back: '返回',
+    back: '上一個',
     more: '更多',
     seeResults: '查看結果'
   },
@@ -175,6 +174,11 @@ const traditionalChinese = {
     name: '姓名'
   },
   results: {
+    overview: '概覽',
+    all: '全部',
+    selectDomain: '選擇特質',
+    readMore: '展開',
+    readLess: '收起',
     theBigFive: '五大性格特質',
     score: '分數',
     important: '重要！',

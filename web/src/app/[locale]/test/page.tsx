@@ -1,10 +1,15 @@
-import { getItems, getInfo, type Question } from '@bigfive-org/questions';
+import {
+  getChoices,
+  getItems,
+  getInfo,
+  type Choice,
+  type Question
+} from '@bigfive-org/questions';
 import { Survey } from './survey';
 import { useTranslations } from 'next-intl';
 import { saveTest } from '@/actions';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import simplifiedChineseQuestions from '../../../../../packages/questions/src/data/zh-cn/questions';
-import simplifiedChineseChoices from '../../../../../packages/questions/src/data/zh-cn/choices';
+import { getLocalizedQuestions } from '@/lib/localized-questions';
 
 const questionLanguages = getInfo().languages;
 
@@ -36,14 +41,17 @@ export default function TestPage({ params: { locale } }: Props) {
 }
 
 function getQuestions(language: string): Question[] {
-  if (language !== 'zh-cn') return getItems(language);
+  const questions = getLocalizedQuestions(language);
+  if (!questions) return getItems(language);
 
-  return simplifiedChineseQuestions.map((question, index) => ({
+  const choices = getChoices(language) as unknown as Record<
+    'plus' | 'minus',
+    Choice[]
+  >;
+
+  return questions.map((question, index) => ({
     ...question,
     num: index + 1,
-    choices:
-      simplifiedChineseChoices[
-        question.keyed as keyof typeof simplifiedChineseChoices
-      ]
+    choices: choices[question.keyed as 'plus' | 'minus']
   }));
 }

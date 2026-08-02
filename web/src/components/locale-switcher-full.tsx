@@ -22,7 +22,7 @@ export default function LocaleSwitcher({
     router.replace(pathname, { locale: nextLocale });
   }
   return (
-    <div className={compact ? 'w-28 min-[360px]:w-32' : 'w-40'}>
+    <div className={compact ? 'w-32 min-[360px]:w-36' : 'w-40'}>
       <Select
         name='localeSelect'
         selectedKeys={[locale]}

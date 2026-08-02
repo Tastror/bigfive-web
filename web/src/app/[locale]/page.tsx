@@ -11,10 +11,9 @@ import {
   PlusLinearIcon
 } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
-import { SonarPulse } from '@/components/sonar-pulse';
 import { Button } from '@nextui-org/button';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import { Chip, Tooltip } from '@nextui-org/react';
+import { Chip } from '@nextui-org/react';
 
 interface Props {
   params: { locale: string };
@@ -45,7 +44,7 @@ export default function Home({ params: { locale } }: Props) {
 
   const titleDescription = t.rich('description.top', {
     wiki: (chunks) => (
-      <span className={title({ color: 'violet' })}>
+      <span className='bg-gradient-to-b from-[#FF1CF7] to-[#b249f8] bg-clip-text text-transparent'>
         {chunks}
         <sup className='ml-1 align-super text-sm font-normal'>
           <Link
@@ -62,13 +61,14 @@ export default function Home({ params: { locale } }: Props) {
   });
 
   return (
-    <section className='relative'>
+    <section className='relative overflow-x-clip'>
       <div>
-        <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
-          <div className='flex relative z-20 flex-col gap-6 w-full lg:w-1/2 xl:mt-10'>
-            <div className='text-center justify-center mt-10'>
-              <h1 className={title()}>{titleDescription}</h1>
-              <br />
+        <section className='flex flex-col items-center justify-center gap-4 py-6 sm:py-10'>
+          <div className='relative z-20 flex w-full max-w-4xl flex-col gap-6 xl:mt-8'>
+            <div className='mt-6 text-center sm:mt-10'>
+              <h1 className='mx-auto text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl'>
+                {titleDescription}
+              </h1>
               <h2 className={subtitle({ class: 'mt-4' })}>
                 {t('description.info')}
               </h2>
@@ -85,7 +85,7 @@ export default function Home({ params: { locale } }: Props) {
                     size: 'lg',
                     fullWidth: true
                   }),
-                  'md:w-auto'
+                  'w-full sm:w-auto'
                 )}
               >
                 {t('call_to_action')} <ArrowRightIcon />
@@ -98,159 +98,47 @@ export default function Home({ params: { locale } }: Props) {
           </div>
         </section>
 
-        <div className='mt-20 mx-2'>
+        <div className='mx-0 mt-14 sm:mx-2 sm:mt-20'>
           <FeaturesGrid features={features} />
         </div>
       </div>
 
-      <div className='mt-20 text-center'>
-        <h1 className={title()}>{t('compare.title')}</h1>
+      <section className='mx-auto mt-20 max-w-4xl text-center sm:mt-28'>
+        <h2 className={title()}>{t('compare.title')}</h2>
 
-        <div className='mt-10'>
-          <div className='text-lg lg:text-xl font-normal text-default-500'>
+        <div className='mt-6'>
+          <p className='text-base font-normal text-default-500 sm:text-lg lg:text-xl'>
             {t('compare.text1')} {t('compare.text2')}
-          </div>
+          </p>
         </div>
-      </div>
+        <div className='mt-8 flex flex-wrap justify-center gap-2 sm:gap-3'>
+          {[
+            f('openness_to_experience.title'),
+            f('conscientiousness.title'),
+            f('extraversion.title'),
+            f('agreeableness.title'),
+            f('neuroticism.title')
+          ].map((name) => (
+            <Chip key={name} color='secondary' variant='flat'>
+              {name}
+            </Chip>
+          ))}
+        </div>
 
-      <div className='text-center h-64 md:h-80 mt-44 md:mt-56'>
-        <SonarPulse
-          color='#7928CA'
-          icon={
-            <Tooltip
-              showArrow
-              color='secondary'
-              content={t('call_to_action')}
-              offset={10}
-              radius='full'
-            >
-              <Button
-                isIconOnly
-                aria-label={t('call_to_action')}
-                className='z-50 w-auto h-auto bg-gradient-to-b from-[#FF1CF7] to-[#7928CA]'
-                radius='full'
-                as={Link}
-                href='/test'
-              >
-                <PlusLinearIcon
-                  className='flex items-center justify-center rounded-full text-white'
-                  size={54}
-                />
-              </Button>
-            </Tooltip>
-          }
+        <Button
+          isIconOnly
+          aria-label={t('compare.title')}
+          className='mt-10 h-16 w-16 bg-gradient-to-b from-[#FF1CF7] to-[#7928CA] shadow-lg'
+          radius='full'
+          as={Link}
+          href='/compare'
         >
-          <div
-            className='absolute rounded-full'
-            style={{
-              width: '130px',
-              top: 130 / 6,
-              left: -120
-            }}
-          >
-            {buildCircle([
-              {
-                name: f('openness_to_experience.title')
-              },
-              {
-                name: f('conscientiousness.title')
-              },
-              { name: f('extraversion.title') },
-              {
-                name: t('compare.action'),
-                href: '/compare/W3sibmFtZSI6Ik1hcnZpbiIsImlkIjoiNThhNzA2MDZhODM1YzQwMGM4YjM4ZTg0In0seyJuYW1lIjoiQXJ0aHVyIERlbnQiLCJpZCI6IjVlNTZiYTdhYjA5NjEzMDAwN2Q1ZDZkOCJ9LHsibmFtZSI6IkZvcmQgUGVyZmVjdCIsImlkIjoiNWRlYTllODhlMTA4Y2IwMDYyMTgzYWYzIn0seyJuYW1lIjoiU2xhcnRpYmFydGZhc3QiLCJpZCI6IjVlNTZiNjUwYjA5NjEzMDAwN2Q1ZDZkMCJ9XQ'
-              },
-              {
-                name: f('agreeableness.title')
-              },
-              { name: f('neuroticism.title') }
-            ]).map((e, idx) => (
-              <div key={idx}>
-                {e.href ? (
-                  <Button
-                    name={e.name}
-                    style={e.style}
-                    className='absolute hidden md:inline-flex hover:bg-secondary'
-                    variant='bordered'
-                    as={Link}
-                    href={e.href}
-                    aria-label={e.name}
-                  >
-                    {e.name}
-                  </Button>
-                ) : (
-                  <Button
-                    name={e.name}
-                    style={e.style}
-                    className='absolute hidden md:inline-flex'
-                    variant='bordered'
-                    as='span'
-                    aria-label={e.name}
-                  >
-                    {e.name}
-                  </Button>
-                )}
-                {e.href ? (
-                  <Chip
-                    size='sm'
-                    color='secondary'
-                    variant='shadow'
-                    aria-label={e.name}
-                    classNames={{
-                      base: 'absolute md:hidden rounded-full left-[85px]',
-                      content: 'drop-shadow shadow-black text-white w-full w-36'
-                    }}
-                    style={e.smallStyle}
-                    as={Link}
-                    href={e.href}
-                  >
-                    {e.name}
-                  </Chip>
-                ) : (
-                  <Chip
-                    size='sm'
-                    color='secondary'
-                    variant='shadow'
-                    aria-label={e.name}
-                    classNames={{
-                      base: 'absolute md:hidden rounded-full left-[85px]',
-                      content: 'drop-shadow shadow-black text-white w-full w-36'
-                    }}
-                    style={e.smallStyle}
-                    as='span'
-                  >
-                    {e.name}
-                  </Chip>
-                )}
-              </div>
-            ))}
-          </div>
-        </SonarPulse>
-      </div>
+          <PlusLinearIcon className='text-white' size={44} />
+        </Button>
+      </section>
     </section>
   );
 }
-const buildCircle = (list: { name: string; href?: string }[]) => {
-  const num = list.length; // Number of Avatars
-  const radius = 180; // Distance from center
-  const start = -90; // Shift start from 0
-  const slice = 360 / num;
-
-  return list.map((item, idx) => {
-    const rotate = slice * idx + start;
-    return {
-      name: item.name,
-      href: item.href,
-      style: {
-        transform: `rotate(${rotate}deg) translate(${radius - 20}px) rotate(${-rotate}deg)`,
-        width: '195px'
-      },
-      smallStyle: {
-        transform: `rotate(${rotate}deg) translate(${radius - 60}px) rotate(${-rotate}deg)`
-      }
-    };
-  });
-};
 
 const wikipediaPages: Record<string, string> = {
   ar: 'https://ar.wikipedia.org/wiki/عناصر_الشخصية_الخمسة',

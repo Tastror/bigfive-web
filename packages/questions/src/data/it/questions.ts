@@ -78,7 +78,7 @@ const questions = [
   },
   {
     id: '8af754f2-68e9-48f3-8c5d-2e6633d4472c',
-    text: 'Prendo il controllo delle situazioni',
+    text: 'Prendo il comando',
     keyed: 'plus',
     domain: 'E',
     facet: 3
@@ -127,7 +127,7 @@ const questions = [
   },
   {
     id: 'e2028ad3-b128-4f76-be57-398bfe2aff22',
-    text: 'Mi piace la competizione',
+    text: 'Mi piace un buon litigio',
     keyed: 'minus',
     domain: 'A',
     facet: 4
@@ -141,14 +141,14 @@ const questions = [
   },
   {
     id: '481efd08-c810-43b1-a952-f8ac9052f96b',
-    text: 'Mi piace far baldoria',
+    text: 'Tendo agli eccessi',
     keyed: 'plus',
     domain: 'N',
     facet: 5
   },
   {
     id: '987efee2-899f-4a65-b9b5-1589ef0460d7',
-    text: 'Mi piace entusiasmarmi',
+    text: 'Amo le emozioni forti',
     keyed: 'plus',
     domain: 'E',
     facet: 5
@@ -183,7 +183,7 @@ const questions = [
   },
   {
     id: '899c3f66-51d0-46ea-963a-6fc36d3b3cb9',
-    text: 'Sono un tipo raggiante di gioia',
+    text: 'Sprizzo felicità',
     keyed: 'plus',
     domain: 'E',
     facet: 6
@@ -225,7 +225,7 @@ const questions = [
   },
   {
     id: '08ff6dca-02a5-4aeb-aaa4-2ecf2526f143',
-    text: 'Mi piace fare voli pindarici',
+    text: 'Mi piace perdermi in fantasie sfrenate',
     keyed: 'plus',
     domain: 'O',
     facet: 1
@@ -407,7 +407,7 @@ const questions = [
   },
   {
     id: 'c2038c12-7a37-47a8-9983-831bd6692aab',
-    text: 'Provo empatia per le persone inferiori a me',
+    text: 'Provo compassione per chi è meno fortunato di me',
     keyed: 'plus',
     domain: 'A',
     facet: 6
@@ -736,7 +736,7 @@ const questions = [
   },
   {
     id: '7317848c-3e1b-422f-bb16-02efc504f677',
-    text: 'Non sono preoccupato dalle difficoltà della società',
+    text: 'Le situazioni sociali difficili non mi turbano',
     keyed: 'minus',
     domain: 'N',
     facet: 4
@@ -778,7 +778,7 @@ const questions = [
   },
   {
     id: '10f90fa9-649c-4631-ac4c-3dd3f751597d',
-    text: 'Agisco in maniera istintiva e pazza',
+    text: 'Mi comporto in modo sfrenato e folle',
     keyed: 'plus',
     domain: 'E',
     facet: 5
