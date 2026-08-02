@@ -10,7 +10,6 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
-import { Analytics } from '@vercel/analytics/react';
 import useTextDirection from '@/hooks/use-text-direction';
 import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
@@ -117,7 +116,6 @@ export default async function RootLayout({
           </div>
         </Providers>
         <Script src={`${basePath}/sw.js`} strategy='beforeInteractive' />
-        <Analytics />
       </body>
       <GoogleAnalytics gaId={gaId} />
     </html>
