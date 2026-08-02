@@ -35,7 +35,14 @@ export default function Footer({ footerLinks }: FooterProps) {
       <div className='w-full flex justify-center mt-12'>
         <ul className='flex mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0'>
           {footerLinks.map((item, index) => (
-            <li key={index}>
+            <li
+              key={index}
+              className={
+                item.href === '/privacy' || item.href === '/faq'
+                  ? 'hidden md:list-item'
+                  : undefined
+              }
+            >
               <Link href={item.href} className='hover:underline me-4 md:me-6'>
                 {item.label}
               </Link>
