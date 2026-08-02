@@ -1,9 +1,11 @@
-import { getItems, getInfo } from '@bigfive-org/questions';
+import { getItems, getInfo, type Question } from '@bigfive-org/questions';
 import { Survey } from './survey';
 import { useTranslations } from 'next-intl';
 import { saveTest } from '@/actions';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { TestLanguageSwitch } from './test-language-switch';
+import simplifiedChineseQuestions from '../../../../../packages/questions/src/data/zh-cn/questions';
+import simplifiedChineseChoices from '../../../../../packages/questions/src/data/zh-cn/choices';
 
 const questionLanguages = getInfo().languages;
 
@@ -17,9 +19,13 @@ export default function TestPage({
   searchParams: { lang }
 }: Props) {
   unstable_setRequestLocale(locale);
+  const localeQuestionLanguage = locale === 'zh' ? 'zh-cn' : locale;
   const language =
-    lang || (questionLanguages.some((l) => l.id === locale) ? locale : 'en');
-  const questions = getItems(language);
+    lang ||
+    (questionLanguages.some((l) => l.id === localeQuestionLanguage)
+      ? localeQuestionLanguage
+      : 'en');
+  const questions = getQuestions(language);
   const t = useTranslations('test');
   return (
     <>
@@ -39,4 +45,17 @@ export default function TestPage({
       />
     </>
   );
+}
+
+function getQuestions(language: string): Question[] {
+  if (language !== 'zh-cn') return getItems(language);
+
+  return simplifiedChineseQuestions.map((question, index) => ({
+    ...question,
+    num: index + 1,
+    choices:
+      simplifiedChineseChoices[
+        question.keyed as keyof typeof simplifiedChineseChoices
+      ]
+  }));
 }

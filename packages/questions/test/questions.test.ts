@@ -32,4 +32,23 @@ describe('questions module tests', () => {
       return current
     })
   })
+
+  it('keeps simplified Chinese choices in the same display order', async () => {
+    const items = await getItems('zh-cn')
+    const expectedLabels = [
+      '完全不符合',
+      '比较不符合',
+      '不确定',
+      '比较符合',
+      '完全符合'
+    ]
+
+    const plusItem = items.find(({ keyed }) => keyed === 'plus')
+    const minusItem = items.find(({ keyed }) => keyed === 'minus')
+
+    expect(plusItem?.choices.map(({ text }) => text)).toEqual(expectedLabels)
+    expect(minusItem?.choices.map(({ text }) => text)).toEqual(expectedLabels)
+    expect(plusItem?.choices.map(({ score }) => score)).toEqual([1, 2, 3, 4, 5])
+    expect(minusItem?.choices.map(({ score }) => score)).toEqual([5, 4, 3, 2, 1])
+  })
 })

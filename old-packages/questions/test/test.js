@@ -61,6 +61,24 @@ test('test all languages', t => {
   languages.map(({ id }) => t.truthy(getItems(id, false), `${id} items ok`))
 })
 
+test('simplified Chinese choices keep the same display order', t => {
+  const items = getItems('zh-cn')
+  const expectedLabels = [
+    '完全不符合',
+    '比较不符合',
+    '不确定',
+    '比较符合',
+    '完全符合'
+  ]
+  const plusItem = items.find(({ keyed }) => keyed === 'plus')
+  const minusItem = items.find(({ keyed }) => keyed === 'minus')
+
+  t.deepEqual(plusItem.choices.map(({ text }) => text), expectedLabels)
+  t.deepEqual(minusItem.choices.map(({ text }) => text), expectedLabels)
+  t.deepEqual(plusItem.choices.map(({ score }) => score), [1, 2, 3, 4, 5])
+  t.deepEqual(minusItem.choices.map(({ score }) => score), [5, 4, 3, 2, 1])
+})
+
 test('translators are credited', t => {
   const translators = getTranslators()
   translators.forEach(translator => {
