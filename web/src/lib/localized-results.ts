@@ -5,6 +5,7 @@ import getResults, {
 import fi from '@/data/result-text/fi.json';
 import hi from '@/data/result-text/hi.json';
 import ja from '@/data/result-text/ja.json';
+import ko from '@/data/result-text/ko.json';
 import pl from '@/data/result-text/pl.json';
 import ru from '@/data/result-text/ru.json';
 import sv from '@/data/result-text/sv.json';
@@ -29,6 +30,7 @@ const translatedReports: Record<string, TranslationFields> = {
   fi,
   hi,
   ja,
+  ko,
   pl,
   ru,
   sv,

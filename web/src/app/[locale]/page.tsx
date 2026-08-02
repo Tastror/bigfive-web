@@ -152,6 +152,7 @@ const wikipediaPages: Record<string, string> = {
   id: 'https://id.wikipedia.org/wiki/Kepribadian_Big_Five',
   it: 'https://it.wikipedia.org/wiki/Big_Five_(psicologia)',
   ja: 'https://ja.wikipedia.org/wiki/ビッグファイブ_(心理学)',
+  ko: 'https://ko.wikipedia.org/wiki/5요인_성격_특성',
   pl: 'https://pl.wikipedia.org/wiki/Wielka_piątka',
   pt: 'https://pt.wikipedia.org/wiki/Cinco_grandes_(psicologia)',
   ru: 'https://ru.wikipedia.org/wiki/Большая_пятёрка_(психология)',

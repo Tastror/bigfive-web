@@ -7,6 +7,7 @@ import french from '../../../packages/questions/src/data/fr/questions';
 import indonesian from '../../../packages/questions/src/data/id/questions';
 import italian from '../../../packages/questions/src/data/it/questions';
 import japanese from '../../../packages/questions/src/data/ja/questions';
+import korean from '../../../packages/questions/src/data/ko/questions';
 import norwegian from '../../../packages/questions/src/data/no/questions';
 import polish from '../../../packages/questions/src/data/pl/questions';
 import brazilianPortuguese from '../../../packages/questions/src/data/pt-br/questions';
@@ -34,6 +35,7 @@ const localizedQuestions: Record<string, QuestionText[]> = {
   id: indonesian,
   it: italian,
   ja: japanese,
+  ko: korean,
   no: norwegian,
   pl: polish,
   'pt-br': brazilianPortuguese,
