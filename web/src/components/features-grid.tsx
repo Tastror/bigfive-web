@@ -16,8 +16,8 @@ const styles = tv({
   slots: {
     base: 'grid grid-cols-1 md:grid-cols-3 gap-4',
     card: 'border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]',
-    header: 'gap-2 pb-0',
-    body: '',
+    header: 'gap-2 pb-0 md:justify-center md:text-center',
+    body: 'md:text-center',
     iconWrapper:
       'flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500',
     title: 'text-base font-semibold',
