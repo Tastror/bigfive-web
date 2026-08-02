@@ -44,10 +44,16 @@ export const languages: Language[] = [
   { code: 'ru', name: 'Russian', countryCode: 'ru' },
   { code: 'th', name: 'Thai', countryCode: 'th' },
   {
-    code: 'zh',
-    name: 'Chinese',
+    code: 'zh-hans',
+    name: '简体中文',
     countryCode: 'cn',
-    map: ['zh-CN', 'zh-Hans', 'zh-Hant']
+    map: ['zh', 'zh-CN', 'zh-SG']
+  },
+  {
+    code: 'zh-hant',
+    name: '繁體中文',
+    countryCode: 'hk',
+    map: ['zh-TW', 'zh-HK', 'zh-MO']
   }
 ];
 

@@ -19,7 +19,8 @@ export default function TestPage({
   searchParams: { lang }
 }: Props) {
   unstable_setRequestLocale(locale);
-  const localeQuestionLanguage = locale === 'zh' ? 'zh-cn' : locale;
+  const localeQuestionLanguage =
+    locale === 'zh-hans' ? 'zh-cn' : locale === 'zh-hant' ? 'zh-hk' : locale;
   const language =
     lang ||
     (questionLanguages.some((l) => l.id === localeQuestionLanguage)

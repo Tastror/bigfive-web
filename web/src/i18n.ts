@@ -5,7 +5,10 @@ import { locales } from './config/site';
 export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as any)) notFound();
 
+  const messageLocale =
+    locale === 'zh-hans' || locale === 'zh-hant' ? 'zh' : locale;
+
   return {
-    messages: (await import(`./messages/${locale}.js`)).default
+    messages: (await import(`./messages/${messageLocale}.js`)).default
   };
 });
