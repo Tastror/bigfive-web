@@ -91,14 +91,6 @@ export const siteConfig = {
     {
       label: 'compare_with',
       href: '/compare'
-    },
-    {
-      label: 'privacy',
-      href: '/privacy'
-    },
-    {
-      label: 'faq',
-      href: '/faq'
     }
   ],
   footerLinks: [
