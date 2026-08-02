@@ -46,14 +46,15 @@ const polish = {
       }
     },
     description: {
-      top: "Poznaj siebie dzięki <violet>darmowemu</violet>, open-source'owemu testowi osobowości.",
+      top: 'Poznaj siebie lepiej dzięki <wiki>pięciu wielkim cechom osobowości</wiki>.',
+      wikipedia: 'Przeczytaj o Wielkiej Piątce w Wikipedii',
       subtop: '',
       subtop2:
         'jest najbardziej wiarygodnym i naukowo potwierdzonym modelem psychologicznym opisującym osobowość.',
       reference: `Testy i ocena użyte na tej stronie pochodzą z
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Następujący test zawiera 120 pytań. Odpowiedź na wszystkie zajmuje ok. 10 minut.',
+      info: 'Test składa się ze 120 pytań i zajmuje około 10 minut.',
       result:
         'Kiedy wypełnisz test, otrzymasz szczegółowy opis Twojej osobowości obejmujący pięć czynników:',
       tests_taken: 'dotychczasowe testy'

@@ -44,14 +44,15 @@ const icelandic = {
       }
     },
     description: {
-      top: 'Lærðu að þekkja sjálfan þig betur með <violet>ókeypis</violet> opnu persónuleikaprófi.',
+      top: 'Lærðu að þekkja sjálfan þig betur með <wiki>Big Five-persónuleikaþáttunum</wiki>.',
+      wikipedia: 'Lestu um Big Five-persónuleikaþættina á Wikipedia',
       subtop: 'The',
       subtop2:
         ' er vísindalega staðfestasta og áreiðanlegasta sálfræðilíkanið til að mæla persónuleika.',
       reference: `Próf og mat fyrir þessa síðu er safnað saman frá
         <a href="http://ipip.ori.org" rel="noopener" target="_blank"> ipip.ori.org </a>,
         birgðir eru frá <i> Johnson (2014) 120 hlutum IPIP NEO-PI-R </i>.`,
-      info: 'Eftirfarandi próf inniheldur 120 spurningar sem áætlað er að taki þig um það bil 10 mínútur.',
+      info: 'Prófið inniheldur 120 spurningar og tekur um 10 mínútur að ljúka.',
       result:
         'Eftir að prófinu lýkur færðu nákvæma persónuleikaskýrslu á eftirfarandi sviðum:',
       tests_taken: 'próf sem tekin hafa verið hingað til'

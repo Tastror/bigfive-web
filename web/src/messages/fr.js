@@ -45,14 +45,15 @@ const french = {
       }
     },
     description: {
-      top: 'Lgagnez à mieux vous connaître grâce à un test de personnalité <violet>gratuit</violet> et open source.',
+      top: 'Apprenez à mieux vous connaître grâce aux <wiki>cinq grands traits de personnalité</wiki>.',
+      wikipedia: 'Découvrir le modèle des Big Five sur Wikipédia',
       subtop: 'The',
       subtop2:
         ' is the most scientifically validated and reliable psychological model to measure personality.',
       reference: `Tests and evaluation for this site is gathered from
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Le test suivant contient 120 questions qui devraient vous prendre environ 10 minutes.',
+      info: 'Ce test comporte 120 questions et prend environ 10 minutes.',
       result:
         'After you have completed the test you will receive a detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'

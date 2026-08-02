@@ -44,14 +44,15 @@ const svenska = {
       }
     },
     description: {
-      top: 'Förstå dig själv och andra bättre med ett <violet>gratis</violet> personlighetstest med öppen källkod.',
+      top: 'Lär känna dig själv bättre genom <wiki>de fem stora personlighetsdragen</wiki>.',
+      wikipedia: 'Läs om femfaktorteorin på Wikipedia',
       subtop: '',
       subtop2:
         ' är en vetenskaplig och trovärdig psykologisk modell för att mäta personlighet.',
       reference: `Tester og evalueringer for bigfive-test.com er hentet fra
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Testet som följer har 120 frågor och beräknad tid är 10 minuter.',
+      info: 'Testet består av 120 frågor och tar cirka 10 minuter.',
       result:
         'När du har slutfört testet får du en detaljerad personlighetsrapport inom följande domäner:',
       tests_taken: 'test utförda hittills'

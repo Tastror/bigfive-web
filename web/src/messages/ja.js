@@ -44,14 +44,15 @@ const japanese = {
       }
     },
     description: {
-      top: '無料のオープンソースの性格検査で自分自身をよりよく知ることを学びましょう。',
+      top: '<wiki>ビッグファイブの性格特性</wiki>を通して、自分自身をより深く理解しましょう。',
+      wikipedia: 'ウィキペディアでビッグファイブについて読む',
       subtop: 'ザ・',
       subtop2:
         ' は、人格を測定するための最も科学的に検証された信頼できる心理モデルです。',
       reference: `Tests and evaluation for this site is gathered from
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: '次のテストには120の質問が含まれており、完了するまでに約10分かかると推定されています。',
+      info: 'このテストは120問で、所要時間は約10分です。',
       result:
         'テストが完了すると、次のドメインで詳細なパーソナリティレポートが届きます。',
       tests_taken: 'これまでに行われたテスト'

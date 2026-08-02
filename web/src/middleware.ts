@@ -29,7 +29,7 @@ export default function middleware(request: NextRequest) {
   if (hasLocalePrefix) return NextResponse.next();
 
   return NextResponse.redirect(
-    getPublicUrl(request, `/en${pathname === '/' ? '' : pathname}`),
+    getPublicUrl(request, `/zh-hans${pathname === '/' ? '' : pathname}`),
     308
   );
 }

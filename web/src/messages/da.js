@@ -45,14 +45,15 @@ const dansk = {
       }
     },
     description: {
-      top: 'Forstå dig selv og andre bedre med en <violet>gratis</violet> open source-personlighedstest.',
+      top: 'Lær dig selv bedre at kende gennem <wiki>Big Five-personlighedstrækkene</wiki>.',
+      wikipedia: 'Læs om femfaktormodellen på Wikipedia',
       subtop: '',
       subtop2:
         ' er en videnskabelig og troværdig psykologisk model til måling af personlighed.',
       reference: `Tester og evalueringer for bigfive-test.com er hentet fra
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Den følgende test har 120 spørgsmål, og den estimerede tid er 10 minutter.',
+      info: 'Testen består af 120 spørgsmål og tager cirka 10 minutter.',
       result:
         'Efter afslutningen af testen får du en detaljeret personlighedsrapport inden for følgende domæner:',
       tests_taken: 'tester utført hidtil'

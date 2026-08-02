@@ -2,18 +2,6 @@ import { MetadataRoute } from 'next';
 import { basePath, locales } from '@/config/site';
 import { getInfo } from '@bigfive-org/results';
 
-const articles = [
-  'agreeableness',
-  'conscientiousness',
-  'extraversion',
-  'neuroticism',
-  'openness',
-  'conscientiousness_longevity',
-  'bigfive_relationships',
-  'personality_diseases',
-  'the_dark_of_personality',
-  'link_between_personality_trais_psychological_needs'
-];
 const resultLanguages = getInfo().languages.map((l) => l.id);
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -63,24 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       // add lang
     },
     {
-      url: `${basePath}/about`,
-      lastModified: new Date()
-    },
-    {
       url: `${basePath}/faq`,
       lastModified: new Date()
     },
     {
       url: `${basePath}/privacy`,
       lastModified: new Date()
-    },
-    {
-      url: `${basePath}/articles`,
-      lastModified: new Date()
-    },
-    ...articles.map((article) => ({
-      url: `${basePath}/articles/${article}`,
-      lastModified: new Date()
-    }))
+    }
   ];
 }

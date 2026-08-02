@@ -2,7 +2,7 @@ import { getTranslations } from 'next-intl/server';
 
 export type SiteConfig = typeof siteConfig;
 
-export const basePath = 'https://bigfive-test.com';
+export const basePath = 'https://big5.tastror.com';
 
 export const supportEmail = 'bigfive-test@rubynor.com';
 
@@ -14,35 +14,6 @@ export type Language = {
 };
 
 export const languages: Language[] = [
-  { code: 'en', name: 'English', countryCode: 'us', map: ['en-GB'] },
-  { code: 'ar', name: 'Arabic', map: ['ar-sa'] },
-  { code: 'de', name: 'German', countryCode: 'de', map: ['de-DE'] },
-  {
-    code: 'es',
-    name: 'Spanish',
-    countryCode: 'es',
-    map: ['es-ES', 'es-US', 'es-MX', 'ca']
-  },
-  { code: 'fr', name: 'French', countryCode: 'fr', map: ['fr-FR', 'fr-CA'] },
-  { code: 'id', name: 'Indonesian', countryCode: 'id' },
-  { code: 'it', name: 'Italian', countryCode: 'it', map: ['it-IT'] },
-  { code: 'no', name: 'Norwegian', countryCode: 'no', map: ['nb', 'nn'] },
-  {
-    code: 'pt',
-    name: 'Portuguese',
-    countryCode: 'pt',
-    map: ['pt-BR', 'pt-PT']
-  },
-  { code: 'sv', name: 'Swedish', countryCode: 'se' },
-  { code: 'uk', name: 'Ukrainian', countryCode: 'ua' },
-  { code: 'da', name: 'Danish', countryCode: 'dk' },
-  { code: 'fi', name: 'Finnish', countryCode: 'fi' },
-  { code: 'hi', name: 'Hindi', countryCode: 'in' },
-  { code: 'is', name: 'Icelandic', countryCode: 'is' },
-  { code: 'ja', name: 'Japanese', countryCode: 'jp' },
-  { code: 'pl', name: 'Polish', countryCode: 'pl' },
-  { code: 'ru', name: 'Russian', countryCode: 'ru' },
-  { code: 'th', name: 'Thai', countryCode: 'th' },
   {
     code: 'zh-hans',
     name: '简体中文',
@@ -54,14 +25,43 @@ export const languages: Language[] = [
     name: '繁體中文',
     countryCode: 'hk',
     map: ['zh-TW', 'zh-HK', 'zh-MO']
-  }
+  },
+  { code: 'en', name: 'English', countryCode: 'us', map: ['en-GB'] },
+  { code: 'ar', name: 'العربية', map: ['ar-sa'] },
+  { code: 'de', name: 'Deutsch', countryCode: 'de', map: ['de-DE'] },
+  {
+    code: 'es',
+    name: 'Español',
+    countryCode: 'es',
+    map: ['es-ES', 'es-US', 'es-MX', 'ca']
+  },
+  { code: 'fr', name: 'Français', countryCode: 'fr', map: ['fr-FR', 'fr-CA'] },
+  { code: 'id', name: 'Bahasa Indonesia', countryCode: 'id' },
+  { code: 'it', name: 'Italiano', countryCode: 'it', map: ['it-IT'] },
+  { code: 'no', name: 'Norsk', countryCode: 'no', map: ['nb', 'nn'] },
+  {
+    code: 'pt',
+    name: 'Português',
+    countryCode: 'pt',
+    map: ['pt-BR', 'pt-PT']
+  },
+  { code: 'sv', name: 'Svenska', countryCode: 'se' },
+  { code: 'uk', name: 'Українська', countryCode: 'ua' },
+  { code: 'da', name: 'Dansk', countryCode: 'dk' },
+  { code: 'fi', name: 'Suomi', countryCode: 'fi' },
+  { code: 'hi', name: 'हिन्दी', countryCode: 'in' },
+  { code: 'is', name: 'Íslenska', countryCode: 'is' },
+  { code: 'ja', name: '日本語', countryCode: 'jp' },
+  { code: 'pl', name: 'Polski', countryCode: 'pl' },
+  { code: 'ru', name: 'Русский', countryCode: 'ru' },
+  { code: 'th', name: 'ไทย', countryCode: 'th' }
 ];
 
 export const locales = languages.map((lang) => lang.code) as string[];
 
 export const siteConfig = {
   name: 'Big Five Personality Test',
-  creator: '@maccyber',
+  creator: '@Tastror',
   description:
     'Learn to know yourself better with a free, open-source personality test.',
   navItems: [
@@ -76,14 +76,6 @@ export const siteConfig = {
     {
       label: 'compare',
       href: '/compare'
-    },
-    {
-      label: 'articles',
-      href: '/articles'
-    },
-    {
-      label: 'about',
-      href: '/about'
     }
   ],
   navMenuItems: [
@@ -100,16 +92,8 @@ export const siteConfig = {
       href: '/compare'
     },
     {
-      label: 'articles',
-      href: '/articles'
-    },
-    {
       label: 'privacy',
       href: '/privacy'
-    },
-    {
-      label: 'about',
-      href: '/about'
     },
     {
       label: 'faq',
@@ -122,16 +106,8 @@ export const siteConfig = {
       href: '/'
     },
     {
-      label: 'articles',
-      href: '/articles'
-    },
-    {
       label: 'privacy',
       href: '/privacy'
-    },
-    {
-      label: 'about',
-      href: '/about'
     },
     {
       label: 'faq',
@@ -139,10 +115,7 @@ export const siteConfig = {
     }
   ],
   links: {
-    github: 'https://github.com/rubynor/bigfive-web',
-    twitter: 'https://twitter.com/rubynor',
-    linkedIn: 'https://www.linkedin.com/company/rubynor-as/',
-    facebook: 'https://www.facebook.com/rubynorno'
+    github: 'https://github.com/Tastror/bigfive-web'
   }
 };
 

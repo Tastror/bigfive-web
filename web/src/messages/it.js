@@ -44,14 +44,15 @@ const italian = {
       }
     },
     description: {
-      top: 'Impara a conoscerti meglio con un test della personalità <violet>gratuito</violet> e open source.',
+      top: 'Impara a conoscerti meglio attraverso i <wiki>cinque grandi tratti della personalità</wiki>.',
+      wikipedia: 'Scopri i Big Five su Wikipedia',
       subtop: 'Il',
       subtop2:
         ' è il modello psicologico più scientificamente convalidato e affidabile per misurare la personalità.',
       reference: `I test e le valutazioni per questo sito sono raccolti da
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`,
-      info: 'Il seguente test contiene 120 domande che si stima richiederanno circa 10 minuti per il completamento.',
+      info: 'Il test contiene 120 domande e richiede circa 10 minuti.',
       result:
         'Dopo aver completato il test riceverai un rapporto dettagliato sulla personalità nei seguenti domini:',
       tests_taken: 'test effettuati finora'

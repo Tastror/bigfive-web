@@ -1,7 +1,7 @@
 const chinese = {
   language: {
-    label: 'Simple Chinese',
-    locale: 'zh'
+    label: '简体中文',
+    locale: 'zh-hans'
   },
   seo: {
     keywords:
@@ -9,12 +9,12 @@ const chinese = {
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
+      title: '免费开源的五大性格特质测试',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        '参加免费、开源的五大性格特质测试，了解自己的性格，并与伴侣、同事、朋友或家人比较。'
     },
     title: '五大人格测试',
-    call_to_action: '现在参加免费测试',
+    call_to_action: '参加免费测试',
     no_registration: '* 无需注册',
     tests_taken: '超过<green>{n}</green>人参加了测试',
     compare: {
@@ -36,21 +36,18 @@ const chinese = {
       scientific: {
         title: '科学',
         text: '五大人格是经过科学验证且可靠的心理模型'
-      },
-      translated: {
-        title: '已翻译',
-        text: '翻译成 20 多种语言。<a href="https://b5.translations.alheimsins.net/" rel="noreferrer" target="blank">点击这里</a>帮助翻译!'
       }
     },
     description: {
-      top: '通过免费的开源个性测试，学会更好地了解自己。',
+      top: '通过<wiki>五大性格特质</wiki>，学会更好地了解自己。',
+      wikipedia: '在维基百科中了解五大性格特质',
       subtop: '的',
       subtop2: ' 是衡量人格最科学、最可靠的心理模型。',
       reference: `此站点的测试和评估来自
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: '以下测试包含 120 个问题，估计需要大约 10 分钟才能完成。',
-      result: '完成测试后，您将取得与详尽地人格报告。该报告将记载以下领域：',
+      info: '本测试包含 120 道题，完成测试大约需要 10 分钟。',
+      result: '完成测试后，您将获得一份详细的性格报告，涵盖以下五个领域：',
       tests_taken: '目前为止完成的测验'
     }
   },
@@ -62,12 +59,10 @@ const chinese = {
     }
   },
   toolbar: {
-    home: '首頁',
+    home: '首页',
     result: '结果',
     compare: '比较',
-    articles: '文章',
     privacy: '隐私',
-    about: '关于我们',
     see_results: '查看您的结果',
     compare_with: '与其他人比较',
     faq: 'FAQ'
@@ -93,31 +88,31 @@ const chinese = {
     and: '和',
     pages: '页面',
     languages: '语言',
-    save: 'Save',
-    close: 'Close'
+    save: '保存',
+    close: '关闭'
   },
   form: {
-    information: 'Information',
-    informationText: 'We use the information you provide to serve you the',
-    mostAccurate: 'most accurate result possible',
-    readMoreAbout: 'Read more about',
+    information: '基本信息',
+    informationText: '我们会根据您提供的信息，尽可能生成',
+    mostAccurate: '准确的测试结果',
+    readMoreAbout: '进一步了解',
     privacy: 'privacy',
-    nextButton: 'Okey, next question',
-    declineButton: 'continue without sharing',
+    nextButton: '好的，下一题',
+    declineButton: '不提供信息并继续',
     prefferedLanguage: '我偏好的语言是',
     selectLanguage: '选择语言',
-    iama: 'I am a',
-    male: 'Male',
-    female: 'Female',
-    age: 'Age',
-    iam: 'I am',
-    yearsOld: 'years old',
-    ageWarning: 'You must be 16 or older',
+    iama: '我的性别是',
+    male: '男性',
+    female: '女性',
+    age: '年龄',
+    iam: '我今年',
+    yearsOld: '岁',
+    ageWarning: '您必须年满 16 岁',
     language: '语言',
-    gender: 'Gender',
-    confirmInfo: 'Confirm information',
-    confirm: 'Confirm',
-    toTestButton: 'Alrighty, take me to the test'
+    gender: '性别',
+    confirmInfo: '确认信息',
+    confirm: '确认',
+    toTestButton: '开始测试'
   },
   test: {
     next: '下一个',
@@ -126,47 +121,45 @@ const chinese = {
     seeResults: '查看结果'
   },
   big_five: {
-    title: 'What are the big five?',
+    title: '什么是五大性格特质？',
     seo: {
-      title: 'What are the big five?',
-      description: 'Read more about the big five'
+      title: '什么是五大性格特质？',
+      description: '进一步了解五大性格特质'
     }
   },
   openness_to_experience: {
     title: '经验开放性',
     seo: {
-      title: 'Overview of the domain Openness To Experience.',
-      description:
-        'Read more about the Openness To Experience domain in the b5 model'
+      title: '经验开放性概述',
+      description: '进一步了解五大性格特质中的经验开放性'
     }
   },
   conscientiousness: {
     title: '尽责性',
     seo: {
-      title: 'Overview of the domain Conscientiousness',
-      description:
-        'Read more about the Conscientiousness domain in the b5 model'
+      title: '尽责性概述',
+      description: '进一步了解五大性格特质中的尽责性'
     }
   },
   extraversion: {
     title: '外向性',
     seo: {
-      title: 'Overview of the domain Extraversion',
-      description: 'Read more about the Extraversion domain in the b5 model'
+      title: '外向性概述',
+      description: '进一步了解五大性格特质中的外向性'
     }
   },
   agreeableness: {
     title: '亲和性',
     seo: {
-      title: 'Overview of the domain Agreeableness',
-      description: 'Read more about the agreeableness domain in the b5 model'
+      title: '亲和性概述',
+      description: '进一步了解五大性格特质中的亲和性'
     }
   },
   neuroticism: {
     title: '神经质',
     seo: {
-      title: 'Overview of the domain Neuroticism',
-      description: 'Read more about the Neuroticism domain in the b5 model'
+      title: '神经质概述',
+      description: '进一步了解五大性格特质中的神经质'
     }
   },
   getCompare: {
@@ -177,14 +170,14 @@ const chinese = {
     needToAddPeople: '您需要添加要比较的人',
     addAnother: '添加其他人',
     addPerson: '添加人员',
-    comparePeople: '比较人',
+    comparePeople: '比较人员',
     nameOfPerson: '此人的姓名',
     urlOrId: '用于比较的 URL 或 ID',
     name: '姓名'
   },
   results: {
     theBigFive: '五大',
-    score: '得分',
+    score: '分数',
     important: '重要！',
     saveResults: '保存以下 ID 以查看以后的结果或',
     compare: '比较',
@@ -192,7 +185,7 @@ const chinese = {
     seo: {
       title: 'My results from the BigFive personality test',
       description:
-        'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
+        '查看我的五大性格特质测试结果，并比较神经质、经验开放性、尽责性、外向性和亲和性。'
     }
   },
   getResult: {

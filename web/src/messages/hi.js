@@ -43,14 +43,15 @@ const hindi = {
       }
     },
     description: {
-      top: 'एक मुक्त, मुक्त-स्रोत व्यक्तित्व परीक्षण के साथ खुद को बेहतर जानना सीखें।',
+      top: '<wiki>बिग फ़ाइव व्यक्तित्व लक्षणों</wiki> के माध्यम से खुद को बेहतर समझें।',
+      wikipedia: 'विकिपीडिया पर बिग फ़ाइव व्यक्तित्व लक्षणों के बारे में पढ़ें',
       subtop: 'The',
       subtop2:
         ' is the most scientifically validated and reliable psychological model to measure personality.',
       reference: `Tests and evaluation for this site is gathered from
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'निम्नलिखित परीक्षण में 120 प्रश्न शामिल हैं जिन्हें पूरा करने में आपको लगभग 10 मिनट लगने का अनुमान है।',
+      info: 'इस परीक्षण में 120 प्रश्न हैं और इसे पूरा करने में लगभग 10 मिनट लगते हैं।',
       result:
         'After you have completed the test you will receive a detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'

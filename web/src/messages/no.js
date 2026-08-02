@@ -45,14 +45,15 @@ const norsk = {
       }
     },
     description: {
-      top: 'Forstå deg selv og andre bedre med en <violet>gratis</violet>, open-source personlighetstest.',
+      top: 'Bli bedre kjent med deg selv gjennom <wiki>de fem store personlighetstrekkene</wiki>.',
+      wikipedia: 'Les om femfaktormodellen på Wikipedia',
       subtop: '',
       subtop2:
         ' er en vitenskapelig og troverdig psykologisk modell for å måle personlighet.',
       reference: `Tester og evalueringer for bigfive-test.com er hentet fra
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Testen som følger har 120 spørsmål og estimert tidsbruk er 10 minutter.',
+      info: 'Testen består av 120 spørsmål og tar omtrent 10 minutter.',
       result:
         'Etter at testen er gjennomført vil du bli presentert en detaljert personlighetsrapport innen følgende domener:',
       tests_taken: 'tester utført så langt'

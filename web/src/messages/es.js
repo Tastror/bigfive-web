@@ -44,14 +44,15 @@ const spanish = {
       }
     },
     description: {
-      top: 'Aprende a conocerte mejor con un test de personalidad <violet>gratuito</violet> y open-source',
+      top: 'Aprende a conocerte mejor a través de los <wiki>cinco grandes rasgos de personalidad</wiki>.',
+      wikipedia: 'Leer sobre los cinco grandes rasgos en Wikipedia',
       subtop: 'el',
       subtop2:
         ' es el modelo psicológico más confiable y científicamente validado para medir la personalidad.',
       reference: `Las pruebas y la evaluación de este sitio se obtienen de
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
-      info: 'La siguiente prueba contiene 120 preguntas que estimamos le tomará unos 10 minutos completar.',
+      info: 'Esta prueba contiene 120 preguntas y tarda unos 10 minutos en completarse.',
       result:
         'Una vez que haya completado la prueba, recibirá un informe de personalidad detallado en los siguientes dominios:',
       tests_taken: 'pruebas tomadas hasta ahora'

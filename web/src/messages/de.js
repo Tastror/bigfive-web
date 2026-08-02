@@ -46,7 +46,8 @@ const deutsh = {
       }
     },
     description: {
-      top: 'Lernen Sie sich besser kennen mithilfe dieses <violet>kostenlosen</violet>, open-source Persönlichkeitstests.',
+      top: 'Lernen Sie sich durch die <wiki>Big-Five-Persönlichkeitsmerkmale</wiki> besser kennen.',
+      wikipedia: 'Mehr über die Big Five auf Wikipedia erfahren',
       subtop: 'Der',
       subtop2:
         ' ist das am meisten wissenschaftlich validierte und zuverlässigste psychologische Modell zur Persönlichkeitsmessung.',

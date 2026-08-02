@@ -46,14 +46,15 @@ const portuguese = {
       }
     },
     description: {
-      top: 'Aprenda a se conhecer melhor com um teste de personalidade <violet>gratuito</violet> e de código aberto.',
+      top: 'Conheça-se melhor por meio dos <wiki>cinco grandes traços de personalidade</wiki>.',
+      wikipedia: 'Leia sobre os Cinco Grandes na Wikipédia',
       subtop: 'O',
       subtop2:
         ' é o modelo psicológico mais validado cientificamente e confiável para medir a personalidade.',
       reference: `Os testes e a avaliação deste site são coletados de
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'O teste a seguir contém 120 questões que levam cerca de 10 minutos para serem concluídas.',
+      info: 'Este teste contém 120 perguntas e leva cerca de 10 minutos para ser concluído.',
       result:
         'Depois de concluir o teste, você receberá um relatório de personalidade detalhado nos seguintes domínios:',
       tests_taken: 'testes feitos até agora'

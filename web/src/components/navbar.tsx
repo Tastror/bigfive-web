@@ -9,7 +9,6 @@ import {
   NavbarItem,
   NavbarMenuItem
 } from '@nextui-org/navbar';
-import LocaleSwitcher from '@/components/locale-switcher';
 import LocaleSwitcherFull from '@/components/locale-switcher-full';
 import { Link } from '@nextui-org/link';
 
@@ -19,7 +18,7 @@ import { siteConfig } from '@/config/site';
 import clsx from 'clsx';
 
 import { ThemeSwitch } from '@/components/theme-switch';
-import { TwitterIcon, GithubIcon, Logo } from '@/components/icons';
+import { GithubIcon, Logo } from '@/components/icons';
 import { Link as NextLink } from '../navigation';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
@@ -84,9 +83,6 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
         justify='end'
       >
         <NavbarItem className='hidden sm:flex gap-2'>
-          <Link isExternal href={siteConfig.links.twitter} aria-label='Twitter'>
-            <TwitterIcon className='text-default-500' />
-          </Link>
           <Link isExternal href={siteConfig.links.github} aria-label='Github'>
             <GithubIcon className='text-default-500' />
           </Link>
@@ -97,9 +93,9 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className='md:hidden basis-1 pl-4' justify='end'>
+      <NavbarContent className='md:hidden basis-1 pl-1 gap-1' justify='end'>
         <NavbarItem>
-          <LocaleSwitcher />
+          <LocaleSwitcherFull compact />
         </NavbarItem>
         <NavbarItem>
           <Link isExternal href={siteConfig.links.github} aria-label='Github'>

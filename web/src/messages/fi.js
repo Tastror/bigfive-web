@@ -44,14 +44,15 @@ const finnish = {
       }
     },
     description: {
-      top: 'Opi tuntemaan itsesi paremmin <violet>ilmaisen</violet>, avoimen lähdekoodin persoonallisuustestin avulla.',
+      top: 'Opi tuntemaan itsesi paremmin <wiki>viiden suuren persoonallisuuspiirteen</wiki> avulla.',
+      wikipedia: 'Lue viidestä suuresta persoonallisuuspiirteestä Wikipediassa',
       subtop: 'The',
       subtop2:
         ' on tieteellisesti validoitu ja luotettava psykologinen malli persoonallisuuden mittaamiseksi.',
       reference: `Tämän sivuston testit ja arvioinnit on kerätty osoitteesta
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   varasto on peräisin <i>Johnsonin (2014) 120 nimikkeen IPIP NEO-PI-R</i>.`,
-      info: 'Seuraava testi sisältää 120 kysymystä, joiden suorittamisen arvioidaan vievän noin 10 minuuttia.',
+      info: 'Testissä on 120 kysymystä, ja sen tekeminen kestää noin 10 minuuttia.',
       result:
         'Testin suorittamisen jälkeen saat yksityiskohtaisen persoonallisuusraportin seuraavista verkkotunnuksista:',
       tests_taken: 'toistaiseksi tehdyt testit'

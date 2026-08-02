@@ -44,14 +44,15 @@ const arabic = {
       }
     },
     description: {
-      top: 'تعرّف على نفسك أكثر عن طريق هذا الاختبار <violet>المجاني</violet> ومفتوح المصدر',
+      top: 'تعرّف على نفسك بشكل أفضل من خلال <wiki>عناصر الشخصية الخمسة</wiki>.',
+      wikipedia: 'اقرأ عن عناصر الشخصية الخمسة في ويكيبيديا',
       subtop: 'The',
       subtop2:
         ' is the most scientifically validated and reliable psychological model to measure personality.',
       reference: `Tests and evaluation for this site is gathered from
 <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
 inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'الاختبار يحتوي على ١٢٠ سؤال وسيستغرق منك إتمامه حوالي ١٠ دقائق',
+      info: 'يتكوّن الاختبار من 120 سؤالًا ويستغرق إكماله نحو 10 دقائق.',
       result:
         'After you have completed the test you will receive a detailed personality report in the following domains:',
       tests_taken: 'tests taken so far'

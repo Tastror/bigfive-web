@@ -45,14 +45,15 @@ const indonesian = {
       }
     },
     description: {
-      top: 'Belajar mengenal diri Anda lebih baik dengan tes kepribadian sumber terbuka <violet>gratis</violet>.',
+      top: 'Kenali diri Anda lebih baik melalui <wiki>lima besar ciri kepribadian</wiki>.',
+      wikipedia: 'Baca tentang kepribadian Big Five di Wikipedia',
       subtop: 'Itu',
       subtop2:
         ' adalah model psikologis yang paling tervalidasi secara ilmiah dan dapat diandalkan untuk mengukur kepribadian.',
       reference: `Tes dan evaluasi untuk situs ini dikumpulkan dari
   <a href="http://ipip.ori.org" rel="noopener" target="_blank">ipip.ori.org</a>,
   inventaris berasal<i>Johnson (2014) 120-item IPIP NEO-PI-R</i>.`,
-      info: 'Tes berikut berisi 120 soal yang diperkirakan membutuhkan waktu sekitar 10 menit untuk diselesaikan.',
+      info: 'Tes ini terdiri dari 120 pertanyaan dan membutuhkan sekitar 10 menit untuk diselesaikan.',
       result:
         'Setelah Anda menyelesaikan tes, Anda akan menerima laporan kepribadian terperinci di domain berikut: ',
       tests_taken: 'tes yang dilakukan sejauh ini'
