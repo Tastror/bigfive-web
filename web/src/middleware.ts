@@ -15,8 +15,10 @@ export default function middleware(request: NextRequest) {
   const canonicalLocale = localeAliases[requestedLocale.toLowerCase()];
 
   if (canonicalLocale) {
-    const url = request.nextUrl.clone();
-    url.pathname = `/${canonicalLocale}${segments.length ? `/${segments.join('/')}` : ''}`;
+    const url = getPublicUrl(
+      request,
+      `/${canonicalLocale}${segments.length ? `/${segments.join('/')}` : ''}`
+    );
     return NextResponse.redirect(url, 308);
   }
 
@@ -26,9 +28,31 @@ export default function middleware(request: NextRequest) {
 
   if (hasLocalePrefix) return NextResponse.next();
 
-  const url = request.nextUrl.clone();
-  url.pathname = `/en${pathname === '/' ? '' : pathname}`;
-  return NextResponse.rewrite(url);
+  return NextResponse.redirect(
+    getPublicUrl(request, `/en${pathname === '/' ? '' : pathname}`),
+    308
+  );
+}
+
+function getPublicUrl(request: NextRequest, pathname: string) {
+  const forwardedHost = request.headers
+    .get('x-forwarded-host')
+    ?.split(',')[0]
+    .trim();
+  const forwardedProto = request.headers
+    .get('x-forwarded-proto')
+    ?.split(',')[0]
+    .trim();
+  const protocol =
+    forwardedProto === 'http' || forwardedProto === 'https'
+      ? forwardedProto
+      : request.nextUrl.protocol.slice(0, -1);
+  const host = forwardedHost || request.nextUrl.host;
+  const url = new URL(`${protocol}://${host}`);
+
+  url.pathname = pathname;
+  url.search = request.nextUrl.search;
+  return url;
 }
 
 export const config = {
