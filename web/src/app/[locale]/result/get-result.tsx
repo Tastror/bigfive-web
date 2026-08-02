@@ -1,10 +1,9 @@
 'use client';
 
 import { button as buttonStyles } from '@nextui-org/theme';
-import { Link } from '@nextui-org/link';
 import clsx from 'clsx';
 import { Button } from '@nextui-org/button';
-import { useRouter } from '@/navigation';
+import { Link, useRouter } from '@/navigation';
 import { formatAndValidateId, formatId } from '@/lib/helpers';
 import { useEffect, useMemo, useState } from 'react';
 import { Input } from '@nextui-org/input';
@@ -56,7 +55,6 @@ export const GetResultPage = ({
           isInvalid={isInvalidId}
           color={isInvalidId ? 'danger' : 'default'}
           onValueChange={setId}
-          errorMessage={isInvalidId && 'Please enter a valid ID'}
           value={id}
         />
       </div>

@@ -32,19 +32,27 @@ import {
 interface CompareProps {
   addPersonText: string;
   comparePeopleText: string;
+  nameText: string;
+  emptyText: string;
+  closeText: string;
+  saveText: string;
   paramId?: string;
 }
 
 export const ComparePeople = ({
   addPersonText,
   comparePeopleText,
+  nameText,
+  emptyText,
+  closeText,
+  saveText,
   paramId
 }: CompareProps) => {
   const router = useRouter();
   const columns = [
     {
       key: 'name',
-      label: 'NAME'
+      label: nameText
     },
     {
       key: 'id',
@@ -134,7 +142,7 @@ export const ComparePeople = ({
       <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-[1fr_1fr_auto] md:items-end md:mb-2'>
         <Input
           type='text'
-          label='Name'
+          label={nameText}
           autoFocus
           labelPlacement='outside'
           placeholder='Arthur Dent'
@@ -155,9 +163,6 @@ export const ComparePeople = ({
           value={id}
           onValueChange={setId}
           isInvalid={isInvalidId}
-          errorMessage={
-            isInvalidId && 'Please enter a valid ID and not a duplicate.'
-          }
         />
         <div className='flex w-full justify-end md:w-auto'>
           <Button
@@ -182,7 +187,7 @@ export const ComparePeople = ({
               <TableColumn key={column.key}>{column.label}</TableColumn>
             )}
           </TableHeader>
-          <TableBody items={rows} emptyContent='No rows to display.'>
+          <TableBody items={rows} emptyContent={emptyText}>
             {(item) => (
               <TableRow key={item.id}>
                 {(columnKey) =>
@@ -227,13 +232,13 @@ export const ComparePeople = ({
           {(onClose) => (
             <>
               <ModalHeader className='flex flex-col gap-1'>
-                Edit person
+                {nameText}
               </ModalHeader>
               <ModalBody>
                 <Input
                   type='text'
                   autoFocus
-                  label='Name'
+                  label={nameText}
                   labelPlacement='outside'
                   placeholder='Arthur Dent'
                   startContent={
@@ -253,15 +258,14 @@ export const ComparePeople = ({
                   value={editId}
                   onValueChange={setEditId}
                   isInvalid={isInvalidEditId}
-                  errorMessage={isInvalidEditId && 'Please enter a valid ID.'}
                 />
               </ModalBody>
               <ModalFooter>
                 <Button color='danger' variant='light' onPress={onClose}>
-                  Close
+                  {closeText}
                 </Button>
                 <Button color='primary' onPress={() => editPerson(onClose)}>
-                  Save
+                  {saveText}
                 </Button>
               </ModalFooter>
             </>

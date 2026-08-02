@@ -7,13 +7,11 @@ import { Progress } from '@nextui-org/progress';
 import confetti from 'canvas-confetti';
 import { useRouter } from '@/navigation';
 
-import { CloseIcon, InfoIcon } from '@/components/icons';
 import { type Question } from '@bigfive-org/questions';
 import { sleep, formatTimer, isDev } from '@/lib/helpers';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
 import { type Answer } from '@/types';
-import { Card, CardHeader } from '@nextui-org/card';
 import { saveResultToHistory } from '@/lib/result-history';
 
 interface SurveyProps {
@@ -38,7 +36,6 @@ export const Survey = ({
   const [questionsPerPage, setQuestionsPerPage] = useState(1);
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [loading, setLoading] = useState(false);
-  const [restored, setRestored] = useState(false);
   const [inProgress, setInProgress] = useState(false);
   const { width } = useWindowDimensions();
   const seconds = useTimer();
@@ -132,7 +129,6 @@ export const Survey = ({
     if (inProgress) return;
     setCurrentQuestionIndex((prev) => prev + questionsPerPage);
     window.scrollTo(0, 0);
-    if (restored) setRestored(false);
   }
 
   function skipToEnd() {
@@ -177,15 +173,7 @@ export const Survey = ({
       const { answers, currentQuestionIndex } = JSON.parse(data);
       setAnswers(answers);
       setCurrentQuestionIndex(currentQuestionIndex);
-      setRestored(true);
     }
-  }
-
-  function clearDataInLocalStorage() {
-    console.log('Clearing data from local storage');
-    localStorage.removeItem('inProgress');
-    localStorage.removeItem('b5data');
-    location.reload();
   }
 
   return (
@@ -201,34 +189,6 @@ export const Survey = ({
         size='lg'
         color='secondary'
       />
-      {restored && (
-        <Card className='mt-4 bg-warning/20 text-warning-600 dark:text-warning'>
-          <CardHeader className='justify-between'>
-            <Button isIconOnly variant='light' color='warning'>
-              <InfoIcon />
-            </Button>
-            <p>
-              Your answers has been restored. Click here to&nbsp;
-              <a
-                className='underline cursor-pointer'
-                onClick={clearDataInLocalStorage}
-                aria-label='Clear data'
-              >
-                start a new test
-              </a>
-              .
-            </p>
-            <Button
-              isIconOnly
-              variant='light'
-              color='warning'
-              onClick={() => setRestored(false)}
-            >
-              <CloseIcon />
-            </Button>
-          </CardHeader>
-        </Card>
-      )}
       {currentQuestions.map((question) => (
         <div key={'q' + question.num}>
           <h2 className='text-2xl my-4'>{question.text}</h2>

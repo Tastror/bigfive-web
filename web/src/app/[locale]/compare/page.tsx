@@ -15,6 +15,7 @@ export default function ComparePage({
 }: Props) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('getCompare');
+  const common = useTranslations('common');
   return (
     <div className='min-h-[60vh] pb-10'>
       <h1 className={title()}>{t('title')}</h1>
@@ -25,6 +26,10 @@ export default function ComparePage({
         <ComparePeople
           addPersonText={t('addPerson')}
           comparePeopleText={t('comparePeople')}
+          nameText={t('nameOfPerson')}
+          emptyText={t('needToAddPeople')}
+          closeText={common('close')}
+          saveText={common('save')}
           paramId={id}
         />
       </Suspense>
