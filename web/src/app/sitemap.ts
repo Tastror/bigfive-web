@@ -49,14 +49,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${basePath}/test`,
       lastModified: new Date()
       // add lang
-    },
-    {
-      url: `${basePath}/faq`,
-      lastModified: new Date()
-    },
-    {
-      url: `${basePath}/privacy`,
-      lastModified: new Date()
     }
   ];
 }

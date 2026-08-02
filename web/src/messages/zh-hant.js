@@ -60,10 +60,8 @@ const traditionalChinese = {
     home: '首頁',
     result: '結果',
     compare: '比較',
-    privacy: '隱私權',
     see_results: '查看您的結果',
     compare_with: '與他人比較',
-    faq: '常見問題'
   },
   facets: {
     openness_to_experience: {
@@ -94,7 +92,6 @@ const traditionalChinese = {
     informationText: '我們會根據您提供的資訊，盡可能產生',
     mostAccurate: '準確的測驗結果',
     readMoreAbout: '進一步了解',
-    privacy: '隱私權',
     nextButton: '好的，下一題',
     declineButton: '不提供資訊並繼續',
     prefferedLanguage: '我偏好的語言是',

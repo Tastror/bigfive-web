@@ -8,7 +8,6 @@ import {
   ModalFooter,
   ModalHeader
 } from '@nextui-org/modal';
-import { Link } from '@nextui-org/link';
 import { useEffect, useState } from 'react';
 import { SettingsIcon } from './icons';
 import { CookieConsentSettings } from './cookie-consent-settings';
@@ -57,9 +56,6 @@ export default function CookieBanner() {
           </ModalHeader>
           <ModalBody>
             <p>We use cookies on our site.</p>
-            <p>
-              Read more in our <Link href='/privacy'>privacy policy</Link>.
-            </p>
           </ModalBody>
           <ModalFooter className='justify-start'>
             <div className='grow'>

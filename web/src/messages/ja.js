@@ -69,11 +69,9 @@ const japanese = {
     result: '結果',
     compare: '比較する',
     articles: '記事',
-    privacy: 'プライバシー',
     about: '約',
     see_results: '結果を見る',
     compare_with: '他の人と比較する',
-    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
@@ -105,7 +103,6 @@ const japanese = {
       '私たちはあなたにサービスを提供するためにあなたが提供した情報を使用します',
     mostAccurate: '可能な限り最も正確な結果',
     readMoreAbout: 'についてもっと読む',
-    privacy: 'プライバシー',
     nextButton: 'オーケー、次の質問',
     declineButton: '共有せずに続行',
     prefferedLanguage: '私の好きな言語は',

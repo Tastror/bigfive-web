@@ -97,14 +97,6 @@ export const siteConfig = {
     {
       label: 'home',
       href: '/'
-    },
-    {
-      label: 'privacy',
-      href: '/privacy'
-    },
-    {
-      label: 'faq',
-      href: '/faq'
     }
   ],
   links: {

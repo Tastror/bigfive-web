@@ -68,11 +68,9 @@ const hindi = {
     result: 'परिणाम',
     compare: 'तुलना',
     articles: 'सामग्री',
-    privacy: 'एकांत',
     about: 'के बारे में',
     see_results: 'अपना परिणाम देखें',
     compare_with: 'दूसरों के साथ तुलना करें',
-    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
@@ -103,7 +101,6 @@ const hindi = {
     informationText: 'We use the information you provide to serve you the',
     mostAccurate: 'most accurate result possible',
     readMoreAbout: 'Read more about',
-    privacy: 'privacy',
     nextButton: 'Okey, next question',
     declineButton: 'continue without sharing',
     prefferedLanguage: 'मेरी पसंदीदा भाषा है',

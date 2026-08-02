@@ -69,11 +69,9 @@ const finnish = {
     result: 'Tulos',
     compare: 'Vertailla',
     articles: 'Artikkelit',
-    privacy: 'Yksityisyys',
     about: 'Noin',
     see_results: 'Katso tulokset',
     compare_with: 'Vertaa muihin',
-    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
@@ -104,7 +102,6 @@ const finnish = {
     informationText: 'Käytämme antamiasi tietoja palvelemaan sinua',
     mostAccurate: 'mahdollisimman tarkka tulos',
     readMoreAbout: 'Lue lisää',
-    privacy: 'yksityisyyttä',
     nextButton: 'Okey, seuraava kysymys',
     declineButton: 'jatka jakamatta',
     prefferedLanguage: 'Haluttu kieleni on',

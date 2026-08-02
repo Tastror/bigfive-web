@@ -69,11 +69,9 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     result: 'Risultato',
     compare: 'Comparare',
     articles: 'Articoli',
-    privacy: 'Privacy',
     about: 'About',
     see_results: 'Visualizza i risultati',
     compare_with: 'Compara con altri',
-    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
@@ -104,7 +102,6 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     informationText: 'Usiamo le informazioni fornite per servirti',
     mostAccurate: 'risultato più accurato possibile',
     readMoreAbout: 'Per saperne di più',
-    privacy: 'privacy',
     nextButton: 'Okey, prossima domanda',
     declineButton: 'continua senza condividere',
     prefferedLanguage: 'La mia lingua preferita è',

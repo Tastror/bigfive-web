@@ -69,11 +69,9 @@ const thai = {
     result: 'ผลลัพธ์',
     compare: 'การเปรียบเทียบ',
     articles: 'บทความ',
-    privacy: 'ความเป็นส่วนตัว',
     about: 'เกี่ยวกับเรา',
     see_results: 'ดูผลลัพธ์ของคุณ',
     compare_with: 'เปรียบเทียบกับคนอื่นๆ',
-    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
@@ -104,7 +102,6 @@ const thai = {
     informationText: 'เราใช้ข้อมูลที่คุณให้มาเพื่อให้คุณ',
     mostAccurate: 'ได้ผลลัพธ์ที่ถูกต้องที่สุด',
     readMoreAbout: 'อ่านเพิ่มเติมเกี่ยวกับ',
-    privacy: 'ความเป็นส่วนตัว',
     nextButton: 'โอเค คำถามต่อไป',
     declineButton: 'ดำเนินการต่อโดยไม่ต้องแชร์',
     prefferedLanguage: 'ภาษาที่ฉันต้องการคือ',

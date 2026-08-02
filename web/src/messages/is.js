@@ -69,11 +69,9 @@ const icelandic = {
     result: 'Niðurstaða',
     compare: 'Berðu saman',
     articles: 'Greinar',
-    privacy: 'Persónuvernd',
     about: 'Um það bil',
     see_results: 'Sjáðu niðurstöðurnar þínar',
     compare_with: 'Berðu saman við aðra',
-    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
@@ -104,7 +102,6 @@ const icelandic = {
     informationText: 'Við notum upplýsingarnar sem þú gefur til að þjóna þér',
     mostAccurate: 'nákvæmasta niðurstaðan möguleg',
     readMoreAbout: 'Lestu meira um',
-    privacy: 'næði',
     nextButton: 'Ókey, næsta spurning',
     declineButton: 'halda áfram án þess að deila',
     prefferedLanguage: 'Æskilegt tungumál mitt er',

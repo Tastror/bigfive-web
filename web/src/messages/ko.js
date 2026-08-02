@@ -66,11 +66,9 @@ const korean = {
     result: '결과',
     compare: '비교',
     articles: '글',
-    privacy: '개인정보 보호',
     about: '소개',
     see_results: '내 결과 보기',
     compare_with: '다른 사람과 비교',
-    faq: '자주 묻는 질문'
   },
   facets: {
     openness_to_experience: {
@@ -101,7 +99,6 @@ const korean = {
     informationText: '입력한 정보는 가능한 한',
     mostAccurate: '정확한 결과를 제공하는 데 사용됩니다',
     readMoreAbout: '자세히 알아보기',
-    privacy: '개인정보 보호',
     nextButton: '확인, 다음 질문',
     declineButton: '정보를 제공하지 않고 계속하기',
     prefferedLanguage: '선호 언어',

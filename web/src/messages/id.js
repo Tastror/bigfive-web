@@ -70,11 +70,9 @@ const indonesian = {
     result: 'Hasil',
     compare: 'Bandingkan',
     articles: 'Artikel',
-    privacy: 'Privasi',
     about: 'Tentang',
     see_results: 'Lihat hasil Anda',
     compare_with: 'Bandingkan dengan orang lain',
-    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
@@ -106,7 +104,6 @@ const indonesian = {
       'Kami menggunakan informasi yang Anda berikan untuk melayani Anda',
     mostAccurate: 'hasil yang paling akurat',
     readMoreAbout: 'Baca lebih lanjut tentang',
-    privacy: 'privasi',
     nextButton: 'Oke, pertanyaan selanjutnya',
     declineButton: 'lanjutkan tanpa berbagi',
     prefferedLanguage: 'Bahasa pilihan saya adalah',

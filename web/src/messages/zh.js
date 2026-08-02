@@ -61,10 +61,8 @@ const chinese = {
     home: '首页',
     result: '结果',
     compare: '比较',
-    privacy: '隐私',
     see_results: '查看您的结果',
     compare_with: '与其他人比较',
-    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
@@ -95,7 +93,6 @@ const chinese = {
     informationText: '我们会根据您提供的信息，尽可能生成',
     mostAccurate: '准确的测试结果',
     readMoreAbout: '进一步了解',
-    privacy: 'privacy',
     nextButton: '好的，下一题',
     declineButton: '不提供信息并继续',
     prefferedLanguage: '我偏好的语言是',

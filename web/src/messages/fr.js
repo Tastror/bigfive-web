@@ -70,11 +70,9 @@ const french = {
     result: 'Résultat',
     compare: 'Comparer',
     articles: 'Des articles',
-    privacy: 'Intimité',
     about: 'Sur',
     see_results: 'Voir vos résultats',
     compare_with: 'Comparez avec les autres',
-    faq: 'FAQ'
   },
   facets: {
     openness_to_experience: {
@@ -105,7 +103,6 @@ const french = {
     informationText: 'We use the information you provide to serve you the',
     mostAccurate: 'most accurate result possible',
     readMoreAbout: 'Read more about',
-    privacy: 'privacy',
     nextButton: 'Okey, next question',
     declineButton: 'continue without sharing',
     prefferedLanguage: 'Ma langue préférée est',
