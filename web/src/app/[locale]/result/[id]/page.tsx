@@ -41,6 +41,7 @@ export default async function ResultPage({
     const reportLanguage = getReportLanguage(params.locale);
     report = await getTestResult(params.id.substring(0, 24), reportLanguage);
   } catch (error) {
+    console.error(error);
     throw new Error('Could not retrieve report');
   }
 

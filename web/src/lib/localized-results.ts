@@ -1,7 +1,4 @@
-import getResults, {
-  Domain,
-  generateResult as generateResultFromTemplate
-} from '@bigfive-org/results';
+import getResults, { Domain } from '@bigfive-org/results';
 import fi from '@/data/result-text/fi.json';
 import hi from '@/data/result-text/hi.json';
 import ja from '@/data/result-text/ja.json';
@@ -25,6 +22,16 @@ interface ResultTemplate {
   results: { score: Score; text: string }[];
   facets: { facet: number; title: string; text: string }[];
 }
+
+type ScoreValues = Record<
+  string,
+  {
+    result: Score;
+    count: number;
+    score: number;
+    facet: Record<string, { result: Score; count: number; score: number }>;
+  }
+>;
 
 const translatedReports: Record<string, TranslationFields> = {
   fi,
@@ -70,6 +77,39 @@ function createTemplate(fields: TranslationFields): ResultTemplate[] {
   }));
 }
 
+function generateResultFromTemplate(
+  scores: ScoreValues,
+  template: ResultTemplate[]
+): Domain[] {
+  return Object.keys(scores).map((domainId) => {
+    const score = scores[domainId];
+    const domain = template.find((item) => item.domain === domainId);
+
+    if (!domain) throw new Error(`Missing report template for ${domainId}`);
+
+    const result = domain.results.find((item) => item.score === score.result);
+    if (!result)
+      throw new Error(`Missing ${score.result} result for ${domainId}`);
+
+    return {
+      domain: domain.domain,
+      title: domain.title,
+      shortDescription: domain.shortDescription,
+      description: domain.description,
+      scoreText: result.score,
+      count: score.count,
+      score: score.score,
+      facets: domain.facets.flatMap((facet) => {
+        const facetScore = score.facet[facet.facet.toString()];
+        return facetScore
+          ? [{ ...facet, ...facetScore, scoreText: facetScore.result }]
+          : [];
+      }),
+      text: result.text
+    };
+  });
+}
+
 export function getLocalizedResults(
   language: string,
   scores: Parameters<typeof getResults>[0]['scores']
@@ -78,5 +118,8 @@ export function getLocalizedResults(
 
   if (!translatedReport) return getResults({ lang: language, scores });
 
-  return generateResultFromTemplate(scores, createTemplate(translatedReport));
+  return generateResultFromTemplate(
+    scores as ScoreValues,
+    createTemplate(translatedReport)
+  );
 }
