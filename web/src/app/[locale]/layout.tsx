@@ -11,8 +11,8 @@ import { basePath, getNavItems, locales, siteConfig } from '@/config/site';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getTranslations } from 'next-intl/server';
 import useTextDirection from '@/hooks/use-text-direction';
-import Script from 'next/script';
 import CookieBanner from '@/components/cookie-consent';
+import { BrowserRecovery } from '@/components/browser-recovery';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -105,6 +105,7 @@ export default async function RootLayout({
             { attribute: 'class', defaultTheme: 'light' } as ThemeProviderProps
           }
         >
+          <BrowserRecovery />
           <div className='relative flex flex-col h-screen'>
             <Navbar navItems={navItems} navMenuItems={navMenuItems} />
             <main className='container mx-auto max-w-7xl pt-10 sm:pt-16 px-4 sm:px-6 flex-grow'>
@@ -114,7 +115,6 @@ export default async function RootLayout({
             <Footer />
           </div>
         </Providers>
-        <Script src={`${basePath}/sw.js`} strategy='beforeInteractive' />
       </body>
       <GoogleAnalytics gaId={gaId} />
     </html>
