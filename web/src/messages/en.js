@@ -44,7 +44,7 @@ const english = {
       }
     },
     description: {
-      top: 'Learn to understand yourself better through the <wiki>Big Five personality traits</wiki>.',
+      top: 'Learn to understand yourself better through the <wiki>Big Five personality traits</wiki>\u2060.',
       wikipedia: 'Read about the Big Five personality traits on Wikipedia',
       subtop: 'The',
       subtop2:
