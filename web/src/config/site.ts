@@ -66,7 +66,7 @@ const additionalLanguages: Language[] = [
     countryCode: 'pt',
     map: ['pt-PT']
   },
-  { code: 'pt-br', name: 'Português (Brasil)', map: ['pt-BR'] },
+  { code: 'pt-br', name: 'Português (BR)', map: ['pt-BR'] },
   { code: 'ro', name: 'Română', map: ['ro-RO'] },
   { code: 'ru', name: 'Русский', countryCode: 'ru' },
   { code: 'sl', name: 'Slovenščina', map: ['sl-SI'] },

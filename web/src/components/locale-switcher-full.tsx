@@ -38,7 +38,7 @@ export default function LocaleSwitcher({
     );
   }
   return (
-    <div className={compact ? 'w-32 min-[360px]:w-36' : 'w-40'}>
+    <div className={compact ? 'w-36 min-[360px]:w-40' : 'w-40'}>
       <Select
         name='localeSelect'
         selectedKeys={[locale]}
