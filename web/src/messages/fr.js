@@ -67,6 +67,7 @@ const french = {
     home: 'Accueil',
     result: 'Résultat',
     compare: 'Comparer',
+    personality: 'Personnalité',
     articles: 'Des articles',
     about: 'Sur',
     see_results: 'Voir vos résultats',

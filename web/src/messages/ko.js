@@ -65,6 +65,7 @@ const korean = {
     home: '홈',
     result: '결과',
     compare: '비교',
+    personality: '성격',
     articles: '글',
     about: '소개',
     see_results: '내 결과 보기',

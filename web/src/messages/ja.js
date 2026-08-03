@@ -67,6 +67,7 @@ const japanese = {
     home: 'ホーム',
     result: '結果',
     compare: '比較する',
+    personality: '性格',
     articles: '記事',
     about: '約',
     see_results: '結果を見る',

@@ -77,6 +77,10 @@ export const siteConfig = {
     {
       label: 'compare',
       href: '/compare'
+    },
+    {
+      label: 'personality',
+      href: '/personality'
     }
   ],
   navMenuItems: [
@@ -91,6 +95,10 @@ export const siteConfig = {
     {
       label: 'compare_with',
       href: '/compare'
+    },
+    {
+      label: 'personality',
+      href: '/personality'
     }
   ],
   links: {

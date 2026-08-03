@@ -68,6 +68,7 @@ const indonesian = {
     home: 'Rumah',
     result: 'Hasil',
     compare: 'Bandingkan',
+    personality: 'Kepribadian',
     articles: 'Artikel',
     about: 'Tentang',
     see_results: 'Lihat hasil Anda',

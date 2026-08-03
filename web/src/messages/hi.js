@@ -67,6 +67,7 @@ const hindi = {
     home: 'मुखपृष्ठ',
     result: 'परिणाम',
     compare: 'तुलना',
+    personality: 'व्यक्तित्व',
     articles: 'सामग्री',
     about: 'के बारे में',
     see_results: 'अपना परिणाम देखें',

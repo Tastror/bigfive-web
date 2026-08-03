@@ -61,6 +61,7 @@ const chinese = {
     home: '首页',
     result: '结果',
     compare: '比较',
+    personality: '认识性格',
     see_results: '查看您的结果',
     compare_with: '与其他人比较'
   },

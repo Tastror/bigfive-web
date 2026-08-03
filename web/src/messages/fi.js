@@ -67,6 +67,7 @@ const finnish = {
     home: 'Koti',
     result: 'Tulos',
     compare: 'Vertailla',
+    personality: 'Persoonallisuus',
     articles: 'Artikkelit',
     about: 'Noin',
     see_results: 'Katso tulokset',

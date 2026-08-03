@@ -67,6 +67,7 @@ const icelandic = {
     home: 'Heim',
     result: 'Niðurstaða',
     compare: 'Berðu saman',
+    personality: 'Persónuleiki',
     articles: 'Greinar',
     about: 'Um það bil',
     see_results: 'Sjáðu niðurstöðurnar þínar',

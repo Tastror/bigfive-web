@@ -59,7 +59,7 @@ export const Navbar = ({
       classNames={{ wrapper: 'px-3 sm:px-6' }}
     >
       <NavbarContent
-        className='basis-auto flex-none md:basis-1/5 md:flex-1'
+        className='basis-auto flex-none lg:basis-1/5 lg:flex-1'
         justify='start'
       >
         <NavbarBrand as='li' className='gap-3 max-w-fit'>
@@ -71,7 +71,7 @@ export const Navbar = ({
             <Logo />
           </NextLink>
         </NavbarBrand>
-        <div className='hidden md:flex gap-4 justify-start ml-2'>
+        <div className='hidden lg:flex gap-4 justify-start ml-2'>
           {navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -91,7 +91,7 @@ export const Navbar = ({
       </NavbarContent>
 
       <NavbarContent
-        className='hidden md:flex basis-1/5 sm:basis-full'
+        className='hidden lg:flex basis-1/5 sm:basis-full'
         justify='end'
       >
         <NavbarItem className='hidden sm:flex gap-2'>
@@ -106,7 +106,7 @@ export const Navbar = ({
       </NavbarContent>
 
       <NavbarContent
-        className='md:hidden ml-auto basis-auto flex-none gap-2'
+        className='lg:hidden ml-auto basis-auto flex-none gap-2'
         justify='end'
       >
         <NavbarItem>

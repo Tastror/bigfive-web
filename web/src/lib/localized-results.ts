@@ -1,4 +1,4 @@
-import getResults, { Domain } from '@bigfive-org/results';
+import getResults, { Domain, getTemplate } from '@bigfive-org/results';
 import fi from '@/data/result-text/fi.json';
 import hi from '@/data/result-text/hi.json';
 import ja from '@/data/result-text/ja.json';
@@ -11,10 +11,10 @@ import uk from '@/data/result-text/uk.json';
 import zhCn from '@/data/result-text/zh-cn.json';
 import zhHant from '@/data/result-text/zh-hant.json';
 
-type Score = 'low' | 'neutral' | 'high';
+export type Score = 'low' | 'neutral' | 'high';
 type TranslationFields = Record<string, string>;
 
-interface ResultTemplate {
+export interface ResultTemplate {
   domain: string;
   title: string;
   shortDescription: string;
@@ -162,7 +162,10 @@ export function getLocalizedResults(
   const translatedReport = translatedReports[language];
 
   if (!translatedReport) {
-    return localizeScoreLabels(language, getResults({ lang: language, scores }));
+    return localizeScoreLabels(
+      language,
+      getResults({ lang: language, scores })
+    );
   }
 
   return localizeScoreLabels(
@@ -172,4 +175,12 @@ export function getLocalizedResults(
       createTemplate(translatedReport)
     )
   );
+}
+
+export function getLocalizedResultTemplate(language: string): ResultTemplate[] {
+  const translatedReport = translatedReports[language];
+
+  if (translatedReport) return createTemplate(translatedReport);
+
+  return getTemplate(language) as ResultTemplate[];
 }

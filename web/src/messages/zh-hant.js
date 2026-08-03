@@ -60,6 +60,7 @@ const traditionalChinese = {
     home: '首頁',
     result: '結果',
     compare: '比較',
+    personality: '認識性格',
     see_results: '查看您的結果',
     compare_with: '與他人比較'
   },

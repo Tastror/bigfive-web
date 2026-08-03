@@ -67,6 +67,7 @@ const thai = {
     home: 'หน้าหลัก',
     result: 'ผลลัพธ์',
     compare: 'การเปรียบเทียบ',
+    personality: 'บุคลิกภาพ',
     articles: 'บทความ',
     about: 'เกี่ยวกับเรา',
     see_results: 'ดูผลลัพธ์ของคุณ',
