@@ -46,3 +46,52 @@ const personalityResultCtas: Record<string, string> = {
 export function getPersonalityResultCta(locale: string): string {
   return personalityResultCtas[locale] ?? personalityResultCtas.en;
 }
+
+const backToResultsLabels: Record<string, string> = {
+  'zh-hans': '返回结果',
+  'zh-hant': '返回結果',
+  en: 'Back to results',
+  ar: 'العودة إلى النتائج',
+  de: 'Zurück zu den Ergebnissen',
+  es: 'Volver a los resultados',
+  fr: 'Retour aux résultats',
+  id: 'Kembali ke hasil',
+  it: 'Torna ai risultati',
+  no: 'Tilbake til resultatene',
+  pt: 'Voltar aos resultados',
+  sv: 'Tillbaka till resultaten',
+  uk: 'Повернутися до результатів',
+  da: 'Tilbage til resultaterne',
+  fi: 'Takaisin tuloksiin',
+  hi: 'परिणामों पर वापस जाएँ',
+  is: 'Til baka í niðurstöður',
+  ja: '結果に戻る',
+  ko: '결과로 돌아가기',
+  pl: 'Wróć do wyników',
+  ru: 'Вернуться к результатам',
+  th: 'กลับไปที่ผลลัพธ์',
+  sq: 'Kthehu te rezultatet',
+  hy: 'Վերադառնալ արդյունքներին',
+  bn: 'ফলাফলে ফিরে যান',
+  'pt-br': 'Voltar aos resultados',
+  bg: 'Назад към резултатите',
+  ca: 'Tornar als resultats',
+  hr: 'Povratak na rezultate',
+  cs: 'Zpět k výsledkům',
+  nl: 'Terug naar de resultaten',
+  et: 'Tagasi tulemuste juurde',
+  he: 'חזרה לתוצאות',
+  hu: 'Vissza az eredményekhez',
+  fa: 'بازگشت به نتایج',
+  ro: 'Înapoi la rezultate',
+  sr: 'Nazad na rezultate',
+  ss: 'Buyela emiphumeleni',
+  sl: 'Nazaj na rezultate',
+  tr: 'Sonuçlara dön',
+  ur: 'نتائج پر واپس جائیں',
+  vi: 'Quay lại kết quả'
+};
+
+export function getBackToResultsLabel(locale: string): string {
+  return backToResultsLabels[locale] ?? backToResultsLabels.en;
+}

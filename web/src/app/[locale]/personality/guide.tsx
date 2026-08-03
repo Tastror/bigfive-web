@@ -5,8 +5,12 @@ import {
 } from '@/lib/personality-guide';
 import { getPersonalityFacetInsight } from '@/lib/personality-insights';
 import { getPersonalityFacetStrength } from '@/lib/personality-strengths';
+import { getBackToResultsLabel } from '@/lib/personality-result-cta';
 import type { Score } from '@/lib/localized-results';
 import clsx from 'clsx';
+import { Link } from '@/navigation';
+import { ArrowRightIcon } from '@/components/icons';
+import { isRtlLang } from 'rtl-detect';
 
 interface PersonalityGuideProps {
   locale: string;
@@ -28,6 +32,8 @@ export function PersonalityGuide({
 }: PersonalityGuideProps) {
   const messages = getPersonalityGuideMessages(locale);
   const domains = getPersonalityGuideDomains(locale);
+  const backToResultsLabel = getBackToResultsLabel(locale);
+  const isRtl = isRtlLang(locale);
   const sentenceSeparator = ['zh-hans', 'zh-hant', 'ja', 'th'].includes(locale)
     ? ''
     : ' ';
@@ -44,6 +50,17 @@ export function PersonalityGuide({
       </header>
 
       <section className='border-b border-default-200 py-8 sm:py-10'>
+        {report && (
+          <Link
+            href={`/result/${report.id}`}
+            className='mb-5 inline-flex items-center gap-2 font-medium text-secondary hover:underline hover:underline-offset-4'
+          >
+            <ArrowRightIcon
+              className={clsx('size-4', !isRtl && 'rotate-180')}
+            />
+            <span>{backToResultsLabel}</span>
+          </Link>
+        )}
         <h2 className='text-xl font-semibold sm:text-2xl'>
           {messages.scaleTitle}
         </h2>
