@@ -69,7 +69,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-danger data-[active=true]:font-medium'
+                  'data-[active=true]:text-danger'
                 )}
                 data-active={isCurrentPath(item.href)}
                 color='foreground'
@@ -129,7 +129,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
                 data-active={isCurrentPath(item.href)}
                 className={clsx(
                   linkStyles({ color: 'foreground' }),
-                  'data-[active=true]:text-danger data-[active=true]:font-medium !text-3xl py-2'
+                  'data-[active=true]:text-danger !text-3xl py-2'
                 )}
               >
                 {item.label}
