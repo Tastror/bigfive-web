@@ -4,6 +4,7 @@ import {
   getPersonalityGuideMessages
 } from '@/lib/personality-guide';
 import { getPersonalityFacetInsight } from '@/lib/personality-insights';
+import { getPersonalityFacetStrength } from '@/lib/personality-strengths';
 import type { Score } from '@/lib/localized-results';
 import clsx from 'clsx';
 
@@ -27,6 +28,9 @@ export function PersonalityGuide({
 }: PersonalityGuideProps) {
   const messages = getPersonalityGuideMessages(locale);
   const domains = getPersonalityGuideDomains(locale);
+  const sentenceSeparator = ['zh-hans', 'zh-hant', 'ja', 'th'].includes(locale)
+    ? ''
+    : ' ';
 
   return (
     <section className='mx-auto w-full max-w-4xl pb-20 sm:pb-28'>
@@ -127,6 +131,11 @@ export function PersonalityGuide({
                       domain.domain,
                       facet.facet
                     );
+                    const strength = getPersonalityFacetStrength(
+                      locale,
+                      domain.domain,
+                      facet.facet
+                    );
                     const facetResult = result?.facets.find(
                       (item) => item.facet === facet.facet
                     );
@@ -167,6 +176,8 @@ export function PersonalityGuide({
                           >
                             <h5 className='font-semibold'>{messages.lower}</h5>
                             <p className='mt-2 leading-7 text-default-600'>
+                              {strength.low}
+                              {sentenceSeparator}
                               {insight.low}
                             </p>
                           </section>
@@ -180,6 +191,8 @@ export function PersonalityGuide({
                           >
                             <h5 className='font-semibold'>{messages.higher}</h5>
                             <p className='mt-2 leading-7 text-default-600'>
+                              {strength.high}
+                              {sentenceSeparator}
                               {insight.high}
                             </p>
                           </section>
@@ -209,6 +222,14 @@ export function PersonalityGuide({
             className='font-medium text-secondary underline decoration-secondary/40 underline-offset-4 hover:decoration-secondary'
           >
             {messages.sourceIpip} ↗
+          </a>
+          <a
+            href='https://ipip.ori.org/30FacetNEO-PI-RItems.htm'
+            target='_blank'
+            rel='noreferrer'
+            className='font-medium text-secondary underline decoration-secondary/40 underline-offset-4 hover:decoration-secondary'
+          >
+            IPIP: 30 NEO-PI-R facet scales (Johnson, 2014) ↗
           </a>
           <a
             href='https://doi.org/10.1016/j.jrp.2014.05.003'
