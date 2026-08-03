@@ -1487,7 +1487,7 @@ export function getPersonalityGuideDomains(
   locale: string
 ): PersonalityGuideDomain[] {
   const reportLanguage = getReportLanguage(locale);
-  const domainOrder = ['O', 'C', 'E', 'A', 'N'];
+  const domainOrder = ['N', 'E', 'O', 'A', 'C'];
   const template = getLocalizedResultTemplate(reportLanguage)
     .slice()
     .sort(
