@@ -15,7 +15,11 @@ import { getReportLanguage } from '@/lib/localized-results';
 import { getErrorMessages } from '@/lib/error-messages';
 import { validId } from '@/lib/helpers';
 import { notFound } from 'next/navigation';
-import { getPersonalityGuideMessages } from '@/lib/personality-guide';
+import { getPersonalityResultCta } from '@/lib/personality-result-cta';
+import { ArrowRightIcon } from '@/components/icons';
+import { button as buttonStyles } from '@nextui-org/theme';
+import { isRtlLang } from 'rtl-detect';
+import clsx from 'clsx';
 
 export async function generateMetadata({
   params: { locale }
@@ -85,7 +89,8 @@ interface ResultsProps {
 const Results = ({ report, locale, showExpanded }: ResultsProps) => {
   const t = useTranslations('results');
   const share = useTranslations('shareLinks');
-  const personality = getPersonalityGuideMessages(locale);
+  const personalityCta = getPersonalityResultCta(locale);
+  const isRtl = isRtlLang(locale);
 
   return (
     <>
@@ -139,9 +144,19 @@ const Results = ({ report, locale, showExpanded }: ResultsProps) => {
       <div className='mt-12 flex justify-center border-t border-default-200 pt-8 print:hidden'>
         <Link
           href={`/personality/${report.id}`}
-          className='font-medium text-secondary underline decoration-secondary/40 underline-offset-4 hover:decoration-secondary'
+          className={clsx(
+            buttonStyles({
+              color: 'primary',
+              radius: 'full',
+              variant: 'shadow',
+              size: 'lg',
+              fullWidth: true
+            }),
+            'w-full sm:w-auto'
+          )}
         >
-          {personality.title}
+          {personalityCta}{' '}
+          <ArrowRightIcon className={isRtl ? 'rotate-180' : undefined} />
         </Link>
       </div>
     </>
