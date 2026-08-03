@@ -112,7 +112,7 @@ export const Navbar = ({
         <NavbarItem>
           <LocaleSwitcherFull compact label={selectLanguageLabel} />
         </NavbarItem>
-        <NavbarItem>
+        <NavbarItem className='hidden min-[340px]:flex'>
           <Link isExternal href={siteConfig.links.github} aria-label='Github'>
             <GithubIcon className='text-default-500' />
           </Link>
