@@ -239,7 +239,7 @@ const questions = [
   },
   {
     id: 'f110fc66-2e9e-413c-920b-19f05e63d7ac',
-    text: '在所做的事情上表現出色',
+    text: '在自己從事的領域出類拔萃',
     keyed: 'plus',
     domain: 'C',
     facet: 1
@@ -309,7 +309,7 @@ const questions = [
   },
   {
     id: 'c55e3958-00c4-4fc3-9118-47d8f31bfde1',
-    text: '會說實話',
+    text: '會實話實說',
     keyed: 'plus',
     domain: 'C',
     facet: 3
@@ -393,7 +393,7 @@ const questions = [
   },
   {
     id: '961376e0-16a1-4c14-b059-789e63d11b63',
-    text: '常常玩得很開心',
+    text: '我的生活很快樂',
     keyed: 'plus',
     domain: 'E',
     facet: 6
@@ -519,7 +519,7 @@ const questions = [
   },
   {
     id: '4e6e3a34-176f-4e6e-8730-1341611f972b',
-    text: '違反規則',
+    text: '打破規則',
     keyed: 'minus',
     domain: 'C',
     facet: 3
