@@ -13,9 +13,22 @@ interface BarChartProps {
 export const BarChart = ({ max, results }: BarChartProps) => {
   const { theme } = useTheme();
   const apexChartTheme = theme === 'dark' ? 'dark' : 'light';
+  const neutralScore = (max / 5) * 3;
+  const annotationColor = apexChartTheme === 'dark' ? '#a1a1aa' : '#71717a';
   const options: ApexOptions = {
     theme: {
       mode: apexChartTheme
+    },
+    annotations: {
+      yaxis: [
+        {
+          y: neutralScore,
+          borderColor: annotationColor,
+          borderWidth: 1,
+          strokeDashArray: 5,
+          opacity: 0.7
+        }
+      ]
     },
     legend: {
       show: false
