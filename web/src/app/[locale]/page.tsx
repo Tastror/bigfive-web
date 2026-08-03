@@ -133,7 +133,7 @@ export default function Home({ params: { locale } }: Props) {
               size: 'lg',
               fullWidth: true
             }),
-            'mt-10 w-full bg-gradient-to-b from-[#FF1CF7] to-[#7928CA] text-white sm:w-auto'
+            'mt-10 w-full sm:w-auto'
           )}
         >
           {t('compare.action')} <ArrowRightIcon />
