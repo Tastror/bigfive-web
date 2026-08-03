@@ -154,7 +154,7 @@ export const ComparePeople = ({
 
   return (
     <div className='w-full flex flex-col gap-4 mt-4'>
-      <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-[1fr_1fr_auto] md:items-end md:mb-2'>
+      <div className='grid w-full grid-cols-1 gap-4 md:grid-cols-[1fr_1fr_auto] md:items-start md:mb-2'>
         <Input
           type='text'
           label={nameText}
@@ -186,7 +186,7 @@ export const ComparePeople = ({
                 : undefined
           }
         />
-        <div className='flex w-full justify-end md:w-auto'>
+        <div className='flex w-full justify-end md:mt-6 md:w-auto'>
           <Button
             color='primary'
             className='w-full sm:w-auto md:flex-shrink-0'
