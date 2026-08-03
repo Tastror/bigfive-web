@@ -13,7 +13,7 @@ export type Language = {
   map?: string[];
 };
 
-export const languages: Language[] = [
+const preferredLanguages: Language[] = [
   {
     code: 'zh-hans',
     name: '简体中文',
@@ -26,7 +26,10 @@ export const languages: Language[] = [
     countryCode: 'hk',
     map: ['zh-TW', 'zh-HK', 'zh-MO']
   },
-  { code: 'en', name: 'English', countryCode: 'us', map: ['en-GB'] },
+  { code: 'en', name: 'English', countryCode: 'us', map: ['en-GB'] }
+];
+
+const additionalLanguages: Language[] = [
   { code: 'ar', name: 'العربية', map: ['ar-sa'] },
   { code: 'bg', name: 'Български', map: ['bg-BG'] },
   { code: 'bn', name: 'বাংলা', map: ['bn-BD'] },
@@ -78,6 +81,18 @@ export const languages: Language[] = [
   { code: 'vi', name: 'Tiếng Việt', map: ['vi-VN'] }
 ];
 
+const languageNameCollator = new Intl.Collator('en', {
+  sensitivity: 'base',
+  usage: 'sort'
+});
+
+export const languages: Language[] = [
+  ...preferredLanguages,
+  ...additionalLanguages.sort((first, second) =>
+    languageNameCollator.compare(first.name, second.name)
+  )
+];
+
 export const locales = languages.map((lang) => lang.code) as string[];
 
 export const siteConfig = {
@@ -97,10 +112,6 @@ export const siteConfig = {
     {
       label: 'compare',
       href: '/compare'
-    },
-    {
-      label: 'personality',
-      href: '/personality'
     }
   ],
   navMenuItems: [
@@ -115,10 +126,6 @@ export const siteConfig = {
     {
       label: 'compare_with',
       href: '/compare'
-    },
-    {
-      label: 'personality',
-      href: '/personality'
     }
   ],
   links: {

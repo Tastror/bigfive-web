@@ -72,7 +72,7 @@ export default function Home({ params: { locale } }: Props) {
 
             <div className='flex items-center justify-center'>
               <Link
-                href={`/${locale}/test`}
+                href='/test'
                 className={clsx(
                   buttonStyles({
                     color: 'primary',
@@ -125,7 +125,7 @@ export default function Home({ params: { locale } }: Props) {
         </div>
 
         <Link
-          href={`/${locale}/compare`}
+          href='/compare'
           className={clsx(
             buttonStyles({
               color: 'secondary',
