@@ -92,6 +92,7 @@ export default async function RootLayout({
 
   const navItems = await getNavItems({ locale, linkType: 'navItems' });
   const navMenuItems = await getNavItems({ locale, linkType: 'navMenuItems' });
+  const form = await getTranslations({ locale, namespace: 'form' });
 
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
@@ -109,7 +110,11 @@ export default async function RootLayout({
         >
           <BrowserRecovery />
           <div className='relative flex h-screen w-screen flex-col'>
-            <Navbar navItems={navItems} navMenuItems={navMenuItems} />
+            <Navbar
+              navItems={navItems}
+              navMenuItems={navMenuItems}
+              selectLanguageLabel={form('selectLanguage')}
+            />
             <main className='container mx-auto max-w-7xl pt-10 sm:pt-16 px-4 sm:px-6 flex-grow'>
               {children}
               <CookieBanner />

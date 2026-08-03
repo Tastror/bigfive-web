@@ -28,9 +28,14 @@ import { getUiMessages } from '@/lib/ui-messages';
 interface NavbarProps {
   navItems: { label: string; href: string }[];
   navMenuItems: { label: string; href: string }[];
+  selectLanguageLabel: string;
 }
 
-export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
+export const Navbar = ({
+  navItems,
+  navMenuItems,
+  selectLanguageLabel
+}: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const locale = useLocale();
@@ -96,7 +101,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem>
-          <LocaleSwitcherFull />
+          <LocaleSwitcherFull label={selectLanguageLabel} />
         </NavbarItem>
       </NavbarContent>
 
@@ -105,7 +110,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
         justify='end'
       >
         <NavbarItem>
-          <LocaleSwitcherFull compact />
+          <LocaleSwitcherFull compact label={selectLanguageLabel} />
         </NavbarItem>
         <NavbarItem>
           <Link isExternal href={siteConfig.links.github} aria-label='Github'>

@@ -1,18 +1,19 @@
 'use client';
 import { ChangeEvent } from 'react';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { languages } from '../config/site';
 import { Select, SelectItem } from '@nextui-org/select';
 
 interface LocaleSwitcherProps {
   compact?: boolean;
+  label: string;
 }
 
 export default function LocaleSwitcher({
-  compact = false
+  compact = false,
+  label
 }: LocaleSwitcherProps) {
   const locale = useLocale();
-  const t = useTranslations('form');
 
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = event.target.value;
@@ -42,7 +43,7 @@ export default function LocaleSwitcher({
         name='localeSelect'
         selectedKeys={[locale]}
         onChange={onSelectChange}
-        aria-label={t('selectLanguage')}
+        aria-label={label}
         size={compact ? 'sm' : 'md'}
         classNames={
           compact

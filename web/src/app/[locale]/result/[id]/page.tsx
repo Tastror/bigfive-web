@@ -83,6 +83,7 @@ interface ResultsProps {
 
 const Results = ({ report, locale, showExpanded }: ResultsProps) => {
   const t = useTranslations('results');
+  const share = useTranslations('shareLinks');
 
   return (
     <>
@@ -112,7 +113,13 @@ const Results = ({ report, locale, showExpanded }: ResultsProps) => {
         </Snippet>
       </div>
       <div className='flex mt-5 justify-end w-full gap-x-1 print:hidden'>
-        <ShareBar report={report} />
+        <ShareBar
+          report={report}
+          shareFacebookText={share('shareFacebook')}
+          shareTwitterText={share('shareTwitter')}
+          shareResultsText={share('shareResults')}
+          copyLinkText={share('copyLink')}
+        />
       </div>
       <div className='flex mt-10'>
         <h1 className={title()}>{t('theBigFive')}</h1>

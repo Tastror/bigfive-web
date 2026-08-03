@@ -6,26 +6,35 @@ import { basePath } from '@/config/site';
 import { Link as NextUiLink } from '@nextui-org/link';
 import { Report } from '@/actions/index';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
-import { useLocale, useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
 import { getUiMessages } from '@/lib/ui-messages';
 
 interface ShareBarProps {
   report: Report;
+  shareFacebookText: string;
+  shareTwitterText: string;
+  shareResultsText: string;
+  copyLinkText: string;
 }
 
-export default function ShareBar({ report }: ShareBarProps) {
+export default function ShareBar({
+  report,
+  shareFacebookText,
+  shareTwitterText,
+  shareResultsText,
+  copyLinkText
+}: ShareBarProps) {
   const [_, copy] = useCopyToClipboard();
-  const t = useTranslations('shareLinks');
   const ui = getUiMessages(useLocale());
 
   const handleCopy = (text: string) => async () => await copy(text);
 
   return (
     <>
-      <Tooltip color='secondary' content={t('shareFacebook')}>
+      <Tooltip color='secondary' content={shareFacebookText}>
         <Button
           isIconOnly
-          aria-label={t('shareFacebook')}
+          aria-label={shareFacebookText}
           radius='full'
           size='md'
           variant='light'
@@ -36,16 +45,16 @@ export default function ShareBar({ report }: ShareBarProps) {
           <FacebookIcon size={48} />
         </Button>
       </Tooltip>
-      <Tooltip color='secondary' content={t('shareTwitter')}>
+      <Tooltip color='secondary' content={shareTwitterText}>
         <Button
           isIconOnly
-          aria-label={t('shareTwitter')}
+          aria-label={shareTwitterText}
           radius='full'
           size='md'
           variant='light'
           target='_blank'
           as={NextUiLink}
-          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(t('shareResults'))}&url=${basePath}/result/${report.id}`}
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(shareResultsText)}&url=${basePath}/result/${report.id}`}
         >
           <TwitterIcon size={42} />
         </Button>
@@ -62,10 +71,10 @@ export default function ShareBar({ report }: ShareBarProps) {
           <PDFIcon size={32} />
         </Button>
       </Tooltip>
-      <Tooltip color='secondary' content={t('copyLink')}>
+      <Tooltip color='secondary' content={copyLinkText}>
         <Button
           isIconOnly
-          aria-label={t('copyLink')}
+          aria-label={copyLinkText}
           radius='full'
           size='md'
           variant='light'
