@@ -66,7 +66,7 @@ export default function Home({ params: { locale } }: Props) {
         <section className='flex flex-col items-center justify-center gap-4 py-6 sm:py-10'>
           <div className='relative z-20 flex w-full max-w-4xl flex-col gap-6 xl:mt-8'>
             <div className='mt-6 text-center sm:mt-10'>
-              <h1 className='mx-auto text-balance text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl'>
+              <h1 className='mx-auto text-balance text-3xl font-semibold leading-snug tracking-tight sm:text-4xl lg:text-5xl'>
                 {titleDescription}
               </h1>
               <h2 className={subtitle({ class: 'mt-4' })}>
