@@ -7,23 +7,24 @@ import { formatAndValidateId, formatId } from '@/lib/helpers';
 import { useEffect, useMemo, useState } from 'react';
 import { Input } from '@nextui-org/input';
 import { ResultIcon } from '@/components/icons';
-import {
-  getPreviousTestResult,
-  type SavedResult
-} from '@/lib/result-history';
+import { getPreviousTestResult, type SavedResult } from '@/lib/result-history';
 
 interface GetResultPageProps {
   viewPreviousText: string;
   getResultsText: string;
+  invalidIdText: string;
   locale: string;
 }
 
 export const GetResultPage = ({
   viewPreviousText,
   getResultsText,
+  invalidIdText,
   locale
 }: GetResultPageProps) => {
-  const [previousResult, setPreviousResult] = useState<SavedResult | null>(null);
+  const [previousResult, setPreviousResult] = useState<SavedResult | null>(
+    null
+  );
   const [id, setId] = useState('');
 
   const isInvalidId = useMemo(() => {
@@ -54,6 +55,7 @@ export const GetResultPage = ({
             <ResultIcon className='text-2xl text-default-400 pointer-events-none flex-shrink-0' />
           }
           isInvalid={isInvalidId}
+          errorMessage={isInvalidId ? invalidIdText : undefined}
           color={isInvalidId ? 'danger' : 'default'}
           onValueChange={setId}
           value={id}

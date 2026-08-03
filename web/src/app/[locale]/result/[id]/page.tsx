@@ -8,11 +8,13 @@ import { getTranslations } from 'next-intl/server';
 import { BarChart } from '@/components/bar-chart';
 import { Link } from '@/navigation';
 import { Alert } from '@/components/alert';
-import { supportEmail } from '@/config/site';
 import ShareBar from '@/components/share-bar';
 import { DomainTabs } from './domain-tabs';
 import { Chip } from '@nextui-org/react';
 import { getReportLanguage } from '@/lib/localized-results';
+import { getErrorMessages } from '@/lib/error-messages';
+import { validId } from '@/lib/helpers';
+import { notFound } from 'next/navigation';
 
 export async function generateMetadata({
   params: { locale }
@@ -35,25 +37,34 @@ export default async function ResultPage({
   params,
   searchParams
 }: ResultPageParams) {
-  let report;
+  const errors = getErrorMessages(params.locale);
+  if (!validId(params.id)) {
+    return (
+      <Alert title={errors.invalidResultIdTitle}>
+        <p>{errors.invalidResultId}</p>
+      </Alert>
+    );
+  }
+
+  let report: Report | undefined;
 
   try {
     const reportLanguage = getReportLanguage(params.locale);
-    report = await getTestResult(params.id.substring(0, 24), reportLanguage);
+    report = await getTestResult(params.id, reportLanguage);
   } catch (error) {
-    console.error(error);
-    throw new Error('Could not retrieve report');
-  }
+    if (error instanceof Error && error.name === 'NotFoundError') {
+      notFound();
+    }
 
-  if (!report)
+    console.error(error);
     return (
-      <Alert title='Could not retrive report'>
-        <>
-          <p>We could not retrive the following id {params.id}.</p>
-          <p>Please check that it is correct or contact us at {supportEmail}</p>
-        </>
+      <Alert title={errors.loadFailedTitle}>
+        <p>{errors.resultLoadFailed}</p>
       </Alert>
     );
+  }
+
+  if (!report) notFound();
 
   return (
     <Results

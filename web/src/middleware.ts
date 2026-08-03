@@ -29,7 +29,11 @@ export default function middleware(request: NextRequest) {
     (locale) => pathname === `/${locale}` || pathname.startsWith(`/${locale}/`)
   );
 
-  if (hasLocalePrefix) return NextResponse.next();
+  if (hasLocalePrefix) {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set('x-bigfive-locale', requestedLocale);
+    return NextResponse.next({ request: { headers: requestHeaders } });
+  }
 
   const rememberedLocale = request.cookies.get(localeCookieName)?.value;
   const preferredLocale =
@@ -38,7 +42,10 @@ export default function middleware(request: NextRequest) {
       : defaultLocale;
 
   return NextResponse.redirect(
-    getPublicUrl(request, `/${preferredLocale}${pathname === '/' ? '' : pathname}`),
+    getPublicUrl(
+      request,
+      `/${preferredLocale}${pathname === '/' ? '' : pathname}`
+    ),
     307
   );
 }

@@ -36,6 +36,8 @@ interface CompareProps {
   emptyText: string;
   closeText: string;
   saveText: string;
+  invalidIdText: string;
+  duplicateIdText: string;
   paramId?: string;
 }
 
@@ -46,6 +48,8 @@ export const ComparePeople = ({
   emptyText,
   closeText,
   saveText,
+  invalidIdText,
+  duplicateIdText,
   paramId
 }: CompareProps) => {
   const router = useRouter();
@@ -77,21 +81,29 @@ export const ComparePeople = ({
   const [editIndex, setEditIndex] = useState<number>();
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  const isInvalidId = React.useMemo(() => {
-    if (id === '') return false;
+  const idError = React.useMemo<'invalid' | 'duplicate' | null>(() => {
+    if (id === '') return null;
 
     const newId = formatId(id);
-    if (rows.some((item) => item.id === newId)) return true;
+    if (!validId(newId)) return 'invalid';
+    if (rows.some((item) => item.id === newId)) return 'duplicate';
 
-    return !validId(newId);
+    return null;
   }, [id, rows]);
+  const isInvalidId = idError !== null;
 
-  const isInvalidEditId = React.useMemo(() => {
-    if (editId === '') return false;
+  const editIdError = React.useMemo<'invalid' | 'duplicate' | null>(() => {
+    if (editId === '') return null;
 
     const newId = formatId(editId);
-    return !validId(newId);
-  }, [editId]);
+    if (!validId(newId)) return 'invalid';
+    if (rows.some((item, index) => item.id === newId && index !== editIndex)) {
+      return 'duplicate';
+    }
+
+    return null;
+  }, [editId, editIndex, rows]);
+  const isInvalidEditId = editIdError !== null;
 
   function deleteItem(id: string) {
     setRows((prev) => {
@@ -163,6 +175,13 @@ export const ComparePeople = ({
           value={id}
           onValueChange={setId}
           isInvalid={isInvalidId}
+          errorMessage={
+            idError === 'duplicate'
+              ? duplicateIdText
+              : idError === 'invalid'
+                ? invalidIdText
+                : undefined
+          }
         />
         <div className='flex w-full justify-end md:w-auto'>
           <Button
@@ -258,6 +277,13 @@ export const ComparePeople = ({
                   value={editId}
                   onValueChange={setEditId}
                   isInvalid={isInvalidEditId}
+                  errorMessage={
+                    editIdError === 'duplicate'
+                      ? duplicateIdText
+                      : editIdError === 'invalid'
+                        ? invalidIdText
+                        : undefined
+                  }
                 />
               </ModalBody>
               <ModalFooter>

@@ -2,6 +2,7 @@ import { title } from '@/components/primitives';
 import { useTranslations } from 'next-intl';
 import { GetResultPage } from './get-result';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import { getErrorMessages } from '@/lib/error-messages';
 
 interface Props {
   params: { locale: string };
@@ -10,6 +11,7 @@ interface Props {
 export default function ResultPage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('getResult');
+  const errors = getErrorMessages(locale);
 
   return (
     <div className='h-[calc(60vh)]'>
@@ -18,6 +20,7 @@ export default function ResultPage({ params: { locale } }: Props) {
       <GetResultPage
         viewPreviousText={t('viewPrevious')}
         getResultsText={t('getResult')}
+        invalidIdText={errors.invalidResultId}
         locale={locale}
       />
     </div>
