@@ -49,8 +49,7 @@ export function PersonalityGuide({
         </h2>
         <p className='mt-3 max-w-3xl leading-7 text-default-600'>
           {messages.scaleText}
-        </p>
-        <p className='mt-4 max-w-3xl border-s-2 border-secondary ps-4 text-sm leading-7 text-default-600'>
+          {sentenceSeparator}
           {messages.note}
         </p>
       </section>
