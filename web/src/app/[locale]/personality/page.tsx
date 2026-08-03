@@ -103,13 +103,13 @@ export default function PersonalityGuidePage({ params: { locale } }: Props) {
                       </p>
 
                       <div className='mt-6 space-y-6'>
-                        <section className='border-s-2 border-default-300 ps-4 sm:ps-5'>
+                        <section className='border-s-2 border-sky-300 ps-4 dark:border-sky-700 sm:ps-5'>
                           <h5 className='font-semibold'>{messages.lower}</h5>
                           <p className='mt-2 leading-7 text-default-600'>
                             {insight.low}
                           </p>
                         </section>
-                        <section className='border-s-2 border-secondary ps-4 sm:ps-5'>
+                        <section className='border-s-2 border-rose-300 ps-4 dark:border-rose-700 sm:ps-5'>
                           <h5 className='font-semibold'>{messages.higher}</h5>
                           <p className='mt-2 leading-7 text-default-600'>
                             {insight.high}
