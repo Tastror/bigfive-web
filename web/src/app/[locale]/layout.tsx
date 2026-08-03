@@ -106,7 +106,7 @@ export default async function RootLayout({
           }
         >
           <BrowserRecovery />
-          <div className='relative flex flex-col h-screen'>
+          <div className='relative flex h-screen w-screen flex-col'>
             <Navbar navItems={navItems} navMenuItems={navMenuItems} />
             <main className='container mx-auto max-w-7xl pt-10 sm:pt-16 px-4 sm:px-6 flex-grow'>
               {children}
