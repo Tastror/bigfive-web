@@ -31,7 +31,7 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
     );
     localStorage.setItem(
       'cookie_consent_marketing',
-      isAnalyticsSelected.toString()
+      isMarketingSelected.toString()
     );
     localStorage.setItem('cookie_consent', 'accepted');
     props.setShowCookieConsentSettings(false);
@@ -49,7 +49,7 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
       setIsAnalyticsSelected(false);
     }
     if (storedMarketingCookieConsent === 'false') {
-      setIsAnalyticsSelected(false);
+      setIsMarketingSelected(false);
     }
   }, []);
 
@@ -60,6 +60,7 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
       className='max-w-lg w-full'
       isDismissable={false}
       isKeyboardDismissDisabled
+      hideCloseButton
     >
       <ModalContent>
         <ModalHeader className='flex flex-col gap-1 border-b border-dark-gray'>
@@ -84,6 +85,7 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
             <Switch
               className='ml-auto'
               id='essential'
+              aria-label={messages.essentialTitle}
               isDisabled
               defaultSelected
             />
@@ -98,6 +100,7 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
             <Switch
               className='ml-auto'
               id='analytics'
+              aria-label={messages.analyticsTitle}
               isSelected={isAnalyticsSelected}
               onValueChange={setIsAnalyticsSelected}
             />
@@ -112,6 +115,7 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
             <Switch
               className='ml-auto'
               id='marketing'
+              aria-label={messages.marketingTitle}
               isSelected={isMarketingSelected}
               onValueChange={setIsMarketingSelected}
             />
