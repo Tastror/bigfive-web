@@ -119,7 +119,7 @@ export default async function RootLayout({
               {children}
               <CookieBanner />
             </main>
-            <Footer />
+            <Footer locale={locale} />
           </div>
         </Providers>
       </body>

@@ -1,3 +1,5 @@
+import { serbianObjectToLatin } from '@/lib/serbian';
+
 export type ErrorMessages = {
   pageNotFoundTitle: string;
   pageNotFound: string;
@@ -42,7 +44,27 @@ type ErrorLocale =
   | 'th'
   | 'uk'
   | 'zh-hans'
-  | 'zh-hant';
+  | 'zh-hant'
+  | 'sq'
+  | 'hy'
+  | 'bn'
+  | 'pt-br'
+  | 'bg'
+  | 'ca'
+  | 'hr'
+  | 'cs'
+  | 'nl'
+  | 'et'
+  | 'he'
+  | 'hu'
+  | 'fa'
+  | 'ro'
+  | 'sr'
+  | 'ss'
+  | 'sl'
+  | 'tr'
+  | 'ur'
+  | 'vi';
 
 const errorMessages: Record<ErrorLocale, ErrorMessages> = {
   en: {
@@ -614,8 +636,542 @@ const errorMessages: Record<ErrorLocale, ErrorMessages> = {
     goBack: 'Повернутися на попередню сторінку',
     tryAgain: 'Спробувати ще раз',
     recovering: 'Відновлення сторінки'
+  },
+  sq: {
+    pageNotFoundTitle: 'Faqja nuk u gjet',
+    pageNotFound: 'Faqja e kërkuar nuk mund të gjendej.',
+    resultNotFoundTitle: 'Rezultati nuk u gjet',
+    resultNotFound:
+      'Nuk u gjet asnjë rezultat testimi i ruajtur për këtë ID. Kontrollo ID-në dhe provo sërish.',
+    comparisonNotFoundTitle: 'Rezultatet e krahasimit nuk u gjetën',
+    comparisonNotFound:
+      'Të paktën një rezultat i ruajtur i testit në këtë krahasim nuk mund të gjendej, kështu që krahasimi nuk mund të shfaqet.',
+    invalidResultIdTitle: 'ID e pavlefshme e rezultatit',
+    invalidResultId: 'Fut një ID të vlefshme rezultati me 24 karaktere.',
+    duplicateResultId: 'Ky rezultat tashmë është shtuar.',
+    invalidComparisonTitle: 'Lidhje e pavlefshme krahasimi',
+    invalidComparison:
+      'Kjo lidhje krahasimi është e keqformuar ose përmban të dhëna të pavlefshme rezultati.',
+    loadFailedTitle: 'Ndodhi një gabim tjetër',
+    resultLoadFailed:
+      'Ndodhi një gabim i papritur gjatë ngarkimit të rezultatit. Ju lutemi provoni përsëri më vonë.',
+    comparisonLoadFailed:
+      'Ndodhi një gabim i papritur gjatë ngarkimit të krahasimit. Ju lutemi provoni përsëri më vonë.',
+    unexpectedTitle: 'Diçka shkoi keq',
+    unexpectedDescription:
+      'Ndodhi një gabim i papritur. Ju lutemi provoni përsëri.',
+    goBack: 'Kthehuni në faqen e mëparshme',
+    tryAgain: 'Provo sërish',
+    recovering: 'Rikuperimi i faqes'
+  },
+  hy: {
+    pageNotFoundTitle: 'Էջը չի գտնվել',
+    pageNotFound: 'Հայցվող էջը չհաջողվեց գտնել:',
+    resultNotFoundTitle: 'Արդյունքը չի գտնվել',
+    resultNotFound:
+      'Այս ID-ի համար պահպանված փորձարկման արդյունք չի գտնվել: Ստուգեք ID-ն և նորից փորձեք:',
+    comparisonNotFoundTitle: 'Համեմատության արդյունքները չեն գտնվել',
+    comparisonNotFound:
+      'Այս համեմատության մեջ առնվազն մեկ պահպանված թեստի արդյունք չի գտնվել, ուստի համեմատությունը չի կարող ցուցադրվել:',
+    invalidResultIdTitle: 'Անվավեր արդյունքի ID',
+    invalidResultId: 'Մուտքագրեք վավեր 24 նիշանոց արդյունքի ID:',
+    duplicateResultId: 'Այս արդյունքն արդեն ավելացվել է։',
+    invalidComparisonTitle: 'Համեմատության անվավեր հղում',
+    invalidComparison:
+      'Համեմատության այս հղումը սխալ ձևավորված է կամ պարունակում է անվավեր արդյունքների տվյալներ:',
+    loadFailedTitle: 'Տեղի ունեցավ այլ սխալ',
+    resultLoadFailed:
+      'Արդյունքը բեռնելիս անսպասելի սխալ առաջացավ: Խնդրում ենք փորձել ավելի ուշ:',
+    comparisonLoadFailed:
+      'Համեմատությունը բեռնելիս անսպասելի սխալ տեղի ունեցավ: Խնդրում ենք փորձել ավելի ուշ:',
+    unexpectedTitle: 'Սխալ առաջացավ',
+    unexpectedDescription:
+      'Անսպասելի սխալ տեղի ունեցավ: Խնդրում ենք կրկին փորձել:',
+    goBack: 'Վերադարձ դեպի նախորդ էջ',
+    tryAgain: 'Նորից փորձեք',
+    recovering: 'Էջի վերականգնում'
+  },
+  bn: {
+    pageNotFoundTitle: 'পেজ পাওয়া যায়নি',
+    pageNotFound: 'অনুরোধ করা পৃষ্ঠা খুঁজে পাওয়া যায়নি.',
+    resultNotFoundTitle: 'ফলাফল পাওয়া যায়নি',
+    resultNotFound:
+      'এই আইডির জন্য কোনো সংরক্ষিত পরীক্ষার ফলাফল পাওয়া যায়নি। আইডি চেক করে আবার চেষ্টা করুন।',
+    comparisonNotFoundTitle: 'তুলনা ফলাফল পাওয়া যায়নি',
+    comparisonNotFound:
+      'এই তুলনাতে অন্তত একটি সংরক্ষিত পরীক্ষার ফলাফল পাওয়া যায়নি, তাই তুলনাটি প্রদর্শন করা যাবে না।',
+    invalidResultIdTitle: 'অবৈধ ফলাফল ID',
+    invalidResultId: 'একটি বৈধ 24-অক্ষরের ফলাফল আইডি লিখুন।',
+    duplicateResultId: 'এই ফলাফল ইতিমধ্যে যোগ করা হয়েছে.',
+    invalidComparisonTitle: 'অবৈধ তুলনা লিঙ্ক',
+    invalidComparison:
+      'এই তুলনা লিঙ্কটি ত্রুটিপূর্ণ বা অবৈধ ফলাফল ডেটা রয়েছে৷',
+    loadFailedTitle: 'একটি ভিন্ন ত্রুটি ঘটেছে',
+    resultLoadFailed:
+      'ফলাফল লোড করার সময় একটি অপ্রত্যাশিত ত্রুটি ঘটেছে৷ পরে আবার চেষ্টা করুন.',
+    comparisonLoadFailed:
+      'তুলনা লোড করার সময় একটি অপ্রত্যাশিত ত্রুটি ঘটেছে৷ পরে আবার চেষ্টা করুন.',
+    unexpectedTitle: 'কিছু ভুল হয়েছে',
+    unexpectedDescription: 'একটি অপ্রত্যাশিত ত্রুটি ঘটেছে৷ আবার চেষ্টা করুন.',
+    goBack: 'আগের পৃষ্ঠায় ফিরে যান',
+    tryAgain: 'আবার চেষ্টা করুন',
+    recovering: 'পৃষ্ঠা পুনরুদ্ধার করা হচ্ছে'
+  },
+  'pt-br': {
+    pageNotFoundTitle: 'Página não encontrada',
+    pageNotFound: 'A página solicitada não foi encontrada.',
+    resultNotFoundTitle: 'Resultado não encontrado',
+    resultNotFound:
+      'Nenhum resultado de teste salvo foi encontrado para este ID. Verifique o ID e tente novamente.',
+    comparisonNotFoundTitle: 'Resultados de comparação não encontrados',
+    comparisonNotFound:
+      'Não foi possível encontrar pelo menos um resultado de teste salvo nesta comparação, portanto a comparação não pode ser exibida.',
+    invalidResultIdTitle: 'ID de resultado inválido',
+    invalidResultId: 'Insira um ID de resultado válido de 24 caracteres.',
+    duplicateResultId: 'Este resultado já foi adicionado.',
+    invalidComparisonTitle: 'Link de comparação inválido',
+    invalidComparison:
+      'Este link de comparação está malformado ou contém dados de resultados inválidos.',
+    loadFailedTitle: 'Ocorreu um erro diferente',
+    resultLoadFailed:
+      'Ocorreu um erro inesperado ao carregar o resultado. Por favor, tente novamente mais tarde.',
+    comparisonLoadFailed:
+      'Ocorreu um erro inesperado ao carregar a comparação. Por favor, tente novamente mais tarde.',
+    unexpectedTitle: 'Algo deu errado',
+    unexpectedDescription:
+      'Ocorreu um erro inesperado. Por favor, tente novamente.',
+    goBack: 'Voltar para a página anterior',
+    tryAgain: 'Tente novamente',
+    recovering: 'Recuperando a página'
+  },
+  bg: {
+    pageNotFoundTitle: 'Страницата не е намерена',
+    pageNotFound: 'Исканата страница не може да бъде намерена.',
+    resultNotFoundTitle: 'Резултатът не е намерен',
+    resultNotFound:
+      'Не е намерен записан резултат от теста за този идентификатор. Проверете ID и опитайте отново.',
+    comparisonNotFoundTitle: 'Резултатите от сравнението не са намерени',
+    comparisonNotFound:
+      'Поне един записан резултат от теста в това сравнение не може да бъде намерен, така че сравнението не може да бъде показано.',
+    invalidResultIdTitle: 'Невалиден ИД на резултата',
+    invalidResultId: 'Въведете валиден 24-знаков идентификатор на резултата.',
+    duplicateResultId: 'Този резултат вече е добавен.',
+    invalidComparisonTitle: 'Невалидна връзка за сравнение',
+    invalidComparison:
+      'Тази връзка за сравнение е деформирана или съдържа невалидни резултати.',
+    loadFailedTitle: 'Възникна различна грешка',
+    resultLoadFailed:
+      'Възникна неочаквана грешка при зареждането на резултата. Моля, опитайте отново по-късно.',
+    comparisonLoadFailed:
+      'Възникна неочаквана грешка при зареждането на сравнението. Моля, опитайте отново по-късно.',
+    unexpectedTitle: 'Нещо се обърка',
+    unexpectedDescription: 'Възникна неочаквана грешка. Моля, опитайте отново.',
+    goBack: 'Върнете се на предишната страница',
+    tryAgain: 'Опитайте отново',
+    recovering: 'Възстановяване на страницата'
+  },
+  ca: {
+    pageNotFoundTitle: "No s'ha trobat la pàgina",
+    pageNotFound: "No s'ha pogut trobar la pàgina sol·licitada.",
+    resultNotFoundTitle: "No s'ha trobat el resultat",
+    resultNotFound:
+      "No s'ha trobat cap resultat de prova desat per a aquest identificador. Comprova l'identificador i torna-ho a provar.",
+    comparisonNotFoundTitle: "No s'han trobat resultats de comparació",
+    comparisonNotFound:
+      "No s'ha pogut trobar almenys un resultat de la prova desat en aquesta comparació, de manera que la comparació no es pot mostrar.",
+    invalidResultIdTitle: 'Identificador de resultat no vàlid',
+    invalidResultId:
+      'Introduïu un identificador de resultat vàlid de 24 caràcters.',
+    duplicateResultId: "Aquest resultat ja s'ha afegit.",
+    invalidComparisonTitle: 'Enllaç de comparació no vàlid',
+    invalidComparison:
+      'Aquest enllaç de comparació té un format incorrecte o conté dades de resultats no vàlides.',
+    loadFailedTitle: "S'ha produït un error diferent",
+    resultLoadFailed:
+      "S'ha produït un error inesperat en carregar el resultat. Si us plau, torna-ho a provar més tard.",
+    comparisonLoadFailed:
+      "S'ha produït un error inesperat en carregar la comparació. Si us plau, torna-ho a provar més tard.",
+    unexpectedTitle: 'Alguna cosa va fallar',
+    unexpectedDescription:
+      "S'ha produït un error inesperat. Si us plau, torna-ho a provar.",
+    goBack: 'Torna a la pàgina anterior',
+    tryAgain: 'Torna-ho a provar',
+    recovering: 'Recuperant la pàgina'
+  },
+  hr: {
+    pageNotFoundTitle: 'Stranica nije pronađena',
+    pageNotFound: 'Tražena stranica nije pronađena.',
+    resultNotFoundTitle: 'Rezultat nije pronađen',
+    resultNotFound:
+      'Nije pronađen nijedan spremljeni rezultat testa za ovaj ID. Provjerite ID i pokušajte ponovno.',
+    comparisonNotFoundTitle: 'Rezultati usporedbe nisu pronađeni',
+    comparisonNotFound:
+      'Najmanje jedan spremljeni rezultat testa u ovoj usporedbi nije moguće pronaći, pa se usporedba ne može prikazati.',
+    invalidResultIdTitle: 'Nevažeći ID rezultata',
+    invalidResultId: 'Unesite važeći ID rezultata od 24 znaka.',
+    duplicateResultId: 'Ovaj rezultat je već dodan.',
+    invalidComparisonTitle: 'Nevažeća veza za usporedbu',
+    invalidComparison:
+      'Ova veza za usporedbu je pogrešno oblikovana ili sadrži nevažeće podatke o rezultatima.',
+    loadFailedTitle: 'Dogodila se drugačija pogreška',
+    resultLoadFailed:
+      'Došlo je do neočekivane pogreške prilikom učitavanja rezultata. Pokušajte ponovno kasnije.',
+    comparisonLoadFailed:
+      'Došlo je do neočekivane pogreške prilikom učitavanja usporedbe. Pokušajte ponovno kasnije.',
+    unexpectedTitle: 'Nešto nije u redu',
+    unexpectedDescription:
+      'Došlo je do neočekivane pogreške. Molimo pokušajte ponovo.',
+    goBack: 'Povratak na prethodnu stranicu',
+    tryAgain: 'Pokušajte ponovno',
+    recovering: 'Oporavak stranice'
+  },
+  cs: {
+    pageNotFoundTitle: 'Stránka nenalezena',
+    pageNotFound: 'Požadovaná stránka nebyla nalezena.',
+    resultNotFoundTitle: 'Výsledek nenalezen',
+    resultNotFound:
+      'Pro toto ID nebyl nalezen žádný uložený výsledek testu. Zkontrolujte ID a zkuste to znovu.',
+    comparisonNotFoundTitle: 'Výsledky srovnání nebyly nalezeny',
+    comparisonNotFound:
+      'Alespoň jeden uložený výsledek testu v tomto srovnání nebyl nalezen, takže srovnání nelze zobrazit.',
+    invalidResultIdTitle: 'Neplatné ID výsledku',
+    invalidResultId: 'Zadejte platné 24místné ID výsledku.',
+    duplicateResultId: 'Tento výsledek již byl přidán.',
+    invalidComparisonTitle: 'Neplatný odkaz na srovnání',
+    invalidComparison:
+      'Tento odkaz na porovnání má nesprávný tvar nebo obsahuje neplatná data výsledků.',
+    loadFailedTitle: 'Došlo k jiné chybě',
+    resultLoadFailed:
+      'Při načítání výsledku došlo k neočekávané chybě. Zkuste to znovu později.',
+    comparisonLoadFailed:
+      'Při načítání porovnání došlo k neočekávané chybě. Zkuste to znovu později.',
+    unexpectedTitle: 'Něco se pokazilo',
+    unexpectedDescription: 'Došlo k neočekávané chybě. Zkuste to prosím znovu.',
+    goBack: 'Vraťte se na předchozí stránku',
+    tryAgain: 'Zkuste to znovu',
+    recovering: 'Obnovení stránky'
+  },
+  nl: {
+    pageNotFoundTitle: 'Pagina niet gevonden',
+    pageNotFound: 'De opgevraagde pagina kon niet worden gevonden.',
+    resultNotFoundTitle: 'Resultaat niet gevonden',
+    resultNotFound:
+      'Er is geen opgeslagen testresultaat gevonden voor deze ID. Controleer de ID en probeer het opnieuw.',
+    comparisonNotFoundTitle: 'Vergelijkingsresultaten niet gevonden',
+    comparisonNotFound:
+      'Tenminste één opgeslagen testresultaat in deze vergelijking kon niet worden gevonden, dus de vergelijking kan niet worden weergegeven.',
+    invalidResultIdTitle: 'Ongeldige resultaat-ID',
+    invalidResultId: 'Voer een geldige resultaat-ID van 24 tekens in.',
+    duplicateResultId: 'Dit resultaat is al toegevoegd.',
+    invalidComparisonTitle: 'Ongeldige vergelijkingslink',
+    invalidComparison:
+      'Deze vergelijkingslink is onjuist opgemaakt of bevat ongeldige resultaatgegevens.',
+    loadFailedTitle: 'Er is een andere fout opgetreden',
+    resultLoadFailed:
+      'Er is een onverwachte fout opgetreden tijdens het laden van het resultaat. Probeer het later opnieuw.',
+    comparisonLoadFailed:
+      'Er is een onverwachte fout opgetreden tijdens het laden van de vergelijking. Probeer het later opnieuw.',
+    unexpectedTitle: 'Er is iets misgegaan',
+    unexpectedDescription:
+      'Er is een onverwachte fout opgetreden. Probeer het opnieuw.',
+    goBack: 'Ga terug naar de vorige pagina',
+    tryAgain: 'Probeer het opnieuw',
+    recovering: 'De pagina herstellen'
+  },
+  et: {
+    pageNotFoundTitle: 'Lehte ei leitud',
+    pageNotFound: 'Soovitud lehte ei leitud.',
+    resultNotFoundTitle: 'Tulemust ei leitud',
+    resultNotFound:
+      'Selle ID jaoks ei leitud ühtegi salvestatud testitulemust. Kontrollige ID-d ja proovige uuesti.',
+    comparisonNotFoundTitle: 'Võrdlustulemusi ei leitud',
+    comparisonNotFound:
+      'Sellest võrdlusest ei leitud vähemalt ühte salvestatud testitulemust, seega ei saa võrdlust kuvada.',
+    invalidResultIdTitle: 'Vale tulemuse ID',
+    invalidResultId: 'Sisestage kehtiv 24-kohaline tulemuse ID.',
+    duplicateResultId: 'See tulemus on juba lisatud.',
+    invalidComparisonTitle: 'Vigane võrdluslink',
+    invalidComparison:
+      'See võrdluslink on valesti vormindatud või sisaldab kehtetuid tulemuste andmeid.',
+    loadFailedTitle: 'Ilmnes teistsugune viga',
+    resultLoadFailed:
+      'Tulemuse laadimisel ilmnes ootamatu viga. Proovige hiljem uuesti.',
+    comparisonLoadFailed:
+      'Võrdluse laadimisel ilmnes ootamatu viga. Proovige hiljem uuesti.',
+    unexpectedTitle: 'Midagi läks valesti',
+    unexpectedDescription: 'Ilmnes ootamatu viga. Palun proovi uuesti.',
+    goBack: 'Mine tagasi eelmisele lehele',
+    tryAgain: 'Proovi uuesti',
+    recovering: 'Lehe taastamine'
+  },
+  he: {
+    pageNotFoundTitle: 'הדף לא נמצא',
+    pageNotFound: 'הדף המבוקש לא נמצא.',
+    resultNotFoundTitle: 'התוצאה לא נמצאה',
+    resultNotFound:
+      'לא נמצאה תוצאת בדיקה שמורה עבור מזהה זה. בדוק את המזהה ונסה שוב.',
+    comparisonNotFoundTitle: 'תוצאות השוואה לא נמצאו',
+    comparisonNotFound:
+      'לא ניתן היה למצוא לפחות תוצאת בדיקה אחת שנשמרה בהשוואה זו, ולכן לא ניתן להציג את ההשוואה.',
+    invalidResultIdTitle: 'מזהה תוצאה לא חוקי',
+    invalidResultId: 'הזן מזהה תוצאה חוקי של 24 תווים.',
+    duplicateResultId: 'תוצאה זו כבר נוספה.',
+    invalidComparisonTitle: 'קישור השוואה לא חוקי',
+    invalidComparison: 'קישור ההשוואה הזה פגום או מכיל נתוני תוצאות לא חוקיים.',
+    loadFailedTitle: 'אירעה שגיאה אחרת',
+    resultLoadFailed:
+      'אירעה שגיאה בלתי צפויה בעת טעינת התוצאה. אנא נסה שוב מאוחר יותר.',
+    comparisonLoadFailed:
+      'אירעה שגיאה בלתי צפויה בעת טעינת ההשוואה. אנא נסה שוב מאוחר יותר.',
+    unexpectedTitle: 'משהו השתבש',
+    unexpectedDescription: 'אירעה שגיאה בלתי צפויה. אנא נסה שוב.',
+    goBack: 'חזור לעמוד הקודם',
+    tryAgain: 'נסה שוב',
+    recovering: 'משחזר את הדף'
+  },
+  hu: {
+    pageNotFoundTitle: 'Az oldal nem található',
+    pageNotFound: 'A keresett oldal nem található.',
+    resultNotFoundTitle: 'Az eredmény nem található',
+    resultNotFound:
+      'Ehhez az azonosítóhoz nem található mentett teszteredmény. Ellenőrizze az azonosítót, és próbálja újra.',
+    comparisonNotFoundTitle: 'Összehasonlítási eredmények nem találhatók',
+    comparisonNotFound:
+      'Ebben az összehasonlításban legalább egy mentett teszteredmény nem található, ezért az összehasonlítás nem jeleníthető meg.',
+    invalidResultIdTitle: 'Érvénytelen eredményazonosító',
+    invalidResultId:
+      'Adjon meg egy érvényes, 24 karakterből álló eredményazonosítót.',
+    duplicateResultId: 'Ezt az eredményt már hozzáadtuk.',
+    invalidComparisonTitle: 'Érvénytelen összehasonlító link',
+    invalidComparison:
+      'Ez az összehasonlító link rosszul formázott vagy érvénytelen eredményadatokat tartalmaz.',
+    loadFailedTitle: 'Más hiba történt',
+    resultLoadFailed:
+      'Váratlan hiba történt az eredmény betöltése közben. Kérjük, próbálja újra később.',
+    comparisonLoadFailed:
+      'Váratlan hiba történt az összehasonlítás betöltése közben. Kérjük, próbálja újra később.',
+    unexpectedTitle: 'Valami elromlott',
+    unexpectedDescription: 'Váratlan hiba történt. Kérjük, próbálja újra.',
+    goBack: 'Menjen vissza az előző oldalra',
+    tryAgain: 'Próbáld újra',
+    recovering: 'Az oldal helyreállítása'
+  },
+  fa: {
+    pageNotFoundTitle: 'صفحه پیدا نشد',
+    pageNotFound: 'صفحه درخواستی یافت نشد.',
+    resultNotFoundTitle: 'نتیجه یافت نشد',
+    resultNotFound:
+      'هیچ نتیجه تست ذخیره شده ای برای این شناسه یافت نشد. شناسه را بررسی کنید و دوباره امتحان کنید.',
+    comparisonNotFoundTitle: 'نتایج مقایسه یافت نشد',
+    comparisonNotFound:
+      'حداقل یک نتیجه تست ذخیره شده در این مقایسه یافت نشد، بنابراین مقایسه نمایش داده نمی شود.',
+    invalidResultIdTitle: 'شناسه نتیجه نامعتبر است',
+    invalidResultId: 'یک شناسه نتیجه 24 نویسه‌ای معتبر وارد کنید.',
+    duplicateResultId: 'این نتیجه قبلاً اضافه شده است.',
+    invalidComparisonTitle: 'لینک مقایسه نامعتبر است',
+    invalidComparison:
+      'این پیوند مقایسه نادرست است یا حاوی داده‌های نتیجه نامعتبر است.',
+    loadFailedTitle: 'یک خطای متفاوت رخ داد',
+    resultLoadFailed:
+      'هنگام بارگیری نتیجه یک خطای غیرمنتظره روی داد. لطفاً بعداً دوباره امتحان کنید.',
+    comparisonLoadFailed:
+      'هنگام بارگیری مقایسه، یک خطای غیرمنتظره روی داد. لطفاً بعداً دوباره امتحان کنید.',
+    unexpectedTitle: 'مشکلی پیش آمد',
+    unexpectedDescription: 'یک خطای غیرمنتظره رخ داد. لطفا دوباره امتحان کنید.',
+    goBack: 'به صفحه قبل برگردید',
+    tryAgain: 'دوباره امتحان کنید',
+    recovering: 'بازیابی صفحه'
+  },
+  ro: {
+    pageNotFoundTitle: 'Pagina nu a fost găsită',
+    pageNotFound: 'Pagina solicitată nu a putut fi găsită.',
+    resultNotFoundTitle: 'Rezultatul nu a fost găsit',
+    resultNotFound:
+      'Nu a fost găsit niciun rezultat al testului salvat pentru acest ID. Verificați ID-ul și încercați din nou.',
+    comparisonNotFoundTitle: 'Rezultatele comparației nu au fost găsite',
+    comparisonNotFound:
+      'Cel puțin un rezultat al testului salvat în această comparație nu a putut fi găsit, astfel încât comparația nu poate fi afișată.',
+    invalidResultIdTitle: 'ID rezultat nevalid',
+    invalidResultId: 'Introduceți un ID valid de rezultat de 24 de caractere.',
+    duplicateResultId: 'Acest rezultat a fost deja adăugat.',
+    invalidComparisonTitle: 'Link de comparație nevalid',
+    invalidComparison:
+      'Acest link de comparație este incorect sau conține date de rezultat nevalide.',
+    loadFailedTitle: 'A apărut o eroare diferită',
+    resultLoadFailed:
+      'A apărut o eroare neașteptată la încărcarea rezultatului. Vă rugăm să încercați din nou mai târziu.',
+    comparisonLoadFailed:
+      'A apărut o eroare neașteptată la încărcarea comparației. Vă rugăm să încercați din nou mai târziu.',
+    unexpectedTitle: 'Ceva a mers prost',
+    unexpectedDescription:
+      'A apărut o eroare neașteptată. Vă rugăm să încercați din nou.',
+    goBack: 'Reveniți la pagina anterioară',
+    tryAgain: 'Încercați din nou',
+    recovering: 'Recuperarea paginii'
+  },
+  sr: {
+    pageNotFoundTitle: 'Страница није пронађена',
+    pageNotFound: 'Тражена страница није пронађена.',
+    resultNotFoundTitle: 'Резултат није пронађен',
+    resultNotFound:
+      'Није пронађен ниједан сачуван резултат теста за овај ИД. Проверите ИД и покушајте поново.',
+    comparisonNotFoundTitle: 'Резултати поређења нису пронађени',
+    comparisonNotFound:
+      'Најмање један сачувани резултат теста у овом поређењу није пронађен, тако да поређење не може да се прикаже.',
+    invalidResultIdTitle: 'Неважећи ИД резултата',
+    invalidResultId: 'Унесите важећи ИД резултата од 24 знака.',
+    duplicateResultId: 'Овај резултат је већ додат.',
+    invalidComparisonTitle: 'Неважећа веза за поређење',
+    invalidComparison:
+      'Ова веза за поређење је погрешно обликована или садржи неважеће податке о резултатима.',
+    loadFailedTitle: 'Дошло је до другачије грешке',
+    resultLoadFailed:
+      'Дошло је до неочекиване грешке приликом учитавања резултата. Покушајте поново касније.',
+    comparisonLoadFailed:
+      'Дошло је до неочекиване грешке при учитавању поређења. Покушајте поново касније.',
+    unexpectedTitle: 'Нешто је пошло по злу',
+    unexpectedDescription: 'Дошло је до неочекиване грешке. Покушајте поново.',
+    goBack: 'Вратите се на претходну страницу',
+    tryAgain: 'Покушајте поново',
+    recovering: 'Опоравак странице'
+  },
+  ss: {
+    pageNotFoundTitle: 'Likhasi alitfolakali',
+    pageNotFound: 'Likhasi leliceliwe alitfolakali.',
+    resultNotFoundTitle: 'Umphumela awukatfolakali',
+    resultNotFound:
+      'Kute umphumela wekuhlola logciniwe lotfolakele wale-ID. Hlola i-ID bese uyazama futsi.',
+    comparisonNotFoundTitle: 'Imiphumela yekucatsanisa ayitfolakali',
+    comparisonNotFound:
+      'Okungenani umphumela munye wekuhlola logciniwe kulokucatsanisa awuzange utfolakale, ngako-ke kucatsanisa akukhonjiswa.',
+    invalidResultIdTitle: 'ID yemphumela lengasebenti',
+    invalidResultId:
+      'Faka i-ID yemphumela lesemtsetfweni lenetinhlavu letingu-24.',
+    duplicateResultId: 'Lomphumela sewuvele wengetiwe.',
+    invalidComparisonTitle: 'Sixhumanisi sekucatsanisa lesingasebenti',
+    invalidComparison:
+      'Lesixhumanisi sekucatsanisa asikalungi kahle noma sicuketse idatha yemphumela lengasebenti.',
+    loadFailedTitle: 'Kwenteke liphutsa lelehlukile',
+    resultLoadFailed:
+      'Kwenteke liphutsa lelingakalindzeleki ngesikhatsi kulayisha umphumela. Sicela uphindze uzame ngemuva kwesikhatsi.',
+    comparisonLoadFailed:
+      'Kwenteke liphutsa lelingakalindzeleki ngesikhatsi kulayisha kucatsanisa. Sicela uphindze uzame ngemuva kwesikhatsi.',
+    unexpectedTitle: 'Kukhona lokungahambanga kahle',
+    unexpectedDescription:
+      'Kwenteke liphutsa lelingakalindzeleki. Sicela uphindze uzame.',
+    goBack: 'Buyela ekhasini lelidlule',
+    tryAgain: 'Zama futsi',
+    recovering: 'Kubuyisa lelikhasi'
+  },
+  sl: {
+    pageNotFoundTitle: 'Stran ni najdena',
+    pageNotFound: 'Zahtevane strani ni bilo mogoče najti.',
+    resultNotFoundTitle: 'Rezultat ni bil najden',
+    resultNotFound:
+      'Za ta ID ni bil najden noben shranjen rezultat testa. Preverite ID in poskusite znova.',
+    comparisonNotFoundTitle: 'Primerjalni rezultati niso bili najdeni',
+    comparisonNotFound:
+      'Vsaj enega shranjenega rezultata testa v tej primerjavi ni bilo mogoče najti, zato primerjave ni mogoče prikazati.',
+    invalidResultIdTitle: 'Neveljaven ID rezultata',
+    invalidResultId: 'Vnesite veljaven 24-mestni ID rezultata.',
+    duplicateResultId: 'Ta rezultat je že dodan.',
+    invalidComparisonTitle: 'Neveljavna primerjalna povezava',
+    invalidComparison:
+      'Ta primerjalna povezava je napačno oblikovana ali vsebuje neveljavne podatke o rezultatih.',
+    loadFailedTitle: 'Prišlo je do drugačne napake',
+    resultLoadFailed:
+      'Med nalaganjem rezultata je prišlo do nepričakovane napake. Poskusite znova pozneje.',
+    comparisonLoadFailed:
+      'Med nalaganjem primerjave je prišlo do nepričakovane napake. Poskusite znova pozneje.',
+    unexpectedTitle: 'Nekaj je šlo narobe',
+    unexpectedDescription:
+      'Prišlo je do nepričakovane napake. prosim poskusite znova',
+    goBack: 'Vrni se na prejšnjo stran',
+    tryAgain: 'poskusi ponovno',
+    recovering: 'Obnavljanje strani'
+  },
+  tr: {
+    pageNotFoundTitle: 'Sayfa bulunamadı',
+    pageNotFound: 'İstenilen sayfa bulunamadı.',
+    resultNotFoundTitle: 'Sonuç bulunamadı',
+    resultNotFound:
+      'Bu kimlik için kayıtlı test sonucu bulunamadı. Kimliği kontrol edip tekrar deneyin.',
+    comparisonNotFoundTitle: 'Karşılaştırma sonuçları bulunamadı',
+    comparisonNotFound:
+      'Bu karşılaştırmada en az bir kayıtlı test sonucu bulunamadı, dolayısıyla karşılaştırma görüntülenemiyor.',
+    invalidResultIdTitle: 'Geçersiz sonuç kimliği',
+    invalidResultId: '24 karakterlik geçerli bir sonuç kimliği girin.',
+    duplicateResultId: 'Bu sonuç zaten eklenmiş.',
+    invalidComparisonTitle: 'Geçersiz karşılaştırma bağlantısı',
+    invalidComparison:
+      'Bu karşılaştırma bağlantısı hatalı biçimlendirilmiş veya geçersiz sonuç verileri içeriyor.',
+    loadFailedTitle: 'Farklı bir hata oluştu',
+    resultLoadFailed:
+      'Sonuç yüklenirken beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyin.',
+    comparisonLoadFailed:
+      'Karşılaştırma yüklenirken beklenmeyen bir hata oluştu. Lütfen daha sonra tekrar deneyin.',
+    unexpectedTitle: 'Bir şeyler ters gitti',
+    unexpectedDescription:
+      'Beklenmeyen bir hata oluştu. Lütfen tekrar deneyin.',
+    goBack: 'Önceki sayfaya geri dön',
+    tryAgain: 'Tekrar dene',
+    recovering: 'Sayfayı kurtarma'
+  },
+  ur: {
+    pageNotFoundTitle: 'صفحہ نہیں ملا',
+    pageNotFound: 'مطلوبہ صفحہ نہیں مل سکا۔',
+    resultNotFoundTitle: 'نتیجہ نہیں ملا',
+    resultNotFound:
+      'اس ID کے لیے کوئی محفوظ شدہ ٹیسٹ کا نتیجہ نہیں ملا۔ ID چیک کریں اور دوبارہ کوشش کریں۔',
+    comparisonNotFoundTitle: 'موازنہ کے نتائج نہیں ملے',
+    comparisonNotFound:
+      'اس موازنہ میں کم از کم ایک محفوظ شدہ ٹیسٹ کا نتیجہ نہیں مل سکا، اس لیے موازنہ ظاہر نہیں کیا جا سکتا۔',
+    invalidResultIdTitle: 'غلط نتیجہ ID',
+    invalidResultId: 'ایک درست 24 حروف کی نتیجہ ID درج کریں۔',
+    duplicateResultId: 'یہ نتیجہ پہلے ہی شامل کیا جا چکا ہے۔',
+    invalidComparisonTitle: 'غلط موازنہ لنک',
+    invalidComparison: 'یہ موازنہ لنک خراب ہے یا اس میں غلط نتائج کا ڈیٹا ہے۔',
+    loadFailedTitle: 'ایک مختلف خرابی پیش آگئی',
+    resultLoadFailed:
+      'نتیجہ لوڈ کرتے وقت ایک غیر متوقع خرابی پیش آگئی۔ براہ کرم بعد میں دوبارہ کوشش کریں۔',
+    comparisonLoadFailed:
+      'موازنہ لوڈ کرتے وقت ایک غیر متوقع خرابی پیش آگئی۔ براہ کرم بعد میں دوبارہ کوشش کریں۔',
+    unexpectedTitle: 'کچھ غلط ہو گیا۔',
+    unexpectedDescription:
+      'ایک غیر متوقع خرابی پیش آگئی۔ براہ کرم دوبارہ کوشش کریں۔',
+    goBack: 'پچھلے صفحے پر واپس جائیں۔',
+    tryAgain: 'دوبارہ کوشش کریں۔',
+    recovering: 'صفحہ بازیافت کرنا'
+  },
+  vi: {
+    pageNotFoundTitle: 'Không tìm thấy trang',
+    pageNotFound: 'Không thể tìm thấy trang được yêu cầu.',
+    resultNotFoundTitle: 'Không tìm thấy kết quả',
+    resultNotFound:
+      'Không tìm thấy kết quả xét nghiệm đã lưu nào cho ID này. Hãy kiểm tra ID và thử lại.',
+    comparisonNotFoundTitle: 'Không tìm thấy kết quả so sánh',
+    comparisonNotFound:
+      'Không thể tìm thấy ít nhất một kết quả kiểm tra đã lưu trong so sánh này, do đó không thể hiển thị so sánh.',
+    invalidResultIdTitle: 'ID kết quả không hợp lệ',
+    invalidResultId: 'Nhập ID kết quả gồm 24 ký tự hợp lệ.',
+    duplicateResultId: 'Kết quả này đã được thêm vào.',
+    invalidComparisonTitle: 'Liên kết so sánh không hợp lệ',
+    invalidComparison:
+      'Liên kết so sánh này không đúng định dạng hoặc chứa dữ liệu kết quả không hợp lệ.',
+    loadFailedTitle: 'Đã xảy ra lỗi khác',
+    resultLoadFailed:
+      'Đã xảy ra lỗi không mong muốn khi tải kết quả. Vui lòng thử lại sau.',
+    comparisonLoadFailed:
+      'Đã xảy ra lỗi không mong muốn khi tải bản so sánh. Vui lòng thử lại sau.',
+    unexpectedTitle: 'Đã xảy ra lỗi',
+    unexpectedDescription: 'Đã xảy ra lỗi không mong muốn. Vui lòng thử lại.',
+    goBack: 'Quay lại trang trước',
+    tryAgain: 'Thử lại',
+    recovering: 'Khôi phục trang'
   }
 };
+
+errorMessages.sr = serbianObjectToLatin(errorMessages.sr);
 
 export function getErrorMessages(locale: string): ErrorMessages {
   return errorMessages[locale as ErrorLocale] ?? errorMessages.en;

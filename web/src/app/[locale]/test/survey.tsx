@@ -3,9 +3,9 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Button } from '@nextui-org/button';
 import { RadioGroup, Radio } from '@nextui-org/radio';
-import { Progress } from '@nextui-org/progress';
 import confetti from 'canvas-confetti';
 import { useRouter } from '@/navigation';
+import { isRtlLang } from 'rtl-detect';
 
 import { type Question } from '@bigfive-org/questions';
 import { sleep, formatTimer, isDev } from '@/lib/helpers';
@@ -34,7 +34,9 @@ export const Survey = ({
   language
 }: SurveyProps) => {
   const router = useRouter();
-  const ui = getUiMessages(useLocale());
+  const locale = useLocale();
+  const ui = getUiMessages(locale);
+  const isRtl = isRtlLang(locale);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [questionsPerPage, setQuestionsPerPage] = useState(1);
   const [answers, setAnswers] = useState<Answer[]>([]);
@@ -181,17 +183,28 @@ export const Survey = ({
 
   return (
     <div className='mt-2'>
-      <Progress
-        aria-label={ui.progressBar}
-        value={progress}
-        className='max-w'
-        showValueLabel={true}
-        label={formatTimer(seconds)}
-        minValue={0}
-        maxValue={100}
-        size='lg'
-        color='secondary'
-      />
+      <div className='w-full'>
+        <div className='mb-1 flex justify-between text-sm text-default-600'>
+          <span>{formatTimer(seconds)}</span>
+          <span>{progress}%</span>
+        </div>
+        <div
+          aria-label={ui.progressBar}
+          aria-valuemax={100}
+          aria-valuemin={0}
+          aria-valuenow={progress}
+          className='h-3 w-full overflow-hidden rounded-full bg-default-200'
+          role='progressbar'
+        >
+          <div
+            className='h-full rounded-full bg-secondary transition-[width] duration-300 motion-reduce:transition-none'
+            style={{
+              marginLeft: isRtl ? 'auto' : undefined,
+              width: `${progress}%`
+            }}
+          />
+        </div>
+      </div>
       {currentQuestions.map((question) => (
         <div key={'q' + question.num}>
           <h2 className='text-2xl my-4'>{question.text}</h2>

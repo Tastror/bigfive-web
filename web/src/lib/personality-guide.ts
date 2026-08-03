@@ -4,6 +4,7 @@ import {
   type ResultTemplate,
   type Score
 } from '@/lib/localized-results';
+import { serbianObjectToLatin } from '@/lib/serbian';
 
 export interface PersonalityGuideMessages {
   title: string;
@@ -692,8 +693,624 @@ const messages: Record<string, PersonalityGuideMessages> = {
     sourceJohnson: 'งานพัฒนาแบบวัดบุคลิกภาพ IPIP-NEO 120 ข้อ',
     noteTitle: 'ข้อควรจำ',
     note: 'ลักษณะบุคลิกภาพไม่ใช่การวินิจฉัย และไม่มีคะแนนใดดีหรือไม่ดีในตัวเอง บริบท เป้าหมาย วัฒนธรรม และการผสมผสานของลักษณะต่าง ๆ ล้วนมีผลต่อการแสดงออกของแนวโน้ม'
+  },
+  sq: {
+    title: 'Kuptoni personalitetin',
+    seoDescription:
+      'Kuptoni dimensionet e Pesë të Mëdha dhe të 30 aspektet në diapazonin e rezultateve më të ulëta, të mesme dhe më të larta.',
+    intro:
+      'Tiparet e personalitetit janë të vazhdueshme, jo kuti. Eksploroni se çfarë përshkruan çdo dimension i gjerë dhe aspekt më i ngushtë dhe se si mund të shfaqen rezultatet më të ulëta, të mesme dhe më të larta në jetën e përditshme.',
+    scaleTitle: 'Si të lexoni nivelet',
+    scaleText:
+      "Më të ulëta, të mesme dhe më të larta përshkruajnë tendenca relative, jo tipe fikse. Një rezultat pranë një kufiri mund t'i ngjajë të dy vargjeve fqinje.",
+    lower: 'Më e ulët',
+    middle: 'E mesme',
+    higher: 'Më e lartë',
+    lowerMeaning:
+      'Kjo tendencë është më pak e theksuar. Modeli me pikë më të ulët i përshkruar më sipër ka më shumë gjasa të përshtatet.',
+    middleMeaning:
+      'Mund të shfaqen të dyja palët. Cili model përshtatet më mirë mund të ndryshojë me situatën.',
+    higherMeaning:
+      'Kjo tendencë është më e theksuar. Modeli me pikë më të lartë i përshkruar më sipër ka më shumë gjasa të përshtatet.',
+    domainGuide: 'Si mund të shfaqen diapazon të ndryshëm rezultatesh',
+    facets: 'Gjashtë aspekte më të ngushta',
+    facetIntro: 'Çfarë përshkruan ky aspekt',
+    viewLevels: 'Shikoni më të ulët, të mesëm dhe më të lartë',
+    sourcesTitle: 'Bazat dhe burimet',
+    sourcesText:
+      'Përshkrimet bazohen në tekstin e raportit IPIP-NEO-120. Rezultatet interpretohen si pozicione në një vazhdimësi dhe jo si lloje të veçanta personaliteti.',
+    sourceIpip:
+      'Udhëzues IPIP për interpretimin e rezultateve individuale të shkallës',
+    sourceJohnson:
+      'Zhvillimi i inventarit të personalitetit IPIP-NEO me 120 artikuj',
+    noteTitle: 'Mbani parasysh',
+    note: 'Tiparet nuk janë diagnoza dhe asnjë rezultat nuk është në thelb i mirë apo i keq. Konteksti, qëllimet, kultura dhe kombinimi i tipareve ndikojnë të gjitha në mënyrën se si shprehet një tendencë.'
+  },
+  hy: {
+    title: 'Հասկացեք անհատականությունը',
+    seoDescription:
+      'Հասկացեք Մեծ հինգ չափերը և բոլոր 30 երեսակները ստորին, միջին և բարձր միավորների միջակայքերում:',
+    intro:
+      'Անհատականության գծերը շարունակական են, այլ ոչ թե տուփեր: Բացահայտեք, թե ինչ է նկարագրում յուրաքանչյուր լայն հարթություն և ավելի նեղ երեսակ, և ինչպես կարող են ավելի ցածր, միջին և բարձր միավորներ հայտնվել առօրյա կյանքում:',
+    scaleTitle: 'Ինչպես կարդալ մակարդակները',
+    scaleText:
+      'Ստորին, միջին և բարձրագույնը բնութագրում են հարաբերական միտումները, ոչ թե ֆիքսված տեսակները: Սահմանի մոտ արդյունքը կարող է նմանվել երկու հարևան միջակայքերին:',
+    lower: 'Ստորին',
+    middle: 'Միջին',
+    higher: 'Ավելի բարձր',
+    lowerMeaning:
+      'Այս միտումն ավելի քիչ է ընդգծված։ Վերևում նկարագրված ավելի ցածր միավորների օրինակն ավելի հավանական է, որ համապատասխանի:',
+    middleMeaning:
+      'Երկու կողմերն էլ կարող են հայտնվել։ Որ նախշը ավելի լավ է համապատասխանում, կարող է փոխվել իրավիճակի հետ:',
+    higherMeaning:
+      'Այս միտումն ավելի ցայտուն է. Վերևում նկարագրված ավելի բարձր միավորների օրինակն ավելի հավանական է, որ համապատասխանի:',
+    domainGuide: 'Որքան տարբեր միավորների միջակայքեր կարող են հայտնվել',
+    facets: 'Վեց ավելի նեղ կողմեր',
+    facetIntro: 'Այն, ինչ նկարագրում է այս կողմը',
+    viewLevels: 'Դիտեք ստորին, միջին և ավելի բարձր',
+    sourcesTitle: 'Հիմքերը և աղբյուրները',
+    sourcesText:
+      'Նկարագրությունները հիմնված են IPIP-NEO-120 հաշվետվության տեքստի վրա: Միավորները մեկնաբանվում են որպես դիրքեր շարունակականության վրա, այլ ոչ թե անհատականության առանձին տեսակների:',
+    sourceIpip:
+      'IPIP ուղեցույց անհատական սանդղակի միավորների մեկնաբանման համար',
+    sourceJohnson: 'IPIP-NEO անհատականության գույքագրման 120 միավորի մշակում',
+    noteTitle: 'Նկատի ունեցեք',
+    note: 'Հատկանիշները ախտորոշումներ չեն, և ոչ մի միավոր էապես լավ կամ վատ չէ: Համատեքստը, նպատակները, մշակույթը և գծերի համակցությունը ազդում են միտումների արտահայտման վրա:'
+  },
+  bn: {
+    title: 'ব্যক্তিত্ব বুঝুন',
+    seoDescription:
+      'নিম্ন, মধ্যম এবং উচ্চতর স্কোর রেঞ্জ জুড়ে বিগ ফাইভ মাত্রা এবং সমস্ত 30টি দিক বুঝুন।',
+    intro:
+      'ব্যক্তিত্বের বৈশিষ্ট্যগুলি অবিরত, বাক্স নয়। প্রতিটি বিস্তৃত মাত্রা এবং সংকীর্ণ দিক কী বর্ণনা করে এবং দৈনন্দিন জীবনে কীভাবে নিম্ন, মধ্যম এবং উচ্চতর স্কোর দেখা যেতে পারে তা অন্বেষণ করুন।',
+    scaleTitle: 'কিভাবে লেভেল পড়তে হয়',
+    scaleText:
+      'নিম্ন, মধ্য এবং উচ্চ আপেক্ষিক প্রবণতা বর্ণনা করে, নির্দিষ্ট ধরনের নয়। একটি সীমানার কাছাকাছি একটি ফলাফল উভয় প্রতিবেশী রেঞ্জের অনুরূপ হতে পারে।',
+    lower: 'নিম্ন',
+    middle: 'মধ্য',
+    higher: 'উচ্চতর',
+    lowerMeaning:
+      'এই প্রবণতা কম বিশিষ্ট। উপরে বর্ণিত নিম্ন-স্কোরিং প্যাটার্নটি ফিট হওয়ার সম্ভাবনা বেশি।',
+    middleMeaning:
+      'উভয় পক্ষই উপস্থিত হতে পারে। কোন প্যাটার্নটি ভাল ফিট করে পরিস্থিতির সাথে পরিবর্তিত হতে পারে।',
+    higherMeaning:
+      'এই প্রবণতা বেশি দেখা যায়। উপরে বর্ণিত উচ্চ-স্কোরিং প্যাটার্ন ফিট হওয়ার সম্ভাবনা বেশি।',
+    domainGuide: 'কিভাবে বিভিন্ন স্কোর পরিসীমা প্রদর্শিত হতে পারে',
+    facets: 'ছয়টি সংকীর্ণ দিক',
+    facetIntro: 'এই দিকটি কী বর্ণনা করে',
+    viewLevels: 'নিম্ন, মধ্য এবং উচ্চ দেখুন',
+    sourcesTitle: 'ভিত্তি ও সূত্র',
+    sourcesText:
+      'বর্ণনাগুলি IPIP-NEO-120 রিপোর্ট পাঠ্যের উপর ভিত্তি করে। স্কোরগুলি পৃথক ব্যক্তিত্বের ধরনগুলির পরিবর্তে একটি ধারাবাহিকতার অবস্থান হিসাবে ব্যাখ্যা করা হয়।',
+    sourceIpip: 'পৃথক স্কেল স্কোর ব্যাখ্যা করার জন্য IPIP নির্দেশিকা',
+    sourceJohnson: '120-আইটেমের আইপিআইপি-এনইও ব্যক্তিত্বের তালিকার বিকাশ',
+    noteTitle: 'মনে রাখবেন',
+    note: 'বৈশিষ্ট্যগুলি নির্ণয় নয়, এবং কোনও স্কোর সহজাতভাবে ভাল বা খারাপ নয়। প্রসঙ্গ, লক্ষ্য, সংস্কৃতি এবং বৈশিষ্ট্যের সংমিশ্রণ সবই প্রভাবিত করে কিভাবে একটি প্রবণতা প্রকাশ করা হয়।'
+  },
+  'pt-br': {
+    title: 'Entenda a personalidade',
+    seoDescription:
+      'Compreenda as cinco grandes dimensões e todas as 30 facetas nas faixas de pontuação inferior, média e superior.',
+    intro:
+      'Os traços de personalidade são contínuos, não caixas. Explore o que cada dimensão ampla e cada faceta mais restrita descrevem e como as pontuações mais baixas, médias e mais altas podem aparecer na vida cotidiana.',
+    scaleTitle: 'Como ler os níveis',
+    scaleText:
+      'Inferior, médio e superior descrevem tendências relativas, não tipos fixos. Um resultado próximo de um limite pode assemelhar-se a ambos os intervalos vizinhos.',
+    lower: 'Inferior',
+    middle: 'Meio',
+    higher: 'Superior',
+    lowerMeaning:
+      'Esta tendência é menos proeminente. O padrão de pontuação mais baixa descrito acima tem maior probabilidade de se ajustar.',
+    middleMeaning:
+      'Ambos os lados podem aparecer. O padrão que se ajusta melhor pode mudar com a situação.',
+    higherMeaning:
+      'Esta tendência é mais proeminente. O padrão de pontuação mais alta descrito acima tem maior probabilidade de se ajustar.',
+    domainGuide: 'Como podem aparecer diferentes faixas de pontuação',
+    facets: 'Seis facetas mais estreitas',
+    facetIntro: 'O que esta faceta descreve',
+    viewLevels: 'Ver inferior, médio e superior',
+    sourcesTitle: 'Base e fontes',
+    sourcesText:
+      'As descrições são baseadas no texto do relatório IPIP-NEO-120. As pontuações são interpretadas como posições em um continuum, em vez de tipos de personalidade separados.',
+    sourceIpip:
+      'Orientação IPIP para interpretar pontuações de escalas individuais',
+    sourceJohnson:
+      'Desenvolvimento do inventário de personalidade IPIP-NEO de 120 itens',
+    noteTitle: 'Lembre-se',
+    note: 'Características não são diagnósticos e nenhuma pontuação é inerentemente boa ou ruim. O contexto, os objetivos, a cultura e a combinação de características afetam a forma como uma tendência é expressa.'
+  },
+  bg: {
+    title: 'Разберете личността',
+    seoDescription:
+      'Разберете големи пет измерения и всичките 30 аспекта в по-ниски, средни и по-високи диапазони на резултата.',
+    intro:
+      'Личностните черти са континууми, а не кутии. Разгледайте какво описва всяко широко измерение и по-тесен аспект и как могат да се появят по-ниски, средни и по-високи резултати в ежедневието.',
+    scaleTitle: 'Как да четем нивата',
+    scaleText:
+      'По-нисък, среден и по-висок описват относителни тенденции, а не фиксирани типове. Резултат близо до граница може да прилича на двата съседни диапазона.',
+    lower: 'По-ниска',
+    middle: 'Среден',
+    higher: 'По-високо',
+    lowerMeaning:
+      'Тази тенденция е по-слабо изразена. Моделът с по-нисък резултат, описан по-горе, е по-вероятно да пасне.',
+    middleMeaning:
+      'Могат да се появят и двете страни. Кой модел е по-подходящ може да се промени в зависимост от ситуацията.',
+    higherMeaning:
+      'Тази тенденция е по-ярка. Моделът с по-висок резултат, описан по-горе, е по-вероятно да пасне.',
+    domainGuide: 'Как могат да се появят различни диапазони на резултатите',
+    facets: 'Шест по-тесни фасети',
+    facetIntro: 'Какво описва този аспект',
+    viewLevels: 'Вижте по-ниско, средно и по-високо',
+    sourcesTitle: 'Основа и източници',
+    sourcesText:
+      'Описанията са базирани на текста на доклада IPIP-NEO-120. Резултатите се интерпретират като позиции в континуум, а не като отделни типове личности.',
+    sourceIpip:
+      'Насоки на IPIP за тълкуване на индивидуални резултати по скала',
+    sourceJohnson:
+      'Разработване на инвентаризация на личността IPIP-NEO от 120 елемента',
+    noteTitle: 'Имайте предвид',
+    note: 'Чертите не са диагнози и нито един резултат не е присъщо добър или лош. Контекстът, целите, културата и комбинацията от черти влияят върху това как се изразява тенденцията.'
+  },
+  ca: {
+    title: 'Entendre la personalitat',
+    seoDescription:
+      'Comprèn les cinc dimensions grans i les 30 facetes dels intervals de puntuació inferior, mitjà i superior.',
+    intro:
+      'Els trets de personalitat són continus, no caixes. Exploreu què descriu cada dimensió àmplia i faceta més estreta i com poden aparèixer puntuacions baixes, mitjanes i altes a la vida quotidiana.',
+    scaleTitle: 'Com llegir els nivells',
+    scaleText:
+      "Baix, mitjà i superior descriuen tendències relatives, no tipus fixos. Un resultat a prop d'un límit pot assemblar-se als dos intervals veïns.",
+    lower: 'Abaix',
+    middle: 'Mitjà',
+    higher: 'Més alt',
+    lowerMeaning:
+      'Aquesta tendència és menys destacada. És més probable que el patró de puntuació més baixa descrit anteriorment encaixi.',
+    middleMeaning:
+      "Poden aparèixer els dos costats. Quin patró s'adapta millor pot canviar amb la situació.",
+    higherMeaning:
+      'Aquesta tendència és més destacada. És més probable que el patró de puntuació més alta descrit anteriorment encaixi.',
+    domainGuide: 'Com poden aparèixer diferents intervals de puntuació',
+    facets: 'Sis facetes més estretes',
+    facetIntro: 'Què descriu aquesta faceta',
+    viewLevels: 'Visualitza la part inferior, mitjana i superior',
+    sourcesTitle: 'Fons i fonts',
+    sourcesText:
+      "Les descripcions es basen en el text de l'informe IPIP-NEO-120. Les puntuacions s'interpreten com a posicions en un continu en lloc de tipus de personalitat separats.",
+    sourceIpip: "Guia IPIP per interpretar puntuacions d'escala individual",
+    sourceJohnson:
+      "Desenvolupament de l'inventari de personalitat IPIP-NEO de 120 articles",
+    noteTitle: 'Tingues en compte',
+    note: "Els trets no són diagnòstics i cap puntuació és inherentment bona o dolenta. El context, els objectius, la cultura i la combinació de trets afecten com s'expressa una tendència."
+  },
+  hr: {
+    title: 'Shvatite osobnost',
+    seoDescription:
+      'Razumijevanje velikih pet dimenzija i svih 30 aspekata u nižim, srednjim i višim rasponima rezultata.',
+    intro:
+      'Crte ličnosti su kontinuumi, a ne kutije. Istražite što opisuje svaka široka dimenzija i uži aspekt i kako se niži, srednji i viši rezultati mogu pojaviti u svakodnevnom životu.',
+    scaleTitle: 'Kako čitati razine',
+    scaleText:
+      'Niži, srednji i viši opisuju relativne tendencije, a ne fiksne tipove. Rezultat blizu granice može nalikovati na oba susjedna raspona.',
+    lower: 'Niže',
+    middle: 'sredina',
+    higher: 'viši',
+    lowerMeaning:
+      'Ova tendencija je manje izražena. Gore opisani obrazac s nižim bodovanjem vjerojatnije će odgovarati.',
+    middleMeaning:
+      'Mogu se pojaviti obje strane. Koji obrazac bolje odgovara može se promijeniti u skladu sa situacijom.',
+    higherMeaning:
+      'Ova tendencija je izraženija. Veća je vjerojatnost da će odgovarati prethodno opisani uzorak s višim bodovanjem.',
+    domainGuide: 'Kako se mogu pojaviti različiti rasponi rezultata',
+    facets: 'Šest užih faseta',
+    facetIntro: 'Što ovaj aspekt opisuje',
+    viewLevels: 'Pogled niže, srednje i više',
+    sourcesTitle: 'Osnove i izvori',
+    sourcesText:
+      'Opisi se temelje na tekstu izvješća IPIP-NEO-120. Rezultati se tumače kao pozicije na kontinuumu, a ne kao odvojeni tipovi osobnosti.',
+    sourceIpip:
+      'IPIP smjernice za tumačenje pojedinačnih rezultata na ljestvici',
+    sourceJohnson: 'Razvoj IPIP-NEO popisa osobnosti od 120 stavki',
+    noteTitle: 'Imajte na umu',
+    note: 'Osobine nisu dijagnoze i nijedan rezultat nije sam po sebi dobar ili loš. Kontekst, ciljevi, kultura i kombinacija osobina utječu na to kako se sklonost izražava.'
+  },
+  cs: {
+    title: 'Pochopit osobnost',
+    seoDescription:
+      'Pochopte dimenze Velké pětky a všech 30 aspektů napříč nižšími, středními a vyššími rozsahy skóre.',
+    intro:
+      'Osobnostní rysy jsou kontinua, nikoli škatulky. Prozkoumejte, co každá široká dimenze a užší aspekt popisuje a jak se může v každodenním životě objevit nižší, střední a vyšší skóre.',
+    scaleTitle: 'Jak číst úrovně',
+    scaleText:
+      'Nižší, střední a vyšší popisují relativní tendence, nikoli fixní typy. Výsledek blízko hranice se může podobat oběma sousedním rozsahům.',
+    lower: 'Nižší',
+    middle: 'Střední',
+    higher: 'vyšší',
+    lowerMeaning:
+      'Tato tendence je méně výrazná. Vzorec s nižším skóre popsaný výše pravděpodobně vyhovuje.',
+    middleMeaning:
+      'Mohou se objevit obě strany. Který vzor lépe sedí, se může se situací změnit.',
+    higherMeaning:
+      'Tato tendence je výraznější. Vzorec s vyšším skóre popsaný výše pravděpodobně bude vyhovovat.',
+    domainGuide: 'Jak se mohou objevit různé rozsahy skóre',
+    facets: 'Šest užších faset',
+    facetIntro: 'Co tento aspekt popisuje',
+    viewLevels: 'Zobrazit nižší, střední a vyšší',
+    sourcesTitle: 'Základy a zdroje',
+    sourcesText:
+      'Popisy jsou založeny na textu zprávy IPIP-NEO-120. Skóre jsou interpretovány spíše jako pozice na kontinuu než jako samostatné typy osobnosti.',
+    sourceIpip: 'Pokyny IPIP pro interpretaci skóre jednotlivých škál',
+    sourceJohnson: 'Vývoj 120položkového osobnostního inventáře IPIP-NEO',
+    noteTitle: 'Mějte na paměti',
+    note: 'Vlastnosti nejsou diagnózy a žádné skóre není ve své podstatě dobré nebo špatné. Kontext, cíle, kultura a kombinace vlastností, to vše ovlivňuje to, jak je tendence vyjádřena.'
+  },
+  nl: {
+    title: 'Begrijp persoonlijkheid',
+    seoDescription:
+      'Begrijp de Big Five-dimensies en alle 30 facetten in het lagere, middelste en hogere scorebereik.',
+    intro:
+      'Persoonlijkheidskenmerken zijn continua, geen hokjes. Ontdek wat elke brede dimensie en elk smaller facet beschrijft, en hoe lagere, gemiddelde en hogere scores in het dagelijks leven kunnen voorkomen.',
+    scaleTitle: 'Hoe de niveaus te lezen',
+    scaleText:
+      'Lager, midden en hoger beschrijven relatieve tendensen, geen vaste typen. Een resultaat nabij een grens kan op beide aangrenzende bereiken lijken.',
+    lower: 'Lager',
+    middle: 'Midden',
+    higher: 'Hoger',
+    lowerMeaning:
+      'Deze tendens is minder prominent aanwezig. Het hierboven beschreven lager scorende patroon past waarschijnlijker.',
+    middleMeaning:
+      'Beide kanten kunnen verschijnen. Welk patroon beter past, kan per situatie veranderen.',
+    higherMeaning:
+      'Deze tendens is prominenter aanwezig. Het hierboven beschreven hoger scorende patroon past waarschijnlijker.',
+    domainGuide: 'Hoe verschillende scorebereiken kunnen verschijnen',
+    facets: 'Zes smallere facetten',
+    facetIntro: 'Wat dit facet beschrijft',
+    viewLevels: 'Bekijk lager, midden en hoger',
+    sourcesTitle: 'Basis en bronnen',
+    sourcesText:
+      'De beschrijvingen zijn gebaseerd op de IPIP-NEO-120 rapporttekst. Scores worden geïnterpreteerd als posities op een continuüm in plaats van afzonderlijke persoonlijkheidstypes.',
+    sourceIpip:
+      'IPIP-richtlijnen voor het interpreteren van individuele schaalscores',
+    sourceJohnson:
+      'Ontwikkeling van de IPIP-NEO-persoonlijkheidsinventaris met 120 items',
+    noteTitle: 'Houd er rekening mee',
+    note: 'Eigenschappen zijn geen diagnoses, en geen enkele score is inherent goed of slecht. Context, doelen, cultuur en de combinatie van eigenschappen hebben allemaal invloed op de manier waarop een tendens wordt uitgedrukt.'
+  },
+  et: {
+    title: 'Mõista isiksust',
+    seoDescription:
+      'Saate aru Big Five dimensioonidest ja kõigist 30 tahku madalamas, keskmises ja kõrgemas skoorivahemikus.',
+    intro:
+      'Isiksuseomadused on pidevad, mitte karbid. Uurige, mida iga laiem mõõde ja kitsam tahk kirjeldab ning kuidas madalamad, keskmised ja kõrgemad hinded võivad igapäevaelus ilmuda.',
+    scaleTitle: 'Kuidas taset lugeda',
+    scaleText:
+      'Madalam, keskmine ja kõrgem kirjeldavad suhtelisi tendentse, mitte fikseeritud tüüpe. Piirilähedane tulemus võib sarnaneda mõlema naabervahemikuga.',
+    lower: 'Madalam',
+    middle: 'Keskmine',
+    higher: 'Kõrgem',
+    lowerMeaning:
+      'See tendents on vähem märgatav. Ülalkirjeldatud väiksema punktisummaga muster sobib suurema tõenäosusega.',
+    middleMeaning:
+      'Mõlemad pooled võivad ilmuda. Milline muster sobib paremini, võib olukorraga muutuda.',
+    higherMeaning:
+      'See tendents on silmatorkavam. Ülalkirjeldatud kõrgema punktisummaga muster sobib suurema tõenäosusega.',
+    domainGuide: 'Kuidas erinevad skoorivahemikud võivad ilmuda',
+    facets: 'Kuus kitsamat tahku',
+    facetIntro: 'Mida see tahk kirjeldab',
+    viewLevels: 'Vaadake madalamat, keskmist ja kõrgemat',
+    sourcesTitle: 'Alus ja allikad',
+    sourcesText:
+      'Kirjeldused põhinevad IPIP-NEO-120 aruande tekstil. Hindeid tõlgendatakse pigem positsioonidena kontiinumil kui eraldi isiksusetüüpidena.',
+    sourceIpip: 'IPIP juhised individuaalsete skaala skooride tõlgendamiseks',
+    sourceJohnson: '120-punktilise IPIP-NEO isiksuseinventari väljatöötamine',
+    noteTitle: 'Pidage meeles',
+    note: 'Tunnused ei ole diagnoosid ja ükski skoor ei ole oma olemuselt hea või halb. Kontekst, eesmärgid, kultuur ja tunnuste kombinatsioon mõjutavad kõik seda, kuidas kalduvus väljendub.'
+  },
+  he: {
+    title: 'להבין אישיות',
+    seoDescription:
+      'הבן את חמשת הממדים הגדולים ואת כל 30 ההיבטים בטווחי ציונים נמוכים, בינוניים וגבוהים יותר.',
+    intro:
+      'תכונות אישיות הן המשכיות, לא קופסאות. חקור מה מתאר כל מימד רחב והיבט צר יותר, וכיצד ציונים נמוכים, בינוניים וגבוהים יותר עשויים להופיע בחיי היומיום.',
+    scaleTitle: 'איך לקרוא את הרמות',
+    scaleText:
+      'נמוך יותר, בינוני וגבוה יותר מתאר נטיות יחסיות, לא טיפוסים קבועים. תוצאה ליד גבול עשויה להידמות לשני הטווחים הסמוכים.',
+    lower: 'תחתון',
+    middle: 'אמצעי',
+    higher: 'גבוה יותר',
+    lowerMeaning:
+      'הנטייה הזו פחות בולטת. סביר יותר שהדפוס בעל הניקוד הנמוך יותר שתואר לעיל יתאים.',
+    middleMeaning:
+      'שני הצדדים יכולים להופיע. איזה דפוס מתאים יותר עשוי להשתנות עם המצב.',
+    higherMeaning:
+      'נטייה זו בולטת יותר. סביר יותר שהדפוס בעל הניקוד הגבוה יותר שתואר לעיל יתאים.',
+    domainGuide: 'כיצד טווחי ניקוד שונים עשויים להופיע',
+    facets: 'שש היבטים צרים יותר',
+    facetIntro: 'מה שהפן הזה מתאר',
+    viewLevels: 'הצג למטה, בינוני ומעלה',
+    sourcesTitle: 'בסיס ומקורות',
+    sourcesText:
+      'התיאורים מבוססים על טקסט הדוח IPIP-NEO-120. ציונים מתפרשים כעמדות על רצף ולא כסוגי אישיות נפרדים.',
+    sourceIpip: 'הנחיות IPIP לפירוש ציוני סולם בודדים',
+    sourceJohnson: 'פיתוח מלאי אישיות IPIP-NEO בן 120 פריטים',
+    noteTitle: 'זכור',
+    note: 'תכונות אינן אבחנות, ואף ציון אינו טוב או רע מטבעו. ההקשר, המטרות, התרבות והשילוב של תכונות כולם משפיעים על האופן שבו נטייה באה לידי ביטוי.'
+  },
+  hu: {
+    title: 'A személyiség megértése',
+    seoDescription:
+      'Ismerje meg a Big Five dimenzióit és mind a 30 aspektusát az alacsonyabb, középső és magasabb pontszámtartományban.',
+    intro:
+      'A személyiségjegyek folytonosak, nem dobozok. Fedezze fel, mit írnak le az egyes tágabb dimenziók és szűkebb szempontok, és hogyan jelenhetnek meg az alacsonyabb, közepes és magasabb pontszámok a mindennapi életben.',
+    scaleTitle: 'Hogyan kell olvasni a szinteket',
+    scaleText:
+      'Az alsó, a közép és a magasabb relatív tendenciákat ír le, nem rögzített típusokat. A határ közelében lévő eredmény mindkét szomszédos tartományra hasonlíthat.',
+    lower: 'Lejjebb',
+    middle: 'Közép',
+    higher: 'Magasabb',
+    lowerMeaning:
+      'Ez a tendencia kevésbé szembetűnő. Valószínűbb, hogy a fent leírt alacsonyabb pontszámú minta illeszkedik.',
+    middleMeaning:
+      'Mindkét oldal megjelenhet. A helyzettel változhat, hogy melyik minta illik jobban.',
+    higherMeaning:
+      'Ez a tendencia szembetűnőbb. Valószínűbb, hogy a fent leírt magasabb pontszámú minta illeszkedik.',
+    domainGuide: 'Hogyan jelenhetnek meg a különböző pontszámok',
+    facets: 'Hat keskenyebb oldal',
+    facetIntro: 'Mit ír le ez a szempont',
+    viewLevels: 'Alsó, középső és magasabb megtekintése',
+    sourcesTitle: 'Alapok és források',
+    sourcesText:
+      'A leírások az IPIP-NEO-120 jelentés szövegén alapulnak. A pontszámokat inkább egy kontinuumon elfoglalt pozíciókként értelmezik, nem pedig különálló személyiségtípusokként.',
+    sourceIpip: 'IPIP útmutató az egyéni skálapontszámok értelmezéséhez',
+    sourceJohnson: 'A 120 tételes IPIP-NEO személyiségleltár fejlesztése',
+    noteTitle: 'Tartsd szem előtt',
+    note: 'A tulajdonságok nem diagnózisok, és egyetlen pontszám sem jó vagy rossz. A kontextus, a célok, a kultúra és a tulajdonságok kombinációja egyaránt befolyásolja a tendencia kifejezését.'
+  },
+  fa: {
+    title: 'شخصیت را درک کنید',
+    seoDescription:
+      'ابعاد پنج بزرگ و تمام 30 وجه را در محدوده امتیازات پایین، متوسط و بالاتر درک کنید.',
+    intro:
+      'ویژگی های شخصیتی پیوسته هستند، نه جعبه ای. کاوش کنید که هر بعد وسیع و جنبه باریک‌تر چه چیزی را توصیف می‌کند و چگونه ممکن است نمرات پایین‌تر، متوسط ​​و بالاتر در زندگی روزمره ظاهر شوند.',
+    scaleTitle: 'نحوه خواندن سطوح',
+    scaleText:
+      'پایین، متوسط و بالاتر گرایش های نسبی را توصیف می کنند، نه انواع ثابت. نتیجه نزدیک یک مرز ممکن است شبیه هر دو محدوده همسایه باشد.',
+    lower: 'پایین تر',
+    middle: 'وسط',
+    higher: 'بالاتر',
+    lowerMeaning:
+      'این گرایش کمتر برجسته است. الگوی با امتیاز کمتری که در بالا توضیح داده شد به احتمال زیاد مناسب است.',
+    middleMeaning:
+      'هر دو طرف می توانند ظاهر شوند. اینکه کدام الگو بهتر است ممکن است با شرایط تغییر کند.',
+    higherMeaning:
+      'این گرایش برجسته تر است. الگوی با امتیاز بالاتر که در بالا توضیح داده شد به احتمال زیاد مناسب است.',
+    domainGuide: 'چگونه ممکن است محدوده امتیازات متفاوتی ظاهر شود',
+    facets: 'شش وجه باریکتر',
+    facetIntro: 'آنچه این وجه توصیف می کند',
+    viewLevels: 'پایین، وسط و بالاتر را مشاهده کنید',
+    sourcesTitle: 'مبانی و منابع',
+    sourcesText:
+      'توضیحات بر اساس متن گزارش IPIP-NEO-120 است. نمرات به جای تیپ های شخصیتی مجزا به عنوان موقعیت هایی در یک پیوستار تفسیر می شوند.',
+    sourceIpip: 'راهنمای IPIP برای تفسیر نمرات مقیاس فردی',
+    sourceJohnson: 'توسعه فهرست 120 موردی شخصیت IPIP-NEO',
+    noteTitle: 'در نظر داشته باشید',
+    note: 'صفات تشخیص نیستند و هیچ نمره ای ذاتاً خوب یا بد نیست. زمینه، اهداف، فرهنگ و ترکیبی از صفات همگی بر نحوه بیان یک گرایش تأثیر می گذارند.'
+  },
+  ro: {
+    title: 'Înțelege personalitatea',
+    seoDescription:
+      'Înțelegeți cele cinci mari dimensiuni și toate cele 30 de fațete din intervalele de scor inferior, mediu și superior.',
+    intro:
+      'Trăsăturile de personalitate sunt continue, nu cutii. Explorați ce descrie fiecare dimensiune largă și fațetă mai restrânsă și cum pot apărea scorurile mai mici, medii și mai mari în viața de zi cu zi.',
+    scaleTitle: 'Cum se citesc nivelurile',
+    scaleText:
+      'Inferior, mijloc și superior descriu tendințe relative, nu tipuri fixe. Un rezultat în apropierea unei granițe poate să semene cu ambele intervale învecinate.',
+    lower: 'Mai jos',
+    middle: 'Mijloc',
+    higher: 'Mai sus',
+    lowerMeaning:
+      'Această tendință este mai puțin proeminentă. Modelul cu scor mai mic descris mai sus este mai probabil să se potrivească.',
+    middleMeaning:
+      'Pot apărea ambele părți. Ce model se potrivește mai bine se poate schimba în funcție de situație.',
+    higherMeaning:
+      'Această tendință este mai proeminentă. Modelul cu scor mai mare descris mai sus este mai probabil să se potrivească.',
+    domainGuide: 'Cum pot apărea diferite intervale de scor',
+    facets: 'Șase fațete mai înguste',
+    facetIntro: 'Ce descrie această fațetă',
+    viewLevels: 'Vedeți mai jos, mijloc și mai sus',
+    sourcesTitle: 'Baza și sursele',
+    sourcesText:
+      'Descrierile se bazează pe textul raportului IPIP-NEO-120. Scorurile sunt interpretate ca poziții pe un continuum, mai degrabă decât tipuri separate de personalitate.',
+    sourceIpip:
+      'Ghid IPIP pentru interpretarea scorurilor la scară individuală',
+    sourceJohnson:
+      'Dezvoltarea inventarului de personalitate IPIP-NEO de 120 de articole',
+    noteTitle: 'Ține minte',
+    note: 'Trăsăturile nu sunt diagnostice și niciun scor nu este în mod inerent bun sau rău. Contextul, scopurile, cultura și combinația de trăsături afectează modul în care este exprimată o tendință.'
+  },
+  sr: {
+    title: 'Разумети личност',
+    seoDescription:
+      'Разумети великих пет димензија и свих 30 аспеката у нижим, средњим и вишим распонима резултата.',
+    intro:
+      'Особине личности су континууми, а не кутије. Истражите шта свака широка димензија и ужи аспект описује и како се у свакодневном животу могу појавити нижи, средњи и виши резултати.',
+    scaleTitle: 'Како читати нивое',
+    scaleText:
+      'Нижи, средњи и виши описују релативне тенденције, а не фиксне типове. Резултат близу границе може да личи на оба суседна опсега.',
+    lower: 'Ниже',
+    middle: 'Средњи',
+    higher: 'Више',
+    lowerMeaning:
+      'Ова тенденција је мање изражена. Већа је вероватноћа да ће одговарати горе описани образац са нижим бодовањем.',
+    middleMeaning:
+      'Могу се појавити обе стране. Који образац боље одговара може се променити са ситуацијом.',
+    higherMeaning:
+      'Ова тенденција је израженија. Већа је вероватноћа да ће одговарати горе описани образац са вишим бодовањем.',
+    domainGuide: 'Како се могу појавити различити распони резултата',
+    facets: 'Шест ужих фасета',
+    facetIntro: 'Оно што овај аспект описује',
+    viewLevels: 'Погледајте ниже, средње и више',
+    sourcesTitle: 'Основа и извори',
+    sourcesText:
+      'Описи су засновани на тексту извештаја ИПИП-НЕО-120. Резултати се тумаче као позиције на континууму, а не као одвојени типови личности.',
+    sourceIpip: 'ИПИП упутство за тумачење појединачних резултата на скали',
+    sourceJohnson: 'Развој ИПИП-НЕО инвентара личности од 120 ставки',
+    noteTitle: 'Имајте на уму',
+    note: 'Особине нису дијагнозе и ниједан резултат није сам по себи добар или лош. Контекст, циљеви, култура и комбинација особина утичу на то како се тенденција изражава.'
+  },
+  ss: {
+    title: 'Kuvisisa buntfu',
+    seoDescription:
+      'Visisa tilinganiso te-Big Five kanye nato tonkhe tincenye letingu-30 kuwo onkhe emabanga laphansi, lasemkhatsini, nalaphakeme.',
+    intro:
+      'Timphawu tebuntfu tichubeka, hhayi emabhokisi. Hlola kutsi silinganiso ngasinye lesibanti kanye nesici lesincane sichazani, nekutsi emaphuzu laphansi, lasemkhatsini, nalaphakeme angavela njani ekuphileni kwamalanga onkhe.',
+    scaleTitle: 'Indlela yekufundza emazinga',
+    scaleText:
+      'Lokuphansi, lokusemkhatsini, nalokuphakeme kuchaza kuthambekela lokuhlobene, hhayi tinhlobo letingagucuki. Umphumela losedvute nemncele ungafana nawo womabili emabanga lasedvute.',
+    lower: 'Ngephansi',
+    middle: 'Emkhatsini',
+    higher: 'Kuphakeme',
+    lowerMeaning:
+      'Lomkhuba awubonakali kakhulu. Iphethini yekushaya emaphuzu laphansi lechazwe ngenhla kungenteka kutsi ifaneleke.',
+    middleMeaning:
+      'Totimbili tinhlangotsi tingavela. Nguyiphi iphethini lehambisana kahle ingashintja ngesimo.',
+    higherMeaning:
+      'Lomkhuba uvele kakhulu. Iphethini yekushaya emaphuzu laphakeme lechazwe ngenhla kungenteka kutsi ifaneleke.',
+    domainGuide: 'Indlela emabanga emaphuzu lehlukene langavela ngayo',
+    facets: 'Tincenye letisitfupha letincane',
+    facetIntro: 'Lokuchazwa ngulesici',
+    viewLevels: 'Buka lokuphansi, lokusemkhatsini, nalokungetulu',
+    sourcesTitle: 'Sisekelo kanye nemitfombo',
+    sourcesText:
+      'Letincazelo tisuselwa embhalweni wembiko we-IPIP-NEO-120. Emaphuzu ahunyushwa njengetikhundla ku-continuum kunetinhlobo tebuntfu letihlukene.',
+    sourceIpip: 'Sicondziso se-IPIP sekuhumusha emaphuzu esikali ngasinye',
+    sourceJohnson:
+      'Kutfutfukiswa kweluhlu lwebuntfu be-IPIP-NEO lolunetintfo letingu-120',
+    noteTitle: 'Khumbula',
+    note: 'Timphawu akusito kuhlolwa, futsi kute emaphuzu lalungile noma lamabi ngekwemvelo. Ingcikitsi, imigomo, emasiko, kanye nekuhlanganiswa kwetimphawu konkhe kutsintsa indlela umkhuba lovetwa ngayo.'
+  },
+  sl: {
+    title: 'Razumeti osebnost',
+    seoDescription:
+      'Razumejte razsežnosti velikih pet in vseh 30 vidikov v nižjih, srednjih in višjih razponih rezultatov.',
+    intro:
+      'Osebnostne lastnosti so kontinuumi, ne škatle. Raziščite, kaj opisuje vsaka širša dimenzija in ožji vidik ter kako se lahko nižji, srednji in višji rezultati pojavijo v vsakdanjem življenju.',
+    scaleTitle: 'Kako brati nivoje',
+    scaleText:
+      'Nižje, srednje in višje opisujejo relativne težnje, ne fiksnih tipov. Rezultat blizu meje je lahko podoben obema sosednjima obsegoma.',
+    lower: 'Nižje',
+    middle: 'sredina',
+    higher: 'višje',
+    lowerMeaning:
+      'Ta težnja je manj izrazita. Zgoraj opisani vzorec z nižjimi točkami bo bolj verjetno ustrezal.',
+    middleMeaning:
+      'Lahko se pojavita obe strani. Kateri vzorec je boljši, se lahko spremeni glede na situacijo.',
+    higherMeaning:
+      'Ta težnja je bolj izrazita. Zgoraj opisani vzorec z višjimi točkami bo bolj verjetno ustrezal.',
+    domainGuide: 'Kako se lahko pojavijo različni razponi rezultatov',
+    facets: 'Šest ožjih faset',
+    facetIntro: 'Kaj ta vidik opisuje',
+    viewLevels: 'Pogled nižje, srednje in višje',
+    sourcesTitle: 'Podlaga in viri',
+    sourcesText:
+      'Opisi temeljijo na besedilu poročila IPIP-NEO-120. Rezultati se razlagajo kot položaji v kontinuumu in ne kot ločeni tipi osebnosti.',
+    sourceIpip: 'Navodila IPIP za razlago rezultatov posamezne lestvice',
+    sourceJohnson: 'Razvoj osebnostnega popisa IPIP-NEO s 120 točkami',
+    noteTitle: 'Imejte v mislih',
+    note: 'Lastnosti niso diagnoze in noben rezultat ni sam po sebi dober ali slab. Kontekst, cilji, kultura in kombinacija lastnosti vplivajo na to, kako se težnja izraža.'
+  },
+  tr: {
+    title: 'Kişiliği anlayın',
+    seoDescription:
+      'Büyük Beş boyutunu ve alt, orta ve yüksek puan aralıklarındaki 30 yönün tamamını anlayın.',
+    intro:
+      'Kişilik özellikleri kutular değil, sürekliliktir. Her geniş boyutun ve dar yönün neyi tanımladığını ve düşük, orta ve yüksek puanların günlük yaşamda nasıl görünebileceğini keşfedin.',
+    scaleTitle: 'Seviyeler nasıl okunur',
+    scaleText:
+      'Düşük, orta ve yüksek sabit türleri değil, göreceli eğilimleri tanımlar. Sınıra yakın bir sonuç, her iki komşu aralığa da benzeyebilir.',
+    lower: 'Daha düşük',
+    middle: 'Orta',
+    higher: 'Daha yüksek',
+    lowerMeaning:
+      'Bu eğilim daha az belirgindir. Yukarıda açıklanan daha düşük puanlama modelinin uyma olasılığı daha yüksektir.',
+    middleMeaning:
+      'Her iki taraf da görünebilir. Hangi modelin daha iyi uyduğu duruma göre değişebilir.',
+    higherMeaning:
+      'Bu eğilim daha belirgindir. Yukarıda açıklanan daha yüksek puanlama modelinin uyma olasılığı daha yüksektir.',
+    domainGuide: 'Farklı puan aralıkları nasıl görünebilir?',
+    facets: 'Altı daha dar yön',
+    facetIntro: 'Bu yönün tanımladığı şey',
+    viewLevels: 'Alt, orta ve üst öğeleri görüntüle',
+    sourcesTitle: 'Temel ve kaynaklar',
+    sourcesText:
+      'Açıklamalar IPIP-NEO-120 rapor metnini temel almaktadır. Puanlar, ayrı kişilik türlerinden ziyade bir süreklilik üzerindeki konumlar olarak yorumlanır.',
+    sourceIpip: 'Bireysel ölçek puanlarının yorumlanması için IPIP kılavuzu',
+    sourceJohnson: '120 maddelik IPIP-NEO kişilik envanterinin geliştirilmesi',
+    noteTitle: 'Aklında tut',
+    note: 'Özellikler teşhis değildir ve hiçbir puan doğası gereği iyi veya kötü değildir. Bağlam, hedefler, kültür ve özelliklerin birleşimi bir eğilimin nasıl ifade edildiğini etkiler.'
+  },
+  ur: {
+    title: 'شخصیت کو سمجھیں۔',
+    seoDescription:
+      'نچلے، درمیانے اور اعلی اسکور کی حدود میں بگ فائیو ڈائمینشنز اور تمام 30 پہلوؤں کو سمجھیں۔',
+    intro:
+      'شخصیت کی خصلتیں مسلسل ہیں، بکس نہیں۔ دریافت کریں کہ ہر ایک وسیع جہت اور تنگ پہلو کیا بیان کرتا ہے، اور روزمرہ کی زندگی میں کم، درمیانی اور اعلیٰ سکور کیسے ظاہر ہو سکتے ہیں۔',
+    scaleTitle: 'سطحوں کو کیسے پڑھیں',
+    scaleText:
+      'نچلا، درمیانی، اور اعلی رشتہ دار رجحانات کو بیان کرتے ہیں، نہ کہ مقررہ اقسام۔ باؤنڈری کے قریب نتیجہ دونوں پڑوسی حدود سے مشابہ ہو سکتا ہے۔',
+    lower: 'زیریں',
+    middle: 'درمیانی',
+    higher: 'اعلی',
+    lowerMeaning:
+      'یہ رجحان کم نمایاں ہے۔ اوپر بیان کردہ کم اسکورنگ پیٹرن کے فٹ ہونے کا زیادہ امکان ہے۔',
+    middleMeaning:
+      'دونوں طرف ظاہر ہو سکتے ہیں۔ کون سا نمونہ بہتر فٹ بیٹھتا ہے وہ صورت حال کے ساتھ بدل سکتا ہے۔',
+    higherMeaning:
+      'یہ رجحان زیادہ نمایاں ہے۔ اوپر بیان کردہ اعلی اسکورنگ پیٹرن کے فٹ ہونے کا زیادہ امکان ہے۔',
+    domainGuide: 'اسکور کی مختلف حدود کیسے ظاہر ہو سکتی ہیں۔',
+    facets: 'چھ تنگ پہلو',
+    facetIntro: 'یہ پہلو کیا بیان کرتا ہے۔',
+    viewLevels: 'نچلا، درمیانی اور اونچا دیکھیں',
+    sourcesTitle: 'بنیاد اور ذرائع',
+    sourcesText:
+      'تفصیل IPIP-NEO-120 رپورٹ کے متن پر مبنی ہے۔ اسکورز کو الگ الگ شخصیت کی اقسام کے بجائے تسلسل پر پوزیشن کے طور پر سمجھا جاتا ہے۔',
+    sourceIpip: 'انفرادی پیمانے کے اسکور کی تشریح کے لیے IPIP رہنمائی',
+    sourceJohnson: '120 آئٹم IPIP-NEO شخصیت کی انوینٹری کی ترقی',
+    noteTitle: 'ذہن میں رکھیں',
+    note: 'خصلتیں تشخیص نہیں ہیں، اور کوئی سکور فطری طور پر اچھا یا برا نہیں ہے۔ سیاق و سباق، اہداف، ثقافت، اور خصائص کا مجموعہ سبھی اس بات پر اثر انداز ہوتے ہیں کہ رجحان کا اظہار کیسے کیا جاتا ہے۔'
+  },
+  vi: {
+    title: 'Hiểu rõ tính cách',
+    seoDescription:
+      'Hiểu được Năm yếu tố lớn và tất cả 30 khía cạnh trên các phạm vi điểm thấp hơn, trung bình và cao hơn.',
+    intro:
+      'Đặc điểm tính cách là liên tục, không phải hộp. Khám phá từng khía cạnh rộng và khía cạnh hẹp hơn mô tả điều gì và điểm thấp hơn, trung bình và cao hơn có thể xuất hiện như thế nào trong cuộc sống hàng ngày.',
+    scaleTitle: 'Cách đọc cấp độ',
+    scaleText:
+      'Thấp hơn, trung bình và cao hơn mô tả các xu hướng tương đối, không phải các loại cố định. Kết quả gần ranh giới có thể giống với cả hai phạm vi lân cận.',
+    lower: 'Hạ xuống',
+    middle: 'giữa',
+    higher: 'Cao hơn',
+    lowerMeaning:
+      'Xu hướng này ít nổi bật hơn. Mô hình tính điểm thấp hơn được mô tả ở trên có nhiều khả năng phù hợp hơn.',
+    middleMeaning:
+      'Cả hai bên đều có thể xuất hiện. Mẫu nào phù hợp hơn có thể thay đổi tùy theo tình huống.',
+    higherMeaning:
+      'Xu hướng này nổi bật hơn. Mẫu có điểm cao hơn được mô tả ở trên có nhiều khả năng phù hợp hơn.',
+    domainGuide: 'Phạm vi điểm khác nhau có thể xuất hiện như thế nào',
+    facets: 'Sáu khía cạnh hẹp hơn',
+    facetIntro: 'Khía cạnh này mô tả điều gì',
+    viewLevels: 'Xem thấp hơn, giữa và cao hơn',
+    sourcesTitle: 'Cơ sở và nguồn',
+    sourcesText:
+      'Các mô tả dựa trên văn bản báo cáo IPIP-NEO-120. Điểm số được hiểu là các vị trí liên tục hơn là các loại tính cách riêng biệt.',
+    sourceIpip: 'Hướng dẫn IPIP để diễn giải điểm thang đo riêng lẻ',
+    sourceJohnson: 'Phát triển kho lưu trữ tính cách IPIP-NEO gồm 120 mục',
+    noteTitle: 'Hãy ghi nhớ',
+    note: 'Các đặc điểm không phải là chẩn đoán và không có điểm số nào là tốt hay xấu. Bối cảnh, mục tiêu, văn hóa và sự kết hợp các đặc điểm đều ảnh hưởng đến cách thể hiện xu hướng.'
   }
 };
+
+messages.sr = serbianObjectToLatin(messages.sr);
 
 const arabicDomainResults: Record<string, Record<Score, string>> = {
   O: {

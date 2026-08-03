@@ -8,6 +8,7 @@ import { ExperimentIcon, LogosOpensource, MoneyIcon } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Chip } from '@nextui-org/react';
+import { isRtlLang } from 'rtl-detect';
 
 interface Props {
   params: { locale: string };
@@ -17,6 +18,7 @@ export default function Home({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
   const t = useTranslations('frontpage');
   const f = useTranslations('facets');
+  const isRtl = isRtlLang(locale);
 
   const features = [
     {
@@ -82,7 +84,8 @@ export default function Home({ params: { locale } }: Props) {
                   'w-full sm:w-auto'
                 )}
               >
-                {t('call_to_action')} <ArrowRightIcon />
+                {t('call_to_action')}{' '}
+                <ArrowRightIcon className={isRtl ? 'rotate-180' : undefined} />
               </Link>
             </div>
           </div>
@@ -134,7 +137,8 @@ export default function Home({ params: { locale } }: Props) {
             'mt-10 w-full sm:w-auto'
           )}
         >
-          {t('compare.action')} <ArrowRightIcon />
+          {t('compare.action')}{' '}
+          <ArrowRightIcon className={isRtl ? 'rotate-180' : undefined} />
         </Link>
       </section>
     </section>

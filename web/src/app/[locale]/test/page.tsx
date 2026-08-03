@@ -24,11 +24,11 @@ export default function TestPage({ params: { locale } }: Props) {
   unstable_setRequestLocale(locale);
   const localeQuestionLanguage =
     locale === 'zh-hans' ? 'zh-cn' : locale === 'zh-hant' ? 'zh-hk' : locale;
-  const language = questionLanguages.some(
-    (item) => item.id === localeQuestionLanguage
-  )
-    ? localeQuestionLanguage
-    : 'en';
+  const language =
+    getLocalizedQuestions(localeQuestionLanguage) ||
+    questionLanguages.some((item) => item.id === localeQuestionLanguage)
+      ? localeQuestionLanguage
+      : 'en';
   const questions = getQuestions(language);
   const t = useTranslations('test');
   return (
@@ -48,10 +48,7 @@ function getQuestions(language: string): Question[] {
   if (!questions) return getItems(language);
 
   const choices = (getLocalizedChoices(language) ??
-    getChoices(language)) as unknown as Record<
-    'plus' | 'minus',
-    Choice[]
-  >;
+    getChoices(language)) as unknown as Record<'plus' | 'minus', Choice[]>;
 
   return questions.map((question, index) => ({
     ...question,
