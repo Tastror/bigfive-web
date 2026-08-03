@@ -1,6 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { locales } from './config/site';
 
+const defaultLocale = 'zh-hans';
+const localeCookieName = 'NEXT_LOCALE';
+
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const [, requestedLocale = '', ...segments] = pathname.split('/');
@@ -28,8 +31,14 @@ export default function middleware(request: NextRequest) {
 
   if (hasLocalePrefix) return NextResponse.next();
 
+  const rememberedLocale = request.cookies.get(localeCookieName)?.value;
+  const preferredLocale =
+    rememberedLocale && locales.includes(rememberedLocale)
+      ? rememberedLocale
+      : defaultLocale;
+
   return NextResponse.redirect(
-    getPublicUrl(request, `/zh-hans${pathname === '/' ? '' : pathname}`),
+    getPublicUrl(request, `/${preferredLocale}${pathname === '/' ? '' : pathname}`),
     307
   );
 }
