@@ -5,7 +5,7 @@ const chinese = {
   },
   seo: {
     keywords:
-      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+      '大五人格测试, 五因素人格测试, B5测试, 人格特质, 大五人格, 结果比较, 免费测试'
   },
   frontpage: {
     seo: {

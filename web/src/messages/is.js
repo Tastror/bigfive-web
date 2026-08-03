@@ -84,7 +84,7 @@ const icelandic = {
       title: 'Öfugugni'
     },
     agreeableness: {
-      title: 'Agreeableness'
+      title: 'Samvinnuþýði'
     },
     neuroticism: {
       title: 'Taugaveiki'

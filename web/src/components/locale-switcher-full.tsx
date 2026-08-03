@@ -38,21 +38,17 @@ export default function LocaleSwitcher({
     );
   }
   return (
-    <div className={compact ? 'w-36 min-[360px]:w-40' : 'w-40'}>
+    <div className='w-[168px]'>
       <Select
         name='localeSelect'
         selectedKeys={[locale]}
         onChange={onSelectChange}
         aria-label={label}
         size={compact ? 'sm' : 'md'}
-        classNames={
-          compact
-            ? {
-                trigger: 'min-w-0 px-2',
-                value: 'text-xs truncate'
-              }
-            : undefined
-        }
+        classNames={{
+          trigger: compact ? 'min-w-0 px-2' : undefined,
+          value: compact ? 'text-sm truncate' : undefined
+        }}
       >
         {languages.map((lang) => (
           <SelectItem key={lang.code} value={lang.code} textValue={lang.name}>

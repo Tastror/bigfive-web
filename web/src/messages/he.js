@@ -76,7 +76,7 @@ const messages = {
       title: 'פתוח לחוויות'
     },
     conscientiousness: {
-      title: 'Conscientiousness'
+      title: 'מצפוניות'
     },
     extraversion: {
       title: 'חוצפה'

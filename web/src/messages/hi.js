@@ -5,7 +5,7 @@ const hindi = {
   },
   seo: {
     keywords:
-      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+      'बिग फ़ाइव व्यक्तित्व परीक्षण, पाँच कारक व्यक्तित्व परीक्षण, बी5 परीक्षण, व्यक्तित्व लक्षण, बिग फ़ाइव, तुलना, निःशुल्क'
   },
   frontpage: {
     seo: {

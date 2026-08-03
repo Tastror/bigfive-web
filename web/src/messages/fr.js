@@ -5,7 +5,7 @@ const french = {
   },
   seo: {
     keywords:
-      'big five personality test, big 5 personality test, b5 test, bigfive test, personality traits, bigfive, compare, free, jordan peterson'
+      'test de personnalité Big Five, test de personnalité à cinq facteurs, test b5, traits de personnalité, Big Five, comparaison, gratuit'
   },
   frontpage: {
     seo: {

@@ -11,6 +11,10 @@ import korean from '../../../packages/questions/src/data/ko/questions';
 import norwegian from '../../../packages/questions/src/data/no/questions';
 import polish from '../../../packages/questions/src/data/pl/questions';
 import brazilianPortuguese from '../../../packages/questions/src/data/pt-br/questions';
+import brazilianPortugueseChoices from '../../../packages/questions/src/data/pt-br/choices';
+import estonianChoices from '../../../packages/questions/src/data/et/choices';
+import croatianChoices from '../../../packages/questions/src/data/hr/choices';
+import urduChoices from '../../../packages/questions/src/data/ur/choices';
 import swedish from '../../../packages/questions/src/data/sv/questions';
 import thai from '../../../packages/questions/src/data/th/questions';
 import ukrainian from '../../../packages/questions/src/data/uk/questions';
@@ -19,7 +23,6 @@ import traditionalChinese from '../../../packages/questions/src/data/zh-hk/quest
 import simplifiedChineseChoices from '../../../packages/questions/src/data/zh-cn/choices';
 import traditionalChineseChoices from '../../../packages/questions/src/data/zh-hk/choices';
 import bengali from '@/data/questions/bn.json';
-import portuguese from '@/data/questions/pt.json';
 import vietnamese from '@/data/questions/vi.json';
 
 type QuestionText = {
@@ -44,7 +47,7 @@ const localizedQuestions: Record<string, QuestionText[]> = {
   ko: korean,
   no: norwegian,
   pl: polish,
-  pt: portuguese.questions as QuestionText[],
+  pt: brazilianPortuguese,
   'pt-br': brazilianPortuguese,
   sv: swedish,
   th: thai,
@@ -60,7 +63,11 @@ export function getLocalizedQuestions(language: string) {
 
 const localizedChoices: Record<string, unknown> = {
   bn: bengali.choices,
-  pt: portuguese.choices,
+  et: estonianChoices,
+  hr: croatianChoices,
+  pt: brazilianPortugueseChoices,
+  'pt-br': brazilianPortugueseChoices,
+  ur: urduChoices,
   vi: vietnamese.choices,
   'zh-cn': simplifiedChineseChoices,
   'zh-hk': traditionalChineseChoices

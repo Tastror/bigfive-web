@@ -45,10 +45,23 @@ export default function TestPage({ params: { locale } }: Props) {
 
 function getQuestions(language: string): Question[] {
   const questions = getLocalizedQuestions(language);
-  if (!questions) return getItems(language);
+  const localizedChoices = getLocalizedChoices(language) as
+    | Record<'plus' | 'minus', Choice[]>
+    | undefined;
 
-  const choices = (getLocalizedChoices(language) ??
-    getChoices(language)) as unknown as Record<'plus' | 'minus', Choice[]>;
+  if (!questions) {
+    const items = getItems(language);
+    if (!localizedChoices) return items;
+    return items.map((question) => ({
+      ...question,
+      choices: localizedChoices[question.keyed as 'plus' | 'minus']
+    }));
+  }
+
+  const choices = (localizedChoices ?? getChoices(language)) as Record<
+    'plus' | 'minus',
+    Choice[]
+  >;
 
   return questions.map((question, index) => ({
     ...question,

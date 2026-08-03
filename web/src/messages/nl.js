@@ -64,7 +64,7 @@ const messages = {
     }
   },
   toolbar: {
-    home: 'Home',
+    home: 'Startpagina',
     result: 'Resultaat',
     compare: 'Vergelijken',
     personality: 'Persoonlijkheid',

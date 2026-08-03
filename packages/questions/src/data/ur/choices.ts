@@ -1,54 +1,54 @@
 const choices = {
   plus: [
     {
-      text: 'Very Inaccurate',
+      text: 'بالکل غلط',
       score: 1,
       color: 1
     },
     {
-      text: 'Moderately Inaccurate',
+      text: 'کسی حد تک غلط',
       score: 2,
       color: 2
     },
     {
-      text: 'Neither Accurate Nor Inaccurate',
+      text: 'نہ درست نہ غلط',
       score: 3,
       color: 3
     },
     {
-      text: 'Moderately Accurate',
+      text: 'کسی حد تک درست',
       score: 4,
       color: 4
     },
     {
-      text: 'Very Accurate',
+      text: 'بالکل درست',
       score: 5,
       color: 5
     }
   ],
   minus: [
     {
-      text: 'Very Inaccurate',
+      text: 'بالکل غلط',
       score: 5,
       color: 1
     },
     {
-      text: 'Moderately Inaccurate',
+      text: 'کسی حد تک غلط',
       score: 4,
       color: 2
     },
     {
-      text: 'Neither Accurate Nor Inaccurate',
+      text: 'نہ درست نہ غلط',
       score: 3,
       color: 3
     },
     {
-      text: 'Moderately Accurate',
+      text: 'کسی حد تک درست',
       score: 2,
       color: 4
     },
     {
-      text: 'Very Accurate',
+      text: 'بالکل درست',
       score: 1,
       color: 5
     }
