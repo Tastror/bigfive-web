@@ -112,6 +112,10 @@ export const siteConfig = {
     {
       label: 'compare',
       href: '/compare'
+    },
+    {
+      label: 'personality',
+      href: '/personality'
     }
   ],
   navMenuItems: [
@@ -126,6 +130,10 @@ export const siteConfig = {
     {
       label: 'compare_with',
       href: '/compare'
+    },
+    {
+      label: 'personality',
+      href: '/personality'
     }
   ],
   links: {
@@ -141,8 +149,14 @@ export const getNavItems = async ({
   linkType: 'navItems' | 'navMenuItems';
 }) => {
   const t = await getTranslations({ locale, namespace: 'toolbar' });
+  const { getPersonalityGuideMessages } = await import(
+    '@/lib/personality-guide'
+  );
   return siteConfig[linkType].map((link) => ({
-    label: t(`${link.label}`),
+    label:
+      link.label === 'personality'
+        ? getPersonalityGuideMessages(locale).title
+        : t(`${link.label}`),
     href: link.href
   }));
 };

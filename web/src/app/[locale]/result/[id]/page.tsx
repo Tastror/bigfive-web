@@ -15,6 +15,7 @@ import { getReportLanguage } from '@/lib/localized-results';
 import { getErrorMessages } from '@/lib/error-messages';
 import { validId } from '@/lib/helpers';
 import { notFound } from 'next/navigation';
+import { getPersonalityGuideMessages } from '@/lib/personality-guide';
 
 export async function generateMetadata({
   params: { locale }
@@ -84,6 +85,7 @@ interface ResultsProps {
 const Results = ({ report, locale, showExpanded }: ResultsProps) => {
   const t = useTranslations('results');
   const share = useTranslations('shareLinks');
+  const personality = getPersonalityGuideMessages(locale);
 
   return (
     <>
@@ -134,6 +136,14 @@ const Results = ({ report, locale, showExpanded }: ResultsProps) => {
         moreText={t('readMore')}
         lessText={t('readLess')}
       />
+      <div className='mt-12 flex justify-center border-t border-default-200 pt-8 print:hidden'>
+        <Link
+          href={`/personality/${report.id}`}
+          className='font-medium text-secondary underline decoration-secondary/40 underline-offset-4 hover:decoration-secondary'
+        >
+          {personality.title}
+        </Link>
+      </div>
     </>
   );
 };

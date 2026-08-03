@@ -5,13 +5,21 @@ import { ObjectId } from 'mongodb';
 import { B5Error, DbResult, Feedback } from '@/types';
 import calculateScore from '@bigfive-org/score';
 import { Domain } from '@bigfive-org/results';
-import { getLocalizedResults } from '@/lib/localized-results';
+import { getLocalizedResults, type Score } from '@/lib/localized-results';
 
 const collectionName = process.env.DB_COLLECTION || 'results';
+export type ReportLevels = Record<
+  string,
+  {
+    level: Score;
+    facets: Record<string, Score>;
+  }
+>;
 export type Report = {
   id: string;
   timestamp: number;
   results: Domain[];
+  levels: ReportLevels;
 };
 
 export async function getTestResult(
@@ -33,10 +41,25 @@ export async function getTestResult(
     }
     const scores = calculateScore({ answers: report.answers });
     const results = getLocalizedResults(language, scores);
+    const levels = Object.fromEntries(
+      Object.entries(scores).map(([domain, domainScore]) => [
+        domain,
+        {
+          level: domainScore.result as Score,
+          facets: Object.fromEntries(
+            Object.entries(domainScore.facet).map(([facet, facetScore]) => [
+              facet,
+              facetScore.result as Score
+            ])
+          )
+        }
+      ])
+    );
     return {
       id: report._id.toString(),
       timestamp: report.dateStamp,
-      results
+      results,
+      levels
     };
   } catch (error) {
     if (error instanceof B5Error) {
