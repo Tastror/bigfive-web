@@ -21,9 +21,7 @@ export default function ComparePage({
   return (
     <div className='min-h-[60vh] pb-10'>
       <h1 className={title()}>{t('title')}</h1>
-      <br />
-      <br />
-      <span className='mt-2'>{t('description1')}</span>
+      <p className='mt-8'>{t('description1')}</p>
       <Suspense fallback='loading...'>
         <ComparePeople
           addPersonText={t('addPerson')}

@@ -16,7 +16,7 @@ export default function ResultPage({ params: { locale } }: Props) {
   return (
     <div className='h-[calc(60vh)]'>
       <h1 className={title()}>{t('result')}</h1>
-      <div className='mt-10'>{t('explanation')}</div>
+      <p className='mt-8'>{t('explanation')}</p>
       <GetResultPage
         viewPreviousText={t('viewPrevious')}
         getResultsText={t('getResult')}
