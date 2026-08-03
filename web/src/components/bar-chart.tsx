@@ -5,6 +5,7 @@ import { useTheme } from 'next-themes';
 import dynamic from 'next/dynamic';
 import { useLocale } from 'next-intl';
 import { getUiMessages } from '@/lib/ui-messages';
+import { prepareChartForPrinting } from '@/lib/chart-printing';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 interface BarChartProps {
@@ -37,6 +38,10 @@ export const BarChart = ({ max, results }: BarChartProps) => {
       show: false
     },
     chart: {
+      events: {
+        mounted: prepareChartForPrinting,
+        updated: prepareChartForPrinting
+      },
       toolbar: {
         show: false
       },
@@ -72,7 +77,7 @@ export const BarChart = ({ max, results }: BarChartProps) => {
   ];
 
   return (
-    <>
+    <div className='printable-chart'>
       <ApexChart
         type='bar'
         options={options}
@@ -80,6 +85,6 @@ export const BarChart = ({ max, results }: BarChartProps) => {
         height={350}
         width='100%'
       />
-    </>
+    </div>
   );
 };

@@ -20,3 +20,23 @@ h3 {
 .articlePage ul {
   @apply list-disc pl-6;
 }
+
+@media print {
+  .printable-chart,
+  .printable-chart > div,
+  .printable-chart .apexcharts-canvas,
+  .printable-chart .apexcharts-svg {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .printable-chart > div,
+  .printable-chart .apexcharts-canvas {
+    min-height: 0 !important;
+    height: auto !important;
+  }
+
+  .printable-chart .apexcharts-svg {
+    height: auto !important;
+  }
+}

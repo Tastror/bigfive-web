@@ -3,6 +3,7 @@
 import { ApexOptions } from 'apexcharts';
 import { useTheme } from 'next-themes';
 import dynamic from 'next/dynamic';
+import { prepareChartForPrinting } from '@/lib/chart-printing';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 interface BarChartCompareProps {
@@ -44,6 +45,10 @@ export const BarChartCompare = ({
       show: true
     },
     chart: {
+      events: {
+        mounted: prepareChartForPrinting,
+        updated: prepareChartForPrinting
+      },
       toolbar: {
         show: false
       },
@@ -69,7 +74,7 @@ export const BarChartCompare = ({
   };
 
   return (
-    <>
+    <div className='printable-chart'>
       <ApexChart
         type='bar'
         options={options}
@@ -77,6 +82,6 @@ export const BarChartCompare = ({
         height={350}
         width='100%'
       />
-    </>
+    </div>
   );
 };
