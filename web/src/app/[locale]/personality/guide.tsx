@@ -8,8 +8,8 @@ import { getPersonalityFacetStrength } from '@/lib/personality-strengths';
 import { getBackToResultsLabel } from '@/lib/personality-result-cta';
 import type { Score } from '@/lib/localized-results';
 import clsx from 'clsx';
-import { Link } from '@/navigation';
 import { ArrowRightIcon } from '@/components/icons';
+import { button as buttonStyles } from '@nextui-org/theme';
 import { isRtlLang } from 'rtl-detect';
 
 interface PersonalityGuideProps {
@@ -47,20 +47,29 @@ export function PersonalityGuide({
         <p className='mt-4 max-w-3xl text-pretty text-base leading-8 text-default-600 sm:text-lg'>
           {messages.intro}
         </p>
-      </header>
-
-      <section className='border-b border-default-200 py-8 sm:py-10'>
         {report && (
-          <Link
-            href={`/result/${report.id}`}
-            className='mb-5 inline-flex items-center gap-2 font-medium text-secondary hover:underline hover:underline-offset-4'
+          <a
+            href={`/${locale}/result/${report.id}`}
+            className={clsx(
+              buttonStyles({
+                color: 'primary',
+                radius: 'full',
+                variant: 'shadow',
+                size: 'lg',
+                fullWidth: true
+              }),
+              'mt-6 w-full sm:w-auto'
+            )}
           >
             <ArrowRightIcon
               className={clsx('size-4', !isRtl && 'rotate-180')}
             />
             <span>{backToResultsLabel}</span>
-          </Link>
+          </a>
         )}
+      </header>
+
+      <section className='border-b border-default-200 py-8 sm:py-10'>
         <h2 className='text-xl font-semibold sm:text-2xl'>
           {messages.scaleTitle}
         </h2>
