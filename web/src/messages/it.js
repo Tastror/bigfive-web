@@ -64,7 +64,7 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     }
   },
   toolbar: {
-    home: 'Home',
+    home: 'Pagina iniziale',
     result: 'Risultato',
     compare: 'Comparare',
     articles: 'Articoli',
@@ -93,8 +93,8 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     and: 'e',
     pages: 'pagine',
     languages: 'lingue',
-    save: 'Save',
-    close: 'Close'
+    save: 'Salva',
+    close: 'Chiudi'
   },
   form: {
     information: 'Informazioni',
@@ -191,7 +191,7 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     selectDomain: 'Seleziona un tratto',
     readMore: 'Leggi di più',
     readLess: 'Mostra meno',
-    theBigFive: 'The Big Five',
+    theBigFive: 'I Big Five',
     score: 'puntazione',
     notice:
       '<important>Importante!</important> Salva il seguente ID per consultare i risultati in seguito o <compare>confrontarti con altre persone</compare>.',

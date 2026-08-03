@@ -13,6 +13,8 @@ import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
 import { type Answer } from '@/types';
 import { saveCompletedTestResult } from '@/lib/result-history';
+import { useLocale } from 'next-intl';
+import { getUiMessages } from '@/lib/ui-messages';
 
 interface SurveyProps {
   questions: Question[];
@@ -32,6 +34,7 @@ export const Survey = ({
   language
 }: SurveyProps) => {
   const router = useRouter();
+  const ui = getUiMessages(useLocale());
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [questionsPerPage, setQuestionsPerPage] = useState(1);
   const [answers, setAnswers] = useState<Answer[]>([]);
@@ -179,7 +182,7 @@ export const Survey = ({
   return (
     <div className='mt-2'>
       <Progress
-        aria-label='Progress bar'
+        aria-label={ui.progressBar}
         value={progress}
         className='max-w'
         showValueLabel={true}

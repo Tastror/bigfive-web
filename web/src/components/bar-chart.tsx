@@ -3,6 +3,8 @@
 import { ApexOptions } from 'apexcharts';
 import { useTheme } from 'next-themes';
 import dynamic from 'next/dynamic';
+import { useLocale } from 'next-intl';
+import { getUiMessages } from '@/lib/ui-messages';
 const ApexChart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 interface BarChartProps {
@@ -12,6 +14,7 @@ interface BarChartProps {
 
 export const BarChart = ({ max, results }: BarChartProps) => {
   const { theme } = useTheme();
+  const ui = getUiMessages(useLocale());
   const apexChartTheme = theme === 'dark' ? 'dark' : 'light';
   const neutralScore = (max / 5) * 3;
   const annotationColor = apexChartTheme === 'dark' ? '#a1a1aa' : '#71717a';
@@ -63,7 +66,7 @@ export const BarChart = ({ max, results }: BarChartProps) => {
 
   const series = [
     {
-      name: 'You',
+      name: ui.you,
       data: results.map((result: any) => result.score)
     }
   ];

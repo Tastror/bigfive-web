@@ -182,7 +182,7 @@ const chinese = {
     notice:
       '<important>重要！</important>请保存以下 ID，以便日后查看结果，或<compare>与他人比较</compare>。',
     seo: {
-      title: 'My results from the BigFive personality test',
+      title: '我的大五人格测试结果',
       description:
         '查看我的大五人格维度测试结果，并比较神经质、开放性、尽责性、外向性和宜人性。'
     }

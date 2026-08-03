@@ -94,8 +94,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     and: 'Und',
     pages: 'Inhalt',
     languages: 'Sprachen',
-    save: 'Save',
-    close: 'Close'
+    save: 'Speichern',
+    close: 'Schließen'
   },
   form: {
     information: 'Information',

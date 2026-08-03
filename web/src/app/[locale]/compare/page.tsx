@@ -4,10 +4,22 @@ import { ComparePeople } from './compare-people';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Suspense } from 'react';
 import { getErrorMessages } from '@/lib/error-messages';
+import { getTranslations } from 'next-intl/server';
+import { getUiMessages } from '@/lib/ui-messages';
 
 interface Props {
   params: { locale: string };
   searchParams: { id: string };
+}
+
+export async function generateMetadata({
+  params: { locale }
+}: Pick<Props, 'params'>) {
+  const t = await getTranslations({ locale, namespace: 'getCompare' });
+  return {
+    title: t('title'),
+    description: t('description1')
+  };
 }
 
 export default function ComparePage({
@@ -18,11 +30,12 @@ export default function ComparePage({
   const t = useTranslations('getCompare');
   const common = useTranslations('common');
   const errors = getErrorMessages(locale);
+  const ui = getUiMessages(locale);
   return (
     <div className='min-h-[60vh] pb-10'>
       <h1 className={title()}>{t('title')}</h1>
       <p className='mt-8'>{t('description1')}</p>
-      <Suspense fallback='loading...'>
+      <Suspense fallback={ui.loading}>
         <ComparePeople
           addPersonText={t('addPerson')}
           comparePeopleText={t('comparePeople')}

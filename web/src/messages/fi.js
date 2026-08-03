@@ -93,8 +93,8 @@ const finnish = {
     and: 'ja',
     pages: 'sivuja',
     languages: 'Kieli (kielet)',
-    save: 'Save',
-    close: 'Close'
+    save: 'Tallenna',
+    close: 'Sulje'
   },
   form: {
     information: 'Tiedot',

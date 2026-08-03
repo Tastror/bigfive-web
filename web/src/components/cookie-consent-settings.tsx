@@ -11,6 +11,8 @@ import {
 import { Switch } from '@nextui-org/switch';
 import { CookieIcon } from './icons';
 import { useEffect, useState } from 'react';
+import { useLocale } from 'next-intl';
+import { getUiMessages } from '@/lib/ui-messages';
 
 interface CookieConsentSettingsProps {
   showCookieConsentSettings: boolean;
@@ -18,6 +20,7 @@ interface CookieConsentSettingsProps {
 }
 
 export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
+  const messages = getUiMessages(useLocale()).cookie;
   const [isAnalyticsSelected, setIsAnalyticsSelected] = useState(true);
   const [isMarketingSelected, setIsMarketingSelected] = useState(true);
 
@@ -63,21 +66,19 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
           <div className='flex items-center'>
             <CookieIcon className='mr-2' />
             <span className='whitespace-nowrap text-2xl font-semibold leading-none tracking-tight'>
-              Cookie Preferences
+              {messages.preferencesTitle}
             </span>
           </div>
           <div className='text-sm text-gray-500 font-normal m-4'>
-            Manage your cookie settings. You can enable or disable different
-            types of cookies below.
+            {messages.preferencesDescription}
           </div>
         </ModalHeader>
         <ModalBody className='space-y-4 pt-4'>
           <div className='flex justify-between items-start space-y-2'>
             <div>
-              <label>Essential Cookies</label>
+              <label>{messages.essentialTitle}</label>
               <p className='text-dark-gray-500 text-sm'>
-                These cookies are necessary for the website to function and
-                cannot be switched off.
+                {messages.essentialDescription}
               </p>
             </div>
             <Switch
@@ -89,10 +90,9 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
           </div>
           <div className='flex justify-between items-start space-y-2'>
             <div>
-              <label>Analytics Cookies</label>
+              <label>{messages.analyticsTitle}</label>
               <p className='text-dark-gray-500 text-sm'>
-                These cookies allow us to count visits and traffic sources, so
-                we can measure and improve the performance of our site.
+                {messages.analyticsDescription}
               </p>
             </div>
             <Switch
@@ -104,9 +104,9 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
           </div>
           <div className='flex justify-between items-start space-y-2'>
             <div>
-              <label>Marketing Cookies</label>
+              <label>{messages.marketingTitle}</label>
               <p className='text-dark-gray-500 text-sm'>
-                These cookies help us show you relevant ads.
+                {messages.marketingDescription}
               </p>
             </div>
             <Switch
@@ -124,7 +124,7 @@ export const CookieConsentSettings = (props: CookieConsentSettingsProps) => {
             type='submit'
             onPress={handleSavePreferences}
           >
-            Save Preferences
+            {messages.savePreferences}
           </Button>
         </ModalFooter>
       </ModalContent>

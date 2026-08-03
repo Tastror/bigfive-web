@@ -3,9 +3,18 @@ import { useTranslations } from 'next-intl';
 import { GetResultPage } from './get-result';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { getErrorMessages } from '@/lib/error-messages';
+import { getTranslations } from 'next-intl/server';
 
 interface Props {
   params: { locale: string };
+}
+
+export async function generateMetadata({ params: { locale } }: Props) {
+  const t = await getTranslations({ locale, namespace: 'getResult' });
+  return {
+    title: t('result'),
+    description: t('explanation')
+  };
 }
 
 export default function ResultPage({ params: { locale } }: Props) {

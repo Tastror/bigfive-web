@@ -11,7 +11,7 @@ const hindi = {
     seo: {
       title: 'बिग फ़ाइव व्यक्तित्व परीक्षण',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        'मुफ़्त बिग फ़ाइव व्यक्तित्व परीक्षण करें। अपने व्यक्तित्व के गुणों को समझें और अपने परिणामों की तुलना अपने साथी, सहकर्मियों, मित्रों या परिवार से करें।'
     },
     title: 'बिग फाइव पर्सनैलिटी टेस्ट',
     call_to_action: 'अब फ्री टेस्ट लें',
@@ -64,7 +64,7 @@ const hindi = {
     }
   },
   toolbar: {
-    home: 'Home',
+    home: 'मुखपृष्ठ',
     result: 'परिणाम',
     compare: 'तुलना',
     articles: 'सामग्री',
@@ -93,8 +93,8 @@ const hindi = {
     and: 'तथा',
     pages: 'पृष्ठों',
     languages: 'भाषाओं',
-    save: 'Save',
-    close: 'Close'
+    save: 'सहेजें',
+    close: 'बंद करें'
   },
   form: {
     information: 'Information',
@@ -193,9 +193,9 @@ const hindi = {
     notice:
       '<important>महत्वपूर्ण!</important> बाद में अपने परिणाम देखने या <compare>दूसरों से अपनी तुलना करने</compare> के लिए नीचे दी गई ID सहेज लें।',
     seo: {
-      title: 'My results from the BigFive personality test',
+      title: 'बिग फ़ाइव व्यक्तित्व परीक्षण के मेरे परिणाम',
       description:
-        'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
+        'मेरे व्यक्तित्व के परिणाम देखें और पाँच आयामों की तुलना करें: भावनात्मक अस्थिरता, अनुभव के प्रति खुलापन, कर्तव्यनिष्ठा, बहिर्मुखता और सहमतता।'
     }
   },
   getResult: {

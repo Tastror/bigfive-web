@@ -17,6 +17,16 @@ interface ComparePageProps {
   };
 }
 
+export async function generateMetadata({
+  params: { locale }
+}: ComparePageProps) {
+  const t = await getTranslations({ locale, namespace: 'getCompare' });
+  return {
+    title: t('title'),
+    description: t('description1')
+  };
+}
+
 type Person = {
   id: string;
   name: string;

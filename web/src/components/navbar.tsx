@@ -23,6 +23,7 @@ import { Link as NextLink } from '../navigation';
 import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { useLocale } from 'next-intl';
+import { getUiMessages } from '@/lib/ui-messages';
 
 interface NavbarProps {
   navItems: { label: string; href: string }[];
@@ -33,6 +34,8 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const locale = useLocale();
+  const ui = getUiMessages(locale);
+  const homeLabel = navItems.find((item) => item.href === '/')?.label ?? locale;
 
   const isCurrentPath = (link: string): boolean => {
     if (link === '/') {
@@ -58,7 +61,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
           <NextLink
             className='flex justify-start items-center gap-1'
             href='/'
-            aria-label='Home'
+            aria-label={homeLabel}
           >
             <Logo />
           </NextLink>
@@ -114,7 +117,7 @@ export const Navbar = ({ navItems, navMenuItems }: NavbarProps) => {
         </NavbarItem>
         <NavbarItem className='w-6 h-full'>
           <NavbarMenuToggle
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-label={isMenuOpen ? ui.closeMenu : ui.openMenu}
           />
         </NavbarItem>
       </NavbarContent>

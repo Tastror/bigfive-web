@@ -94,8 +94,8 @@ const indonesian = {
     and: 'dan',
     pages: 'halaman',
     languages: 'bahasa',
-    save: 'Save',
-    close: 'Close'
+    save: 'Simpan',
+    close: 'Tutup'
   },
   form: {
     information: 'Informasi',

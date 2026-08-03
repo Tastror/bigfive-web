@@ -93,8 +93,8 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     and: 'och',
     pages: 'sidor',
     languages: 'språk',
-    save: 'Save',
-    close: 'Close'
+    save: 'Spara',
+    close: 'Stäng'
   },
   form: {
     information: 'information',

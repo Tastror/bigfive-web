@@ -6,6 +6,8 @@ import { basePath } from '@/config/site';
 import { Link as NextUiLink } from '@nextui-org/link';
 import { Report } from '@/actions/index';
 import { useCopyToClipboard } from '@/hooks/use-copy-to-clipboard';
+import { useLocale, useTranslations } from 'next-intl';
+import { getUiMessages } from '@/lib/ui-messages';
 
 interface ShareBarProps {
   report: Report;
@@ -13,15 +15,17 @@ interface ShareBarProps {
 
 export default function ShareBar({ report }: ShareBarProps) {
   const [_, copy] = useCopyToClipboard();
+  const t = useTranslations('shareLinks');
+  const ui = getUiMessages(useLocale());
 
   const handleCopy = (text: string) => async () => await copy(text);
 
   return (
     <>
-      <Tooltip color='secondary' content='Share on facebook'>
+      <Tooltip color='secondary' content={t('shareFacebook')}>
         <Button
           isIconOnly
-          aria-label='Share on facebook'
+          aria-label={t('shareFacebook')}
           radius='full'
           size='md'
           variant='light'
@@ -32,24 +36,24 @@ export default function ShareBar({ report }: ShareBarProps) {
           <FacebookIcon size={48} />
         </Button>
       </Tooltip>
-      <Tooltip color='secondary' content='Share on X'>
+      <Tooltip color='secondary' content={t('shareTwitter')}>
         <Button
           isIconOnly
-          aria-label='Share on X'
+          aria-label={t('shareTwitter')}
           radius='full'
           size='md'
           variant='light'
           target='_blank'
           as={NextUiLink}
-          href={`https://twitter.com/intent/tweet?text=See my personality traits!&url=${basePath}/result/${report.id}`}
+          href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(t('shareResults'))}&url=${basePath}/result/${report.id}`}
         >
           <TwitterIcon size={42} />
         </Button>
       </Tooltip>
-      <Tooltip color='secondary' content='Download PDF'>
+      <Tooltip color='secondary' content={ui.downloadPdf}>
         <Button
           isIconOnly
-          aria-label='Download pdf'
+          aria-label={ui.downloadPdf}
           radius='full'
           size='md'
           variant='light'
@@ -58,10 +62,10 @@ export default function ShareBar({ report }: ShareBarProps) {
           <PDFIcon size={32} />
         </Button>
       </Tooltip>
-      <Tooltip color='secondary' content='Copy link'>
+      <Tooltip color='secondary' content={t('copyLink')}>
         <Button
           isIconOnly
-          aria-label='Copy link'
+          aria-label={t('copyLink')}
           radius='full'
           size='md'
           variant='light'

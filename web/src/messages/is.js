@@ -93,8 +93,8 @@ const icelandic = {
     and: 'og',
     pages: 'blaðsíður',
     languages: 'tungumálum',
-    save: 'Save',
-    close: 'Close'
+    save: 'Vista',
+    close: 'Loka'
   },
   form: {
     information: 'Upplýsingar',

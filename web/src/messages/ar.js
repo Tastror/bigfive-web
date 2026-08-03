@@ -12,7 +12,7 @@ const arabic = {
     seo: {
       title: 'اختبار سمات الشخصية الخمس الكبرى',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        'أجرِ اختبار السمات الخمس الكبرى للشخصية مجانًا. تعرّف على سمات شخصيتك وقارن نتائجك بنتائج شريكك أو زملائك أو أصدقائك أو أفراد عائلتك.'
     },
     title: 'اختبار السمات الخمسة الكبرى للشخصية',
     call_to_action: 'ابدأ الاختبار الآن مجاناً',
@@ -65,7 +65,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     }
   },
   toolbar: {
-    home: 'Home',
+    home: 'الرئيسية',
     result: 'النتيجة',
     compare: 'قارن',
     articles: 'مقالات',
@@ -94,8 +94,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     and: 'و',
     pages: 'صفحات',
     languages: 'اللغات',
-    save: 'محل',
-    close: 'يغلق'
+    save: 'حفظ',
+    close: 'إغلاق'
   },
   form: {
     information: 'Information',
@@ -194,9 +194,9 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     notice:
       '<important>مهم!</important> احفظ المعرّف التالي لعرض نتائجك لاحقًا أو <compare>لمقارنة نتائجك بنتائج الآخرين</compare>.',
     seo: {
-      title: 'My results from the BigFive personality test',
+      title: 'نتائجي في اختبار السمات الخمس الكبرى',
       description:
-        'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
+        'اطّلع على نتائج شخصيتي وقارن الأبعاد الخمسة: العصابية والانفتاح على الخبرة ويقظة الضمير والانبساط والتوافق.'
     }
   },
   getResult: {

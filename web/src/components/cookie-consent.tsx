@@ -11,8 +11,11 @@ import {
 import { useEffect, useState } from 'react';
 import { SettingsIcon } from './icons';
 import { CookieConsentSettings } from './cookie-consent-settings';
+import { useLocale } from 'next-intl';
+import { getUiMessages } from '@/lib/ui-messages';
 
 export default function CookieBanner() {
+  const messages = getUiMessages(useLocale()).cookie;
   const [showBanner, setShowBanner] = useState(false);
   const [showCookieConsentSettings, setShowCookieConsentSettings] =
     useState(false);
@@ -52,10 +55,10 @@ export default function CookieBanner() {
       >
         <ModalContent>
           <ModalHeader className='flex flex-col gap-1'>
-            Cookie consent
+            {messages.consentTitle}
           </ModalHeader>
           <ModalBody>
-            <p>We use cookies on our site.</p>
+            <p>{messages.description}</p>
           </ModalBody>
           <ModalFooter className='justify-start'>
             <div className='grow'>
@@ -64,7 +67,7 @@ export default function CookieBanner() {
                 startContent={<SettingsIcon />}
                 onPress={handleSettings}
               >
-                Preferences
+                {messages.preferences}
               </Button>
             </div>
             <Button
@@ -72,10 +75,10 @@ export default function CookieBanner() {
               variant='light'
               onPress={handleDeclineCookies}
             >
-              Decline
+              {messages.decline}
             </Button>
             <Button color='primary' onPress={handleAllowCookies}>
-              Accept all
+              {messages.acceptAll}
             </Button>
           </ModalFooter>
         </ModalContent>

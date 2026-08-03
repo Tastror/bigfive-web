@@ -93,8 +93,8 @@ const thai = {
     and: 'และ',
     pages: 'หน้า',
     languages: 'ภาษา',
-    save: 'Save',
-    close: 'Close'
+    save: 'บันทึก',
+    close: 'ปิด'
   },
   form: {
     information: 'ข้อมูล',

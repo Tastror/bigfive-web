@@ -28,6 +28,8 @@ import {
   ModalHeader,
   useDisclosure
 } from '@nextui-org/modal';
+import { useLocale } from 'next-intl';
+import { getUiMessages } from '@/lib/ui-messages';
 
 interface CompareProps {
   addPersonText: string;
@@ -53,6 +55,7 @@ export const ComparePeople = ({
   paramId
 }: CompareProps) => {
   const router = useRouter();
+  const ui = getUiMessages(useLocale());
   const columns = [
     {
       key: 'name',
@@ -64,7 +67,7 @@ export const ComparePeople = ({
     },
     {
       key: 'actions',
-      label: 'ACTIONS'
+      label: ui.actions
     }
   ];
 
@@ -157,7 +160,7 @@ export const ComparePeople = ({
           label={nameText}
           autoFocus
           labelPlacement='outside'
-          placeholder='Arthur Dent'
+          placeholder={nameText}
           startContent={
             <PersonIcon className='text-2xl text-default-400 pointer-events-none flex-shrink-0' />
           }
@@ -197,7 +200,7 @@ export const ComparePeople = ({
       <div>
         <Table
           hideHeader
-          aria-label='List of persons to compare'
+          aria-label={ui.compareList}
           isStriped
           classNames={{ wrapper: 'overflow-x-auto', table: 'min-w-[32rem]' }}
         >
@@ -215,7 +218,7 @@ export const ComparePeople = ({
                       <Button
                         isIconOnly
                         variant='light'
-                        aria-label='Edit'
+                        aria-label={ui.edit}
                         onPress={() => onOpenEditPerson(onOpen, item)}
                       >
                         <EditIcon />
@@ -223,7 +226,7 @@ export const ComparePeople = ({
                       <Button
                         isIconOnly
                         variant='light'
-                        aria-label='Delete'
+                        aria-label={ui.delete}
                         onClick={() => deleteItem(item.id)}
                       >
                         <DeleteIcon />
@@ -259,7 +262,7 @@ export const ComparePeople = ({
                   autoFocus
                   label={nameText}
                   labelPlacement='outside'
-                  placeholder='Arthur Dent'
+                  placeholder={nameText}
                   startContent={
                     <PersonIcon className='text-2xl text-default-400 pointer-events-none flex-shrink-0' />
                   }

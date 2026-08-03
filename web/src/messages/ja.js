@@ -93,8 +93,8 @@ const japanese = {
     and: 'そして',
     pages: 'ページ',
     languages: '言語',
-    save: 'Save',
-    close: 'Close'
+    save: '保存',
+    close: '閉じる'
   },
   form: {
     information: '情報',

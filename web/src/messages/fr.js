@@ -11,7 +11,7 @@ const french = {
     seo: {
       title: 'Test de personnalité Big Five',
       description:
-        'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
+        'Passez gratuitement le test de personnalité Big Five. Découvrez vos traits de personnalité et comparez vos résultats avec ceux de votre partenaire, de vos collègues, de vos amis ou de votre famille.'
     },
     title: 'Test de personnalité Big Five',
     call_to_action: 'Faites le test gratuit maintenant',
@@ -64,7 +64,7 @@ const french = {
     }
   },
   toolbar: {
-    home: 'Home',
+    home: 'Accueil',
     result: 'Résultat',
     compare: 'Comparer',
     articles: 'Des articles',
@@ -93,8 +93,8 @@ const french = {
     and: 'et',
     pages: 'pages',
     languages: 'langages',
-    save: 'Save',
-    close: 'Close'
+    save: 'Enregistrer',
+    close: 'Fermer'
   },
   form: {
     information: 'Information',
@@ -122,7 +122,7 @@ const french = {
     next: 'prochain',
     back: 'précédent',
     more: 'plus',
-    seeResults: 'see results'
+    seeResults: 'voir les résultats'
   },
   big_five: {
     title: 'What are the big five?',
@@ -194,9 +194,9 @@ const french = {
     notice:
       '<important>Important !</important> Enregistrez l’identifiant suivant pour consulter vos résultats plus tard ou <compare>vous comparer à d’autres personnes</compare>.',
     seo: {
-      title: 'My results from the BigFive personality test',
+      title: 'Mes résultats au test de personnalité Big Five',
       description:
-        'See my personality and compare yourself in the following five domains: Neuroticism, Openness To Experience, Conscientiousness, Extraversion, Agreeableness'
+        'Consultez mes résultats et comparez les cinq dimensions : névrosisme, ouverture à l’expérience, conscienciosité, extraversion et agréabilité.'
     }
   },
   getResult: {

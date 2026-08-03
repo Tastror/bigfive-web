@@ -13,6 +13,7 @@ import { getTranslations } from 'next-intl/server';
 import useTextDirection from '@/hooks/use-text-direction';
 import CookieBanner from '@/components/cookie-consent';
 import { BrowserRecovery } from '@/components/browser-recovery';
+import { getUiMessages } from '@/lib/ui-messages';
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -25,6 +26,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: 'frontpage' });
   const s = await getTranslations({ locale, namespace: 'seo' });
+  const ui = getUiMessages(locale);
   const alternatesLang = locales.reduce((a, v) => ({ ...a, [v]: `/${v}` }), {});
   return {
     title: {
@@ -51,7 +53,7 @@ export async function generateMetadata({
       description: t('seo.description'),
       images: {
         url: `${basePath}/og-image.png`,
-        alt: 'People comparing personality tests'
+        alt: `${ui.compareList} — ${t('seo.title')}`
       }
     },
     twitter: {
@@ -62,7 +64,7 @@ export async function generateMetadata({
       creator: siteConfig.creator,
       images: {
         url: `${basePath}/og-image.png`,
-        alt: 'People comparing personality tests'
+        alt: `${ui.compareList} — ${t('seo.title')}`
       }
     }
   };
