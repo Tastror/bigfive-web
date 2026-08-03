@@ -45,7 +45,7 @@ export const GetResultPage = ({
 
   return (
     <>
-      <div className='w-full mt-4 mb-3'>
+      <div className='flow-root w-full mt-4 mb-3'>
         <Input
           type='text'
           label='ID'
