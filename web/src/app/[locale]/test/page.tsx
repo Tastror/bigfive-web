@@ -13,6 +13,7 @@ import {
   getLocalizedChoices,
   getLocalizedQuestions
 } from '@/lib/localized-questions';
+import { serbianObjectToLatin } from '@/lib/serbian';
 
 const questionLanguages = getInfo().languages;
 
@@ -48,24 +49,28 @@ function getQuestions(language: string): Question[] {
   const localizedChoices = getLocalizedChoices(language) as
     | Record<'plus' | 'minus', Choice[]>
     | undefined;
+  let items: Question[];
 
   if (!questions) {
-    const items = getItems(language);
-    if (!localizedChoices) return items;
-    return items.map((question) => ({
+    const defaultItems = getItems(language);
+    items = localizedChoices
+      ? defaultItems.map((question) => ({
+          ...question,
+          choices: localizedChoices[question.keyed as 'plus' | 'minus']
+        }))
+      : defaultItems;
+  } else {
+    const choices = (localizedChoices ?? getChoices(language)) as Record<
+      'plus' | 'minus',
+      Choice[]
+    >;
+
+    items = questions.map((question, index) => ({
       ...question,
-      choices: localizedChoices[question.keyed as 'plus' | 'minus']
+      num: index + 1,
+      choices: choices[question.keyed as 'plus' | 'minus']
     }));
   }
 
-  const choices = (localizedChoices ?? getChoices(language)) as Record<
-    'plus' | 'minus',
-    Choice[]
-  >;
-
-  return questions.map((question, index) => ({
-    ...question,
-    num: index + 1,
-    choices: choices[question.keyed as 'plus' | 'minus']
-  }));
+  return language === 'sr' ? serbianObjectToLatin(items) : items;
 }
