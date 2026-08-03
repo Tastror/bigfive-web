@@ -3,7 +3,6 @@ import { ChangeEvent } from 'react';
 import { useLocale } from 'next-intl';
 import { languages } from '../config/site';
 import { Select, SelectItem } from '@nextui-org/select';
-import { useRouter, usePathname } from '../navigation';
 
 interface LocaleSwitcherProps {
   compact?: boolean;
@@ -14,12 +13,27 @@ export default function LocaleSwitcher({
 }: LocaleSwitcherProps) {
   const locale = useLocale();
 
-  const router = useRouter();
-  const pathname = usePathname();
-
   function onSelectChange(event: ChangeEvent<HTMLSelectElement>) {
     const nextLocale = event.target.value;
-    router.replace(pathname, { locale: nextLocale });
+    if (
+      nextLocale === locale ||
+      !languages.some((language) => language.code === nextLocale)
+    )
+      return;
+
+    const [, currentLocale = '', ...segments] =
+      window.location.pathname.split('/');
+    const pathname = languages.some(
+      (language) => language.code === currentLocale
+    )
+      ? `/${segments.join('/')}`
+      : window.location.pathname;
+    const route = pathname === '/' ? '' : pathname;
+
+    document.cookie = `NEXT_LOCALE=${encodeURIComponent(nextLocale)}; Path=/; Max-Age=31536000; SameSite=Lax`;
+    window.location.replace(
+      `/${nextLocale}${route}${window.location.search}${window.location.hash}`
+    );
   }
   return (
     <div className={compact ? 'w-32 min-[360px]:w-36' : 'w-40'}>
