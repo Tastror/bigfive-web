@@ -210,7 +210,7 @@ export function PersonalityGuide({
         <h2 className='text-xl font-semibold sm:text-2xl'>
           {messages.sourcesTitle}
         </h2>
-        <p className='mt-3 max-w-3xl leading-7 text-default-600'>
+        <p className='mt-3 leading-7 text-default-600'>
           {messages.sourcesText}
         </p>
         <div className='mt-5 flex flex-col items-start gap-3 text-sm'>
