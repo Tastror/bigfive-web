@@ -20,10 +20,7 @@ const polish = {
     compare: {
       title: 'Porównaj się z innymi',
       action: 'Porównaj teraz',
-      text1:
-        'Porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.',
-      text2:
-        'Dowiedz się, jak różnisz się od innych ludzi pod względem pięciu czynników:'
+      text: 'Porównaj swoje wyniki z wynikami partnera, współpracowników, znajomych lub członków rodziny, aby zobaczyć, czym różnicie się w pięciu wymiarach.'
     },
     share:
       'Udostępnij test przyjaciołom i dowiedz się jak bardzo jesteście kompatybilni',
@@ -197,10 +194,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     readLess: 'Pokaż mniej',
     theBigFive: 'Wielka Piątka',
     score: 'punktacja',
-    important: 'Ważne!',
-    saveResults: 'Zachowaj następujące ID, by móc powrócić do swoich wyników.',
-    compare: 'Porównaj',
-    toOthers: 'się z innymi',
+    notice:
+      '<important>Ważne!</important> Zapisz poniższy identyfikator, aby później wyświetlić wyniki lub <compare>porównać się z innymi</compare>.',
     seo: {
       title: 'Moje wyniki testu osobowości BigFive.',
       description:

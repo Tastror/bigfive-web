@@ -20,10 +20,7 @@ const french = {
     compare: {
       title: 'Comparez-vous aux autres',
       action: 'Comparer maintenant',
-      text1:
-        'Comparez-vous avec votre partenaire, vos collègues, vos amis ou votre famille.',
-      text2:
-        'Découvrez en quoi vous vous différenciez des autres dans les cinq domaines:'
+      text: 'Comparez vos résultats à ceux de votre partenaire, de vos collègues, de vos amis ou de votre famille pour découvrir vos différences sur les cinq dimensions.'
     },
     share: 'Partagez avec vos amis et découvrez votre compatibilité',
     cards: {
@@ -194,11 +191,8 @@ const french = {
     readLess: 'Réduire',
     theBigFive: 'Les cinq grands',
     score: 'But',
-    important: 'Important!',
-    saveResults:
-      "Enregistrez l'ID suivant pour voir les résultats plus tard ou",
-    compare: 'comparer',
-    toOthers: 'toi-même aux autres',
+    notice:
+      '<important>Important !</important> Enregistrez l’identifiant suivant pour consulter vos résultats plus tard ou <compare>vous comparer à d’autres personnes</compare>.',
     seo: {
       title: 'My results from the BigFive personality test',
       description:

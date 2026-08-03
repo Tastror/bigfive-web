@@ -104,9 +104,7 @@ export default function Home({ params: { locale } }: Props) {
 
         <div className='mt-6'>
           <p className='text-base font-normal text-default-500 sm:text-lg lg:text-xl'>
-            {t('compare.text1')}
-            {locale.startsWith('zh') ? '' : ' '}
-            {t('compare.text2')}
+            {t('compare.text')}
           </p>
         </div>
         <div className='mt-8 flex flex-wrap justify-center gap-2 sm:gap-3'>

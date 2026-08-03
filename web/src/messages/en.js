@@ -21,9 +21,7 @@ const english = {
     compare: {
       title: 'Compare yourself to others',
       action: 'Compare now',
-      text1:
-        'Compare yourself with your partner, colleagues, friends or family.',
-      text2: 'Learn how you differ from other people in the five domains:'
+      text: 'Compare your results with those of a partner, colleague, friend, or family member to see how you differ across the five dimensions.'
     },
     share: 'Share with your friends and find out how compatible you are',
     cards: {
@@ -193,10 +191,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     readLess: 'Read less',
     theBigFive: 'The Big Five',
     score: 'score',
-    important: 'Important!',
-    saveResults: 'Save the following ID to see the results later or ',
-    compare: 'compare',
-    toOthers: 'yourself to others',
+    notice:
+      '<important>Important!</important> Save the following ID to view your results later or <compare>compare yourself with others</compare>.',
     seo: {
       title: 'My results from the BigFive personality test',
       description:

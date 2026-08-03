@@ -20,8 +20,7 @@ const traditionalChinese = {
     compare: {
       title: '與他人比較',
       action: '立即進行比較',
-      text1: '將自己的測驗結果與伴侶、同事、朋友或家人比較，',
-      text2: '了解彼此在五大性格特質上的差異。'
+      text: '將自己的測驗結果與伴侶、同事、朋友或家人比較，了解彼此在五大性格特質上的差異。'
     },
     share: '與朋友分享，了解彼此的契合程度',
     cards: {
@@ -179,10 +178,8 @@ const traditionalChinese = {
     readLess: '收起',
     theBigFive: '五大性格特質',
     score: '分數',
-    important: '重要！',
-    saveResults: '請儲存以下 ID，以便日後查看結果，或',
-    compare: '與他人比較',
-    toOthers: '。',
+    notice:
+      '<important>重要！</important>請儲存以下 ID，以便日後查看結果，或<compare>與他人比較</compare>。',
     seo: {
       title: '我的五大性格特質測驗結果',
       description:

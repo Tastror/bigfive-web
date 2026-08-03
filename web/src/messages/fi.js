@@ -20,8 +20,7 @@ const finnish = {
     compare: {
       title: 'Vertaa itseäsi muihin',
       action: 'Vertaile nyt',
-      text1: 'Vertaa itseäsi kumppaniin, kollegoihin, ystäviin tai perheeseen.',
-      text2: 'Opi, miten erotat muista viidestä verkkotunnuksesta:'
+      text: 'Vertaa tuloksiasi kumppanisi, kollegojesi, ystäviesi tai perheenjäsentesi tuloksiin ja selvitä, miten eroatte viidellä ulottuvuudella.'
     },
     share: 'jaaYstävillesiJaSelvitä,kuinkaYhteensopivaOlet',
     cards: {
@@ -189,10 +188,8 @@ const finnish = {
     readLess: 'Näytä vähemmän',
     theBigFive: 'Iso viisi',
     score: 'pisteet',
-    important: 'Tärkeä!',
-    saveResults: 'Tallenna seuraava tunnus nähdäksesi tulokset myöhemmin tai ',
-    compare: 'vertailla',
-    toOthers: 'itsesi muille',
+    notice:
+      '<important>Tärkeää!</important> Tallenna seuraava tunnus, jotta voit tarkastella tuloksiasi myöhemmin tai <compare>verrata niitä muiden tuloksiin</compare>.',
     seo: {
       title: 'Tulokseni BigFive-persoonallisuustestistä',
       description:

@@ -20,10 +20,7 @@ const deutsh = {
     compare: {
       title: 'Vergleichen Sie sich mit anderen',
       action: 'Jetzt vergleichen',
-      text1:
-        'Vergleichen Sie sich mit Ihrem Partner, Kollegen, Freunden oder Familie.',
-      text2:
-        'Erfahren Sie, wie Sie sich in den fünf Dimensionen von anderen unterscheiden:'
+      text: 'Vergleiche deine Ergebnisse mit denen deines Partners, deiner Kollegen, Freunde oder Familie, um zu sehen, wie ihr euch in den fünf Dimensionen unterscheidet.'
     },
     share:
       'Teilen Sie Ihre Ergebnisse mit Freunden und finden Sie heraus wie kompatibel Sie sind',
@@ -198,11 +195,8 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     readLess: 'Weniger anzeigen',
     theBigFive: 'Die BigFive',
     score: 'Punkte',
-    important: 'Wichtig!',
-    saveResults:
-      'Speichern Sie die folgende ID, um Ihre Ergebnisse später abzurufen oder um',
-    compare: 'zu vergleichen',
-    toOthers: 'sich mit anderen',
+    notice:
+      '<important>Wichtig!</important> Speichere die folgende ID, um deine Ergebnisse später erneut anzusehen oder <compare>mit anderen zu vergleichen</compare>.',
     seo: {
       title: 'Meine Ergebnisse des BigFive Persönlichkeitstest',
       description:

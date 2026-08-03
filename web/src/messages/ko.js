@@ -20,8 +20,7 @@ const korean = {
     compare: {
       title: '다른 사람과 비교하기',
       action: '지금 비교하기',
-      text1: '연인, 동료, 친구 또는 가족과 결과를 비교해 보세요.',
-      text2: '다섯 가지 성격 특성에서 서로 어떻게 다른지 알아볼 수 있습니다.'
+      text: '연인, 동료, 친구 또는 가족과 결과를 비교하여 다섯 가지 성격 특성에서 서로 어떻게 다른지 알아보세요.'
     },
     share: '친구와 공유하고 서로 얼마나 잘 맞는지 알아보세요',
     cards: {
@@ -186,10 +185,8 @@ const korean = {
     readLess: '접기',
     theBigFive: '성격 5요인',
     score: '점수',
-    important: '중요!',
-    saveResults: '나중에 결과를 다시 보려면 다음 ID를 저장하거나',
-    compare: '다른 사람과',
-    toOthers: '비교하세요',
+    notice:
+      '<important>중요!</important> 나중에 결과를 다시 확인하거나 <compare>다른 사람과 비교</compare>할 수 있도록 다음 ID를 저장하세요.',
     seo: {
       title: '나의 빅파이브 성격 검사 결과',
       description:

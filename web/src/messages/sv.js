@@ -20,9 +20,7 @@ const svenska = {
     compare: {
       title: 'Jämför dig med andra',
       action: 'Jämför nu',
-      text1: 'Jämför dig själv med din partner, kollegor, vänner eller familj.',
-      text2:
-        'Lär dig hur du kan skilja dig från andra människor inom de fem domänerna:'
+      text: 'Jämför dina resultat med din partners, dina kollegors, vänners eller familjemedlemmars för att se hur ni skiljer er åt inom de fem dimensionerna.'
     },
     share: 'Dela med dina vänner och ta reda på hur kompatibel du är.',
     cards: {
@@ -191,10 +189,8 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     readLess: 'Visa mindre',
     theBigFive: 'De fem stora',
     score: 'Värdering',
-    important: 'Viktigt!',
-    saveResults: 'Spara följande ID för att se dina resultat senare eller till',
-    compare: 'jämföra',
-    toOthers: 'du med andra',
+    notice:
+      '<important>Viktigt!</important> Spara följande ID för att se resultaten senare eller <compare>jämföra dig med andra</compare>.',
     seo: {
       title: 'Min rapport från Big Five personlighetstestet',
       description:

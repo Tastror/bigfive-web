@@ -20,9 +20,7 @@ const japanese = {
     compare: {
       title: '自分を他の人と比較する',
       action: '今すぐ比較する',
-      text1:
-        'あなたのパートナー、同僚、友人または家族とあなた自身を比較してください。',
-      text2: '5つのドメインで他の人とどのように違うかを学びましょう。'
+      text: '自分の結果をパートナー、同僚、友人、家族の結果と比較し、5つの特性でどのような違いがあるか確認できます。'
     },
     share: '友達と共有して、あなたがどれだけ互換性があるかを調べてください',
     cards: {
@@ -191,10 +189,8 @@ const japanese = {
     readLess: '折りたたむ',
     theBigFive: 'ビッグファイブ',
     score: 'スコア',
-    important: '重要！',
-    saveResults: '次のIDを保存して、後で結果を確認するか、 ',
-    compare: '比較する',
-    toOthers: '他人に自分自身',
+    notice:
+      '<important>重要！</important>後で結果を確認したり、<compare>他の人と比較したり</compare>できるように、次の ID を保存してください。',
     seo: {
       title: 'BigFive性格検査の結果',
       description:

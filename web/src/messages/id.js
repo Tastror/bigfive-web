@@ -20,9 +20,7 @@ const indonesian = {
     compare: {
       title: 'Bandingkan diri Anda dengan orang lain',
       action: 'Bandingkan sekarang',
-      text1:
-        'Bandingkan diri Anda dengan pasangan, kolega, teman, atau keluarga Anda.',
-      text2: 'Pelajari bagaimana Anda berbeda dari orang lain di lima domain:'
+      text: 'Bandingkan hasil Anda dengan hasil pasangan, kolega, teman, atau anggota keluarga untuk melihat perbedaan kalian dalam lima dimensi.'
     },
     share:
       'Bagikan dengan teman-teman Anda dan cari tahu seberapa kompatibel Anda',
@@ -196,10 +194,8 @@ const indonesian = {
     readLess: 'Tampilkan lebih sedikit',
     theBigFive: 'Lima Besar',
     score: 'skor',
-    important: 'Penting!',
-    saveResults: 'Simpan ID berikut untuk melihat hasilnya nanti atau',
-    compare: 'membandingkan',
-    toOthers: 'diri Anda kepada orang lain',
+    notice:
+      '<important>Penting!</important> Simpan ID berikut untuk melihat hasil Anda nanti atau <compare>membandingkan diri dengan orang lain</compare>.',
     seo: {
       title: 'Hasil saya dari tes kepribadian BigFive',
       description:

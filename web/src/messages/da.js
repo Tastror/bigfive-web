@@ -20,10 +20,7 @@ const dansk = {
     compare: {
       title: 'Sammenlign dig selv med andre',
       action: 'Sammenlign nu',
-      text1:
-        'Sammenlign dig selv med din partner, kolleger, venner eller familie.',
-      text2:
-        'Lær hvordan du kan differentiere dig fra andre mennesker på de fem domæner:'
+      text: 'Sammenlign dine resultater med din partners, dine kollegers, venners eller familiemedlemmers for at se, hvordan I adskiller jer på de fem dimensioner.'
     },
     share: 'Del med dine venner, og find ud af hvor kompatibel du er.',
     cards: {
@@ -192,10 +189,8 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     readLess: 'Læs mindre',
     theBigFive: 'De fem store',
     score: 'Score',
-    important: 'Vigtig!',
-    saveResults: 'Gem følgende ID for at se dine resultater senere eller til',
-    compare: 'sammenligne',
-    toOthers: 'dig sammen med andre',
+    notice:
+      '<important>Vigtigt!</important> Gem følgende ID, så du senere kan se dine resultater eller <compare>sammenligne dem med andres</compare>.',
     seo: {
       title: 'Min rapport fra BigFive personlighedstest',
       description:

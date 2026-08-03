@@ -20,8 +20,7 @@ const chinese = {
     compare: {
       title: '与他人比较',
       action: '立即进行比较',
-      text1: '将自己的测试结果与伴侣、同事、朋友或家人进行比较，',
-      text2: '了解彼此在大五人格维度上的差异。'
+      text: '将自己的测试结果与伴侣、同事、朋友或家人进行比较，了解彼此在大五人格维度上的差异。'
     },
     share: '与朋友分享，了解您的兼容性',
     cards: {
@@ -180,10 +179,8 @@ const chinese = {
     readLess: '收起',
     theBigFive: '大五人格维度',
     score: '分数',
-    important: '重要！',
-    saveResults: '请保存以下 ID，以便日后查看结果，或',
-    compare: '与他人比较',
-    toOthers: '。',
+    notice:
+      '<important>重要！</important>请保存以下 ID，以便日后查看结果，或<compare>与他人比较</compare>。',
     seo: {
       title: 'My results from the BigFive personality test',
       description:

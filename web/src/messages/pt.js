@@ -20,9 +20,7 @@ const portuguese = {
     compare: {
       title: 'Compare-se com outros',
       action: 'Comparar agora',
-      text1:
-        'Compare-se com o seu parceiro ou parceira, colegas, amigos ou família.',
-      text2: 'Saiba como você difere de outras pessoas em cinco domínios:'
+      text: 'Compare os seus resultados com os do seu parceiro, colegas, amigos ou familiares para descobrir como diferem nas cinco dimensões.'
     },
     share:
       'Compartilhe com seus amigos e descubra o quão compatíveis vocês são',
@@ -194,10 +192,8 @@ inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     readLess: 'Mostrar menos',
     theBigFive: 'Os Cinco Grandes',
     score: 'pontuação',
-    important: 'Importante!',
-    saveResults: 'Salve a seguinte ID para ver os resultados depois ou ',
-    compare: 'compare-se',
-    toOthers: 'com ou outros',
+    notice:
+      '<important>Importante!</important> Guarde o seguinte ID para consultar os resultados mais tarde ou <compare>comparar-se com outras pessoas</compare>.',
     seo: {
       title: 'Meus resultados do teste de personalidade BigFive',
       description:

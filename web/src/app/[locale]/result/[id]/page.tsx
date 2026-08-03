@@ -92,15 +92,14 @@ const Results = ({ report, locale, showExpanded }: ResultsProps) => {
         </Chip>
       </div>
       <div className='text-center mt-4'>
-        <span className='font-bold'>{t('important')}</span>
-        {locale.startsWith('zh') ? '' : ' '}
-        {t('saveResults')}
-        {locale.startsWith('zh') ? '' : ' '}
-        <Link href={`/compare/?id=${report.id}`} className='underline'>
-          {t('compare')}
-        </Link>
-        {locale.startsWith('zh') ? '' : ' '}
-        {t('toOthers')}
+        {t.rich('notice', {
+          important: (chunks) => <span className='font-bold'>{chunks}</span>,
+          compare: (chunks) => (
+            <Link href={`/compare/?id=${report.id}`} className='underline'>
+              {chunks}
+            </Link>
+          )
+        })}
       </div>
       <div className='flex mt-4'>
         <Snippet

@@ -20,9 +20,7 @@ const icelandic = {
     compare: {
       title: 'Berðu þig saman við aðra',
       action: 'Berðu saman núna',
-      text1:
-        'Berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.',
-      text2: 'Lærðu hvernig þú ert frábrugðin öðru fólki á lénunum fimm:'
+      text: 'Berðu niðurstöður þínar saman við niðurstöður maka, samstarfsfólks, vina eða fjölskyldu til að sjá hvernig þið eruð ólík á víddunum fimm.'
     },
     share: 'Deildu með vinum þínum og komdu að því hversu samhæfur þú ert',
     cards: {
@@ -191,11 +189,8 @@ const icelandic = {
     readLess: 'Sýna minna',
     theBigFive: 'Fimm stóru',
     score: 'mark',
-    important: 'Mikilvægt!',
-    saveResults:
-      'Vistaðu eftirfarandi auðkenni til að sjá niðurstöðurnar síðar eða',
-    compare: 'bera saman',
-    toOthers: 'sjálfur við aðra',
+    notice:
+      '<important>Mikilvægt!</important> Vistaðu eftirfarandi auðkenni til að skoða niðurstöðurnar síðar eða <compare>bera þig saman við aðra</compare>.',
     seo: {
       title: 'Niðurstöður mínar úr BigFive persónuleikaprófinu',
       description:
