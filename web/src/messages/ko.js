@@ -19,6 +19,7 @@ const korean = {
     tests_taken: '<green>{n}</green>명 이상이 테스트에 참여했습니다',
     compare: {
       title: '다른 사람과 비교하기',
+      action: '지금 비교하기',
       text1: '연인, 동료, 친구 또는 가족과 결과를 비교해 보세요.',
       text2: '다섯 가지 성격 특성에서 서로 어떻게 다른지 알아볼 수 있습니다.'
     },
@@ -68,7 +69,7 @@ const korean = {
     articles: '글',
     about: '소개',
     see_results: '내 결과 보기',
-    compare_with: '다른 사람과 비교',
+    compare_with: '다른 사람과 비교'
   },
   facets: {
     openness_to_experience: {
@@ -198,7 +199,7 @@ const korean = {
   getResult: {
     result: '결과',
     explanation:
-      '테스트를 완료하고 ID를 저장했다면, 받은 ID를 입력해 결과를 다시 볼 수 있습니다. 예:',
+      '테스트를 마친 뒤 결과 ID를 저장했다면, 아래에 입력하여 결과를 확인할 수 있습니다.',
     idInput: 'ID 입력란에 입력',
     urlOrId: '결과 URL 또는 ID',
     getResult: '결과 보기',

@@ -90,7 +90,6 @@ export default async function RootLayout({
 
   const navItems = await getNavItems({ locale, linkType: 'navItems' });
   const navMenuItems = await getNavItems({ locale, linkType: 'navMenuItems' });
-  const footerLinks = await getNavItems({ locale, linkType: 'footerLinks' });
 
   return (
     <html lang={locale} dir={direction} suppressHydrationWarning>
@@ -112,7 +111,7 @@ export default async function RootLayout({
               {children}
               <CookieBanner />
             </main>
-            <Footer footerLinks={footerLinks} />
+            <Footer />
           </div>
         </Providers>
         <Script src={`${basePath}/sw.js`} strategy='beforeInteractive' />

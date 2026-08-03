@@ -20,6 +20,7 @@ const arabic = {
     tests_taken: 'أكثر من <green>{n}</green> أخذوا الاختبار',
     compare: {
       title: 'قارن شخصيتك بشخصية غيرك',
+      action: 'ابدأ المقارنة',
       text1: 'قارن شخصيتك بشخصية شريكك أو زميلك أو صديقك',
       text2: 'اعرف ما يميّزك عن غيرك في السمات الخمسة'
     },
@@ -71,7 +72,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     articles: 'مقالات',
     about: 'عنّا',
     see_results: 'شاهد نتيجتك',
-    compare_with: 'قارن مع غيرك',
+    compare_with: 'قارن مع غيرك'
   },
   facets: {
     openness_to_experience: {
@@ -205,7 +206,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   getResult: {
     result: 'النتيجة',
     explanation:
-      'سبق وأخذت الاختبار واحتفظت برمز النتيجة؟ يمكنك تحصيل نتيجتك هنا عن طريق إدخال رمز النتيجة مثل ',
+      'إذا سبق لك إجراء الاختبار وحفظ معرّف النتيجة، فأدخل المعرّف أدناه لعرض نتيجتك.',
     idInput: ' في الحقل أدناه',
     urlOrId: 'رابط أو رمز النتيجة',
     getResult: 'احصل على النتيجة',

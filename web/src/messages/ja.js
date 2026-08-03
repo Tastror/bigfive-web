@@ -19,6 +19,7 @@ const japanese = {
     tests_taken: '<green>{n}</green>人以上がテストを受けました',
     compare: {
       title: '自分を他の人と比較する',
+      action: '今すぐ比較する',
       text1:
         'あなたのパートナー、同僚、友人または家族とあなた自身を比較してください。',
       text2: '5つのドメインで他の人とどのように違うかを学びましょう。'
@@ -71,7 +72,7 @@ const japanese = {
     articles: '記事',
     about: '約',
     see_results: '結果を見る',
-    compare_with: '他の人と比較する',
+    compare_with: '他の人と比較する'
   },
   facets: {
     openness_to_experience: {
@@ -203,7 +204,7 @@ const japanese = {
   getResult: {
     result: '結果',
     explanation:
-      'テストを受けてIDを保存した場合は、取得したIDを入力すると、ここに結果が表示されます。',
+      'テスト後に結果 ID を保存している場合は、下に入力すると結果を確認できます。',
     idInput: 'ID入力フィールド',
     urlOrId: '結果のURLまたはID',
     getResult: '結果を得る',

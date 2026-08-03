@@ -20,6 +20,7 @@ const finnish = {
     tests_taken: 'Testin on suorittanut yli <green>{n}</green> ihmistä',
     compare: {
       title: 'Vertaa itseäsi muihin',
+      action: 'Vertaile nyt',
       text1: 'Vertaa itseäsi kumppaniin, kollegoihin, ystäviin tai perheeseen.',
       text2: 'Opi, miten erotat muista viidestä verkkotunnuksesta:'
     },
@@ -71,7 +72,7 @@ const finnish = {
     articles: 'Artikkelit',
     about: 'Noin',
     see_results: 'Katso tulokset',
-    compare_with: 'Vertaa muihin',
+    compare_with: 'Vertaa muihin'
   },
   facets: {
     openness_to_experience: {
@@ -202,7 +203,7 @@ const finnish = {
   getResult: {
     result: 'Tulos',
     explanation:
-      'Jos olet suorittanut testin ja tallentanut henkilötodistuksesi, näet tulokset täältä kirjoittamalla saamasi henkilötodistuksen.',
+      'Jos tallensit tulostunnuksesi testin suorittamisen jälkeen, näet tuloksen syöttämällä tunnuksen alle.',
     idInput: 'ID-syöttökentässä',
     urlOrId: 'Tuloksesi URL-osoite tai tunniste',
     getResult: 'Hanki tulos',

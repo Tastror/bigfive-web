@@ -19,6 +19,7 @@ const spanish = {
     tests_taken: 'Más de <green>{n}</green> personas han realizado la prueba',
     compare: {
       title: 'Compárese con los demás',
+      action: 'Comparar ahora',
       text1: 'Compárese con su pareja, colegas, amigos o familiares.',
       text2:
         'Descubra en qué se diferencia de otras personas en los cinco dominios:'
@@ -71,7 +72,7 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
     articles: 'Artículos',
     about: 'Acerca de',
     see_results: 'Ver sus resultados',
-    compare_with: 'Comparar con otros',
+    compare_with: 'Comparar con otros'
   },
   facets: {
     openness_to_experience: {
@@ -204,7 +205,7 @@ el inventario es de<i>Johnson's (2014) IPIP NEO-PI-R de 120 elementos</i>.`,
   getResult: {
     result: 'Resultado',
     explanation:
-      'Si ha realizado la prueba y ha guardado su identificación, puede ver los resultados aquí escribiendo la identificación que obtuvo, es decir, ',
+      'Si guardó el ID de su resultado después de realizar la prueba, introdúzcalo a continuación para ver el resultado.',
     idInput: 'en el campo de entrada de ID',
     urlOrId: 'URL o ID de su resultado',
     getResult: 'Obtener resultado',

@@ -19,6 +19,7 @@ const dansk = {
     tests_taken: 'Over <green>{n}</green> mennesker har taget testen',
     compare: {
       title: 'Sammenlign dig selv med andre',
+      action: 'Sammenlign nu',
       text1:
         'Sammenlign dig selv med din partner, kolleger, venner eller familie.',
       text2:
@@ -72,7 +73,7 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     articles: 'Artikler',
     about: 'Om',
     see_results: 'Se resultater',
-    compare_with: 'Se sammenligning',
+    compare_with: 'Se sammenligning'
   },
   facets: {
     openness_to_experience: {
@@ -204,7 +205,7 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   getResult: {
     result: 'Hent resultater',
     explanation:
-      'Hvis du tidligere har taget testen og gemt ID, kan du se dine resultater her ved at indsætte det ID, du fik f.eks.',
+      "Hvis du tidligere har taget testen og gemt dit ID, kan du se resultatet ved at indtaste ID'et nedenfor.",
     idInput: 'i ID-tekstfeltet',
     urlOrId: 'Lenken eller ID til resultatet',
     getResult: 'Hent resultat',

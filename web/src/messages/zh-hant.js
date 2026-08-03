@@ -19,8 +19,9 @@ const traditionalChinese = {
     tests_taken: '已有超過<green>{n}</green>人完成測驗',
     compare: {
       title: '與他人比較',
-      text1: '將自己的結果與伴侶、同事、朋友或家人比較。',
-      text2: '了解您與他人在五個性格領域中的差異：'
+      action: '立即進行比較',
+      text1: '將自己的測驗結果與伴侶、同事、朋友或家人比較，',
+      text2: '了解彼此在五大性格特質上的差異。'
     },
     share: '與朋友分享，了解彼此的契合程度',
     cards: {
@@ -61,7 +62,7 @@ const traditionalChinese = {
     result: '結果',
     compare: '比較',
     see_results: '查看您的結果',
-    compare_with: '與他人比較',
+    compare_with: '與他人比較'
   },
   facets: {
     openness_to_experience: {
@@ -190,7 +191,7 @@ const traditionalChinese = {
   },
   getResult: {
     result: '結果',
-    explanation: '如果您已完成測驗並儲存 ID，可在此輸入該 ID，例如',
+    explanation: '如果您儲存過測驗結果，請在下方輸入結果 ID。',
     idInput: '在 ID 欄位中',
     urlOrId: '結果網址或 ID',
     getResult: '取得結果',

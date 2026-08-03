@@ -93,12 +93,6 @@ export const siteConfig = {
       href: '/compare'
     }
   ],
-  footerLinks: [
-    {
-      label: 'home',
-      href: '/'
-    }
-  ],
   links: {
     github: 'https://github.com/Tastror/bigfive-web'
   }
@@ -109,7 +103,7 @@ export const getNavItems = async ({
   linkType
 }: {
   locale: string;
-  linkType: 'navItems' | 'navMenuItems' | 'footerLinks';
+  linkType: 'navItems' | 'navMenuItems';
 }) => {
   const t = await getTranslations({ locale, namespace: 'toolbar' });
   return siteConfig[linkType].map((link) => ({

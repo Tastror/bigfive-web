@@ -20,6 +20,7 @@ const portuguese = {
     tests_taken: 'Mais de <green>{n}</green> pessoas fizeram o teste',
     compare: {
       title: 'Compare-se com outros',
+      action: 'Comparar agora',
       text1:
         'Compare-se com o seu parceiro ou parceira, colegas, amigos ou família.',
       text2: 'Saiba como você difere de outras pessoas em cinco domínios:'
@@ -73,7 +74,7 @@ inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     articles: 'Artigos',
     about: 'Sobre',
     see_results: 'Veja seus resultados',
-    compare_with: 'Compare com outros',
+    compare_with: 'Compare com outros'
   },
   facets: {
     openness_to_experience: {
@@ -207,7 +208,7 @@ inventário é de <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   getResult: {
     result: 'Resultado',
     explanation:
-      'Se você fez o teste e salvou sua ID, pode ver os resultados aqui digitando a ID que obteve, ou seja, ',
+      'Se você salvou o ID do resultado após fazer o teste, insira-o abaixo para ver o resultado.',
     idInput: 'no campo ID',
     urlOrId: 'URL ou ID do seu resultado',
     getResult: 'Obter resultado',

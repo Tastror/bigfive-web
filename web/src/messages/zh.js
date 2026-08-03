@@ -18,9 +18,10 @@ const chinese = {
     no_registration: '* 无需注册',
     tests_taken: '超过<green>{n}</green>人参加了测试',
     compare: {
-      title: '拿自己和别人比较',
-      text1: '拿自己和伴侣、同事、朋友或家人进行比较',
-      text2: '了解您与五个域中的其他人有何不同：'
+      title: '与他人比较',
+      action: '立即进行比较',
+      text1: '将自己的测试结果与伴侣、同事、朋友或家人进行比较，',
+      text2: '了解彼此在五大性格特质上的差异。'
     },
     share: '与朋友分享，了解您的兼容性',
     cards: {
@@ -62,7 +63,7 @@ const chinese = {
     result: '结果',
     compare: '比较',
     see_results: '查看您的结果',
-    compare_with: '与其他人比较',
+    compare_with: '与其他人比较'
   },
   facets: {
     openness_to_experience: {
@@ -191,7 +192,7 @@ const chinese = {
   },
   getResult: {
     result: '结果',
-    explanation: '如果您参加了测试并保存了 ID，则通过键入您得到的 ID（比如',
+    explanation: '如果您保存过测试结果，请在下方输入结果 ID。',
     idInput: '在 ID 输入字段中',
     urlOrId: '结果的 URL 或 ID',
     getResult: '获取结果',

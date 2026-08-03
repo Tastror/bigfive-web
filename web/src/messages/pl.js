@@ -19,6 +19,7 @@ const polish = {
     tests_taken: 'Ponad <green>{n}</green> ludzi wzięło udział w teście',
     compare: {
       title: 'Porównaj się z innymi',
+      action: 'Porównaj teraz',
       text1:
         'Porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.',
       text2:
@@ -73,7 +74,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     articles: 'Artykuły',
     about: 'O nas',
     see_results: 'Zobacz swoje wyniki',
-    compare_with: 'Porównaj z innymi',
+    compare_with: 'Porównaj z innymi'
   },
   facets: {
     openness_to_experience: {
@@ -209,7 +210,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   getResult: {
     result: 'Wynik',
     explanation:
-      'Jeśli wykonywałeś już test i zapisałeś ID, możesz zobaczyć wynik po wpisaniu otrzymanego ID',
+      'Jeśli po wykonaniu testu zapisano identyfikator wyniku, wpisz go poniżej, aby wyświetlić wynik.',
     idInput: 'w pole wprowadzania ID',
     urlOrId: 'URL lub ID Twojego wyniku',
     getResult: 'Otrzymaj wynik',

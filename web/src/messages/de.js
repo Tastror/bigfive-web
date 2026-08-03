@@ -19,6 +19,7 @@ const deutsh = {
     tests_taken: 'Über <green>{n}</green> Menschen haben bisher teilgenommen',
     compare: {
       title: 'Vergleichen Sie sich mit anderen',
+      action: 'Jetzt vergleichen',
       text1:
         'Vergleichen Sie sich mit Ihrem Partner, Kollegen, Freunden oder Familie.',
       text2:
@@ -73,7 +74,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     articles: 'Artikel',
     about: 'Über uns',
     see_results: 'Sehen Sie Ihre Ergebnisse',
-    compare_with: 'Mit anderen vergleichen',
+    compare_with: 'Mit anderen vergleichen'
   },
   facets: {
     openness_to_experience: {
@@ -211,7 +212,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   getResult: {
     result: 'Ergebnis',
     explanation:
-      'Wenn Sie an dem Test teilgenommen und Ihre ID gespeichert haben, können Sie die Ergebnisse durch das Eingeben Ihrer ID einsehen, z.B.',
+      'Wenn Sie den Test bereits durchgeführt und Ihre ID gespeichert haben, geben Sie die ID unten ein, um Ihr Ergebnis aufzurufen.',
     idInput: 'in das ID-Eingabefeld',
     urlOrId: 'URL oder ID Ihrer Ergebnisse',
     getResult: 'Zum Ergebnis',

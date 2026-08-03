@@ -19,6 +19,7 @@ const italian = {
     tests_taken: 'Oltre <green>{n}</green> persone hanno sostenuto il test',
     compare: {
       title: 'Confronta te stesso con gli altri',
+      action: 'Confronta ora',
       text1:
         'Confronta te stesso con il tuo partner, colleghi, amici o familiari.',
       text2: 'Scopri come ti differenzi dalle altre persone nei cinque domini:'
@@ -71,7 +72,7 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
     articles: 'Articoli',
     about: 'About',
     see_results: 'Visualizza i risultati',
-    compare_with: 'Compara con altri',
+    compare_with: 'Compara con altri'
   },
   facets: {
     openness_to_experience: {
@@ -208,7 +209,7 @@ l'inventario proviene da <i>Johnson's (2014) IPIP NEO-PI-R di 120 elementi</i>.`
   getResult: {
     result: 'Risultati',
     explanation:
-      "Se hai eseguito il test e salvato il tuo ID, puoi vedere i risultati qui digitando l'ID che hai ottenuto, ad es.",
+      'Se hai salvato l’ID del risultato dopo aver completato il test, inseriscilo qui sotto per visualizzare il risultato.',
     idInput: 'nel campo di immissione ID',
     urlOrId: 'URL o ID del risultato',
     getResult: 'Ottieni risultato',

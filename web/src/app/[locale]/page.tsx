@@ -1,17 +1,11 @@
 import { useTranslations } from 'next-intl';
 import { Link } from '@nextui-org/link';
 import { button as buttonStyles } from '@nextui-org/theme';
-import { title, subtitle } from '@/components/primitives';
+import { subtitle } from '@/components/primitives';
 import clsx from 'clsx';
 import { FeaturesGrid } from '@/components/features-grid';
-import {
-  ExperimentIcon,
-  LogosOpensource,
-  MoneyIcon,
-  PlusLinearIcon
-} from '@/components/icons';
+import { ExperimentIcon, LogosOpensource, MoneyIcon } from '@/components/icons';
 import { ArrowRightIcon } from '@/components/icons';
-import { Button } from '@nextui-org/button';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { Chip } from '@nextui-org/react';
 
@@ -104,11 +98,15 @@ export default function Home({ params: { locale } }: Props) {
       </div>
 
       <section className='mx-auto mt-20 max-w-4xl text-center sm:mt-28'>
-        <h2 className={title()}>{t('compare.title')}</h2>
+        <h2 className='mx-auto text-balance text-3xl font-semibold leading-snug tracking-tight sm:text-4xl sm:leading-snug lg:text-5xl lg:leading-snug'>
+          {t('compare.title')}
+        </h2>
 
         <div className='mt-6'>
           <p className='text-base font-normal text-default-500 sm:text-lg lg:text-xl'>
-            {t('compare.text1')} {t('compare.text2')}
+            {t('compare.text1')}
+            {locale.startsWith('zh') ? '' : ' '}
+            {t('compare.text2')}
           </p>
         </div>
         <div className='mt-8 flex flex-wrap justify-center gap-2 sm:gap-3'>
@@ -125,16 +123,21 @@ export default function Home({ params: { locale } }: Props) {
           ))}
         </div>
 
-        <Button
-          isIconOnly
-          aria-label={t('compare.title')}
-          className='mt-10 h-16 w-16 bg-gradient-to-b from-[#FF1CF7] to-[#7928CA] shadow-lg'
-          radius='full'
-          as={Link}
+        <Link
           href='/compare'
+          className={clsx(
+            buttonStyles({
+              color: 'secondary',
+              radius: 'full',
+              variant: 'shadow',
+              size: 'lg',
+              fullWidth: true
+            }),
+            'mt-10 w-full bg-gradient-to-b from-[#FF1CF7] to-[#7928CA] text-white sm:w-auto'
+          )}
         >
-          <PlusLinearIcon className='text-white' size={44} />
-        </Button>
+          {t('compare.action')} <ArrowRightIcon />
+        </Link>
       </section>
     </section>
   );

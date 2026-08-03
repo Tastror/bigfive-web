@@ -19,6 +19,7 @@ const icelandic = {
     tests_taken: 'Yfir <green>{n}</green> manns hafa tekið prófið',
     compare: {
       title: 'Berðu þig saman við aðra',
+      action: 'Berðu saman núna',
       text1:
         'Berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.',
       text2: 'Lærðu hvernig þú ert frábrugðin öðru fólki á lénunum fimm:'
@@ -71,7 +72,7 @@ const icelandic = {
     articles: 'Greinar',
     about: 'Um það bil',
     see_results: 'Sjáðu niðurstöðurnar þínar',
-    compare_with: 'Berðu saman við aðra',
+    compare_with: 'Berðu saman við aðra'
   },
   facets: {
     openness_to_experience: {
@@ -204,7 +205,7 @@ const icelandic = {
   getResult: {
     result: 'Niðurstaða',
     explanation:
-      'Ef þú hefur tekið prófið og vistað skilríkin geturðu séð niðurstöðurnar hér með því að slá inn skilríkin sem þú fékkst þ.e.a.s. ',
+      'Ef þú vistaðir auðkenni niðurstöðunnar eftir prófið skaltu slá það inn hér að neðan til að skoða niðurstöðuna.',
     idInput: 'í auðkennisreitinn',
     urlOrId: 'Slóð eða auðkenni niðurstöðu þinnar',
     getResult: 'Fáðu niðurstöðu',

@@ -19,6 +19,7 @@ const svenska = {
     tests_taken: 'Över <green>{n}</green> personer har tagit testet',
     compare: {
       title: 'Jämför dig med andra',
+      action: 'Jämför nu',
       text1: 'Jämför dig själv med din partner, kollegor, vänner eller familj.',
       text2:
         'Lär dig hur du kan skilja dig från andra människor inom de fem domänerna:'
@@ -71,7 +72,7 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     articles: 'Artiklar',
     about: 'Om',
     see_results: 'Se resultat',
-    compare_with: 'Se jämförelse',
+    compare_with: 'Se jämförelse'
   },
   facets: {
     openness_to_experience: {
@@ -203,7 +204,7 @@ innholdet er fra <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   getResult: {
     result: 'Se resultat',
     explanation:
-      'Om du tidigare har gjort testet, och lagrat din rapports ID, så kan du se ditt resultat här om du klistrar in det ID du fick, dvs en kod liknande',
+      'Om du sparade resultatets ID efter testet kan du ange det nedan för att visa resultatet.',
     idInput: 'i ID-textrutan',
     urlOrId: 'Resultatets länk eller ID',
     getResult: 'Se resultat',

@@ -19,6 +19,7 @@ const french = {
     tests_taken: 'Plus de <green>{n}</green> personnes ont passé le test',
     compare: {
       title: 'Comparez-vous aux autres',
+      action: 'Comparer maintenant',
       text1:
         'Comparez-vous avec votre partenaire, vos collègues, vos amis ou votre famille.',
       text2:
@@ -72,7 +73,7 @@ const french = {
     articles: 'Des articles',
     about: 'Sur',
     see_results: 'Voir vos résultats',
-    compare_with: 'Comparez avec les autres',
+    compare_with: 'Comparez avec les autres'
   },
   facets: {
     openness_to_experience: {
@@ -207,7 +208,7 @@ const french = {
   getResult: {
     result: 'Résultat',
     explanation:
-      "Si vous avez passé le test et enregistré votre identifiant, vous pouvez voir les résultats ici en tapant l'identifiant que vous avez obtenu, c'est-à-dire",
+      'Si vous avez enregistré l’identifiant de votre résultat après le test, saisissez-le ci-dessous pour consulter votre résultat.',
     idInput: 'dans le champ de saisie ID',
     urlOrId: 'URL ou ID de votre résultat',
     getResult: 'Obtenez le résultat',

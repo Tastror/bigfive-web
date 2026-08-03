@@ -19,6 +19,7 @@ const indonesian = {
     tests_taken: 'Lebih dari <green>{n}</green> orang telah mengikuti tes',
     compare: {
       title: 'Bandingkan diri Anda dengan orang lain',
+      action: 'Bandingkan sekarang',
       text1:
         'Bandingkan diri Anda dengan pasangan, kolega, teman, atau keluarga Anda.',
       text2: 'Pelajari bagaimana Anda berbeda dari orang lain di lima domain:'
@@ -72,7 +73,7 @@ const indonesian = {
     articles: 'Artikel',
     about: 'Tentang',
     see_results: 'Lihat hasil Anda',
-    compare_with: 'Bandingkan dengan orang lain',
+    compare_with: 'Bandingkan dengan orang lain'
   },
   facets: {
     openness_to_experience: {
@@ -208,7 +209,7 @@ const indonesian = {
   getResult: {
     result: 'Hasil',
     explanation:
-      'Jika Anda telah mengikuti tes dan menyimpan ID Anda, Anda dapat melihat hasilnya di sini dengan mengetikkan ID yang Anda dapatkan, yaitu.',
+      'Jika Anda menyimpan ID hasil setelah mengikuti tes, masukkan ID tersebut di bawah untuk melihat hasil Anda.',
     idInput: 'di kolom input-ID',
     urlOrId: 'URL atau ID hasil Anda',
     getResult: 'Dapatkan hasil',

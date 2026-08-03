@@ -20,6 +20,7 @@ const english = {
     tests_taken: 'Over <green>{n}</green> people have taken the test',
     compare: {
       title: 'Compare yourself to others',
+      action: 'Compare now',
       text1:
         'Compare yourself with your partner, colleagues, friends or family.',
       text2: 'Learn how you differ from other people in the five domains:'
@@ -72,7 +73,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
     articles: 'Articles',
     about: 'About',
     see_results: 'See your results',
-    compare_with: 'Compare with others',
+    compare_with: 'Compare with others'
   },
   facets: {
     openness_to_experience: {
@@ -205,7 +206,7 @@ inventory is from <i>Johnson's (2014) 120-item IPIP NEO-PI-R</i>.`,
   getResult: {
     result: 'Result',
     explanation:
-      'If you have taken the test and saved your ID, you can see the results here by typing in the ID you got i.e. ',
+      'If you saved your result ID after taking the test, enter it below to view your result.',
     idInput: 'in the ID-input field',
     urlOrId: 'URL or ID of your result',
     getResult: 'Get result',
