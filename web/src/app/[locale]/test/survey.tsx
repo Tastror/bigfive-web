@@ -12,7 +12,7 @@ import { sleep, formatTimer, isDev } from '@/lib/helpers';
 import useWindowDimensions from '@/hooks/useWindowDimensions';
 import useTimer from '@/hooks/useTimer';
 import { type Answer } from '@/types';
-import { saveResultToHistory } from '@/lib/result-history';
+import { saveCompletedTestResult } from '@/lib/result-history';
 
 interface SurveyProps {
   questions: Question[];
@@ -159,7 +159,7 @@ export const Survey = ({
     localStorage.removeItem('inProgress');
     localStorage.removeItem('b5data');
     console.log(result);
-    saveResultToHistory(result.id);
+    saveCompletedTestResult(result.id);
     router.push(`/result/${result.id}`);
   }
 

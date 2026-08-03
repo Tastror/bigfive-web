@@ -3,12 +3,14 @@
 import { button as buttonStyles } from '@nextui-org/theme';
 import clsx from 'clsx';
 import { Button } from '@nextui-org/button';
-import { Link, useRouter } from '@/navigation';
 import { formatAndValidateId, formatId } from '@/lib/helpers';
 import { useEffect, useMemo, useState } from 'react';
 import { Input } from '@nextui-org/input';
 import { ResultIcon } from '@/components/icons';
-import { getResultHistory, type SavedResult } from '@/lib/result-history';
+import {
+  getPreviousTestResult,
+  type SavedResult
+} from '@/lib/result-history';
 
 interface GetResultPageProps {
   viewPreviousText: string;
@@ -21,9 +23,7 @@ export const GetResultPage = ({
   getResultsText,
   locale
 }: GetResultPageProps) => {
-  const router = useRouter();
-
-  const [resultHistory, setResultHistory] = useState<SavedResult[]>([]);
+  const [previousResult, setPreviousResult] = useState<SavedResult | null>(null);
   const [id, setId] = useState('');
 
   const isInvalidId = useMemo(() => {
@@ -33,12 +33,13 @@ export const GetResultPage = ({
   }, [id]);
 
   useEffect(() => {
-    setResultHistory(getResultHistory());
+    setPreviousResult(getPreviousTestResult());
   }, []);
 
   const handleGetResults = () => {
     if (!formatAndValidateId(id)) return;
-    router.push(`/result/${formatId(id)}`);
+
+    window.location.assign(`/${locale}/result/${formatId(id)}`);
   };
 
   return (
@@ -69,27 +70,26 @@ export const GetResultPage = ({
           {getResultsText}
         </Button>
       </div>
-      {resultHistory.length > 0 && (
+      {previousResult && (
         <div className='mt-10' aria-label={viewPreviousText}>
           <h2 className='text-xl font-semibold mb-3'>{viewPreviousText}</h2>
           <div className='grid gap-3'>
-            {resultHistory.map((result) => (
-              <Link
-                key={result.id}
-                className={clsx(
-                  buttonStyles({ variant: 'bordered', size: 'lg' }),
-                  'h-auto min-h-12 justify-between gap-3 px-4 py-3'
+            <a
+              className={clsx(
+                buttonStyles({ variant: 'bordered', size: 'lg' }),
+                'h-auto min-h-12 justify-between gap-3 px-4 py-3'
+              )}
+              href={`/${locale}/result/${previousResult.id}`}
+            >
+              <code className='text-xs sm:text-sm break-all'>
+                {previousResult.id}
+              </code>
+              <span className='shrink-0 text-sm text-default-500'>
+                {new Intl.DateTimeFormat(locale).format(
+                  previousResult.createdAt
                 )}
-                href={`/result/${result.id}`}
-              >
-                <code className='text-xs sm:text-sm break-all'>
-                  {result.id}
-                </code>
-                <span className='shrink-0 text-sm text-default-500'>
-                  {new Intl.DateTimeFormat(locale).format(result.createdAt)}
-                </span>
-              </Link>
-            ))}
+              </span>
+            </a>
           </div>
         </div>
       )}

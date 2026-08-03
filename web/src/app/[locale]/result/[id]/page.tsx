@@ -13,7 +13,6 @@ import ShareBar from '@/components/share-bar';
 import { DomainTabs } from './domain-tabs';
 import { Chip } from '@nextui-org/react';
 import { getReportLanguage } from '@/lib/localized-results';
-import { RememberResult } from './remember-result';
 
 export async function generateMetadata({
   params: { locale }
@@ -76,10 +75,6 @@ const Results = ({ report, locale, showExpanded }: ResultsProps) => {
 
   return (
     <>
-      <RememberResult
-        id={report.id}
-        timestamp={new Date(report.timestamp).getTime()}
-      />
       <div className='flex justify-end'>
         <Chip>
           {new Intl.DateTimeFormat(locale).format(new Date(report.timestamp))}
