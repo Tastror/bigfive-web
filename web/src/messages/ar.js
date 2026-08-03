@@ -10,7 +10,7 @@ const arabic = {
   },
   frontpage: {
     seo: {
-      title: 'Free open-source BigFive personality traits test',
+      title: 'اختبار سمات الشخصية الخمس الكبرى',
       description:
         'Take a free, open-source Big Five personality test. Learn to know your personality traits and compare yourself with your partner, colleagues, friends or family.'
     },

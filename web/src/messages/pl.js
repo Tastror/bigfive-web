@@ -9,7 +9,7 @@ const polish = {
   },
   frontpage: {
     seo: {
-      title: "Darmowy, open source'owy test osobowości BigFive",
+      title: 'Test osobowości Big Five',
       description:
         'Zrób darmowy, open-source`owy test Wielkiej Piątki. Poznaj swoje cechy osobowości i porównaj się ze swoim partnerem, partnerką, kolegami, przyjaciółmi i rodziną.'
     },

@@ -9,7 +9,7 @@ const svenska = {
   },
   frontpage: {
     seo: {
-      title: 'Gratis open source big five personlighetstest',
+      title: 'Big Five-personlighetstest',
       description:
         'Ta ett gratis, open source Big Five-personlighetstest. Lär känna dina personlighetsdrag - jämför med din partner, kollegor, vänner eller familj.'
     },

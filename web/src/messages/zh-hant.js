@@ -9,7 +9,7 @@ const traditionalChinese = {
   },
   frontpage: {
     seo: {
-      title: '免費開源的五大性格特質測驗',
+      title: '五大性格特質測驗',
       description:
         '參加免費、開源的五大性格特質測驗，了解自己的性格，並與伴侶、同事、朋友或家人比較。'
     },
@@ -180,9 +180,9 @@ const traditionalChinese = {
     theBigFive: '五大性格特質',
     score: '分數',
     important: '重要！',
-    saveResults: '請儲存以下 ID，以便日後查看結果或',
-    compare: '比較',
-    toOthers: '自己與他人',
+    saveResults: '請儲存以下 ID，以便日後查看結果，或',
+    compare: '與他人比較',
+    toOthers: '。',
     seo: {
       title: '我的五大性格特質測驗結果',
       description:

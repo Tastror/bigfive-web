@@ -9,8 +9,7 @@ const finnish = {
   },
   frontpage: {
     seo: {
-      title:
-        'Ilmainen avoimen lähdekoodin BigFive-persoonallisuuspiirteiden testi',
+      title: 'Big Five -persoonallisuustesti',
       description:
         'Ota ilmainen, avoimen lähdekoodin Big Five -henkilöstötesti. Opi tuntemaan persoonallisuutesi ja vertaamaan itseäsi kumppaniin, kollegoihin, ystäviin tai perheeseen.'
     },

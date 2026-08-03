@@ -9,7 +9,7 @@ const indonesian = {
   },
   frontpage: {
     seo: {
-      title: 'Tes open-source sifat kepribadian BigFive gratis',
+      title: 'Tes kepribadian Big Five',
       description:
         'Ikuti tes open-source kepribadian Lima Besar gratis. Belajar untuk mengetahui ciri-ciri kepribadian Anda dan bandingkan diri Anda dengan pasangan, kolega, teman atau keluarga Anda.'
     },

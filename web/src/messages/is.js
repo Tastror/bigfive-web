@@ -9,7 +9,7 @@ const icelandic = {
   },
   frontpage: {
     seo: {
-      title: 'Ókeypis opið uppspretta BigFive persónueinkenni próf',
+      title: 'Big Five persónuleikapróf',
       description:
         'Taktu ókeypis opið uppsprettu Big Five persónuleikapróf. Lærðu að þekkja persónueinkenni þín og berðu þig saman við maka þinn, samstarfsmenn, vini eða fjölskyldu.'
     },

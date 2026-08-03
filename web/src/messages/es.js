@@ -9,7 +9,7 @@ const spanish = {
   },
   frontpage: {
     seo: {
-      title: 'Prueba gratuita y open-source de rasgos de personalidad BigFive',
+      title: 'Prueba de personalidad Big Five',
       description:
         'Realiza la prueba de personalidad Big Five, gratuita y open-source. Aprende a conocer tus rasgos de personalidad y compárate con tu pareja, compañeros, amigos o familiares.'
     },

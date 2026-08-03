@@ -9,7 +9,7 @@ const italian = {
   },
   frontpage: {
     seo: {
-      title: 'Test dei tratti della personalità BigFive open-source gratuito',
+      title: 'Test della personalità Big Five',
       description:
         'Fai un test della personalità Big Five gratuito e open source. Impara a conoscere i tratti della tua personalità e confrontati con il tuo partner, colleghi, amici o familiari.'
     },

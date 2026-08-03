@@ -81,12 +81,14 @@ const Results = ({ report, locale, showExpanded }: ResultsProps) => {
         </Chip>
       </div>
       <div className='text-center mt-4'>
-        <span className='font-bold'>{t('important')}</span> &nbsp;
-        {t('saveResults')} &nbsp;
+        <span className='font-bold'>{t('important')}</span>
+        {locale.startsWith('zh') ? '' : ' '}
+        {t('saveResults')}
+        {locale.startsWith('zh') ? '' : ' '}
         <Link href={`/compare/?id=${report.id}`} className='underline'>
           {t('compare')}
-        </Link>{' '}
-        &nbsp;
+        </Link>
+        {locale.startsWith('zh') ? '' : ' '}
         {t('toOthers')}
       </div>
       <div className='flex mt-4'>

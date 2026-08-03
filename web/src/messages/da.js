@@ -9,7 +9,7 @@ const dansk = {
   },
   frontpage: {
     seo: {
-      title: 'Gratis open source big five personlighedstest',
+      title: 'Big Five-personlighedstest',
       description:
         'Tag en gratis open source Big Five-personlighedstest. Lær dine personlighedsegenskaber at kende - sammenlign dig selv med din partner, kolleger, venner eller familie.'
     },

@@ -9,11 +9,11 @@ const chinese = {
   },
   frontpage: {
     seo: {
-      title: '免费开源的五大性格特质测试',
+      title: '大五人格维度测试',
       description:
-        '参加免费、开源的五大性格特质测试，了解自己的性格，并与伴侣、同事、朋友或家人比较。'
+        '参加免费、开源的大五人格维度测试，了解自己的性格，并与伴侣、同事、朋友或家人比较。'
     },
-    title: '五大人格测试',
+    title: '大五人格测试',
     call_to_action: '参加免费测试',
     no_registration: '* 无需注册',
     tests_taken: '超过<green>{n}</green>人参加了测试',
@@ -21,7 +21,7 @@ const chinese = {
       title: '与他人比较',
       action: '立即进行比较',
       text1: '将自己的测试结果与伴侣、同事、朋友或家人进行比较，',
-      text2: '了解彼此在五大性格特质上的差异。'
+      text2: '了解彼此在大五人格维度上的差异。'
     },
     share: '与朋友分享，了解您的兼容性',
     cards: {
@@ -35,12 +35,12 @@ const chinese = {
       },
       scientific: {
         title: '科学',
-        text: '五大人格是经过科学验证且可靠的心理模型'
+        text: '大五人格是经过科学验证且可靠的心理模型'
       }
     },
     description: {
-      top: '通过<wiki>五大性格特质</wiki>，学会更好地了解自己。',
-      wikipedia: '在维基百科中了解五大性格特质',
+      top: '通过<wiki>大五人格维度</wiki>，学会更好地了解自己。',
+      wikipedia: '在维基百科中了解大五人格维度',
       subtop: '的',
       subtop2: ' 是衡量人格最科学、最可靠的心理模型。',
       reference: `此站点的测试和评估来自
@@ -53,7 +53,7 @@ const chinese = {
   },
   about: {
     seo: {
-      title: '关于五大人格测试',
+      title: '关于大五人格测试',
       description:
         'BigFive has a very active and engaged team that is constantly striving to push BigFive forward.'
     }
@@ -67,7 +67,7 @@ const chinese = {
   },
   facets: {
     openness_to_experience: {
-      title: '经验开放性'
+      title: '开放性'
     },
     conscientiousness: {
       title: '尽责性'
@@ -76,7 +76,7 @@ const chinese = {
       title: '外向性'
     },
     agreeableness: {
-      title: '亲和性'
+      title: '宜人性'
     },
     neuroticism: {
       title: '神经质'
@@ -118,50 +118,50 @@ const chinese = {
     seeResults: '查看结果'
   },
   big_five: {
-    title: '什么是五大性格特质？',
+    title: '什么是大五人格维度？',
     seo: {
-      title: '什么是五大性格特质？',
-      description: '进一步了解五大性格特质'
+      title: '什么是大五人格维度？',
+      description: '进一步了解大五人格维度'
     }
   },
   openness_to_experience: {
-    title: '经验开放性',
+    title: '开放性',
     seo: {
-      title: '经验开放性概述',
-      description: '进一步了解五大性格特质中的经验开放性'
+      title: '开放性概述',
+      description: '进一步了解大五人格维度中的开放性'
     }
   },
   conscientiousness: {
     title: '尽责性',
     seo: {
       title: '尽责性概述',
-      description: '进一步了解五大性格特质中的尽责性'
+      description: '进一步了解大五人格维度中的尽责性'
     }
   },
   extraversion: {
     title: '外向性',
     seo: {
       title: '外向性概述',
-      description: '进一步了解五大性格特质中的外向性'
+      description: '进一步了解大五人格维度中的外向性'
     }
   },
   agreeableness: {
-    title: '亲和性',
+    title: '宜人性',
     seo: {
-      title: '亲和性概述',
-      description: '进一步了解五大性格特质中的亲和性'
+      title: '宜人性概述',
+      description: '进一步了解大五人格维度中的宜人性'
     }
   },
   neuroticism: {
     title: '神经质',
     seo: {
       title: '神经质概述',
-      description: '进一步了解五大性格特质中的神经质'
+      description: '进一步了解大五人格维度中的神经质'
     }
   },
   getCompare: {
     title: '比较他人或团队',
-    description1: '将五大人格测试的结果与多人进行比较。',
+    description1: '将大五人格测试的结果与多人进行比较。',
     description2: '输入您从测试结果（比如',
     description3: '在 ID 输入字段中',
     needToAddPeople: '您需要添加要比较的人',
@@ -178,16 +178,16 @@ const chinese = {
     selectDomain: '选择特质',
     readMore: '展开',
     readLess: '收起',
-    theBigFive: '五大性格特质',
+    theBigFive: '大五人格维度',
     score: '分数',
     important: '重要！',
-    saveResults: '保存以下 ID 以查看以后的结果或',
-    compare: '比较',
-    toOthers: '自己对别人',
+    saveResults: '请保存以下 ID，以便日后查看结果，或',
+    compare: '与他人比较',
+    toOthers: '。',
     seo: {
       title: 'My results from the BigFive personality test',
       description:
-        '查看我的五大性格特质测试结果，并比较神经质、经验开放性、尽责性、外向性和亲和性。'
+        '查看我的大五人格维度测试结果，并比较神经质、开放性、尽责性、外向性和宜人性。'
     }
   },
   getResult: {

@@ -9,7 +9,7 @@ const deutsh = {
   },
   frontpage: {
     seo: {
-      title: 'Kostenloser open-source BigFive Persönlichkeitstest',
+      title: 'BigFive-Persönlichkeitstest',
       description:
         'Machen Sie einen kostenlosen open-source Persönlichkeitstest. Lernen Sie Ihre Persönlichkeitsmerkmale kennen und vergleichen Sie sich mit Ihrem Partner, Kollegen, Freunden oder Familie.'
     },
