@@ -1,10 +1,9 @@
 'use client';
 
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Button } from '@nextui-org/button';
 import { RadioGroup, Radio } from '@nextui-org/radio';
 import confetti from 'canvas-confetti';
-import { useRouter } from '@/navigation';
 import { isRtlLang } from 'rtl-detect';
 
 import { type Question } from '@bigfive-org/questions';
@@ -15,6 +14,8 @@ import { type Answer } from '@/types';
 import { saveCompletedTestResult } from '@/lib/result-history';
 import { useLocale } from 'next-intl';
 import { getUiMessages } from '@/lib/ui-messages';
+import { getErrorMessages } from '@/lib/error-messages';
+import { Alert } from '@/components/alert';
 
 interface SurveyProps {
   questions: Question[];
@@ -33,7 +34,6 @@ export const Survey = ({
   saveTest,
   language
 }: SurveyProps) => {
-  const router = useRouter();
   const locale = useLocale();
   const ui = getUiMessages(locale);
   const isRtl = isRtlLang(locale);
@@ -41,7 +41,9 @@ export const Survey = ({
   const [questionsPerPage, setQuestionsPerPage] = useState(1);
   const [answers, setAnswers] = useState<Answer[]>([]);
   const [loading, setLoading] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
   const [inProgress, setInProgress] = useState(false);
+  const submittingRef = useRef(false);
   const { width } = useWindowDimensions();
   const seconds = useTimer();
 
@@ -151,21 +153,35 @@ export const Survey = ({
   }
 
   async function submitTest() {
+    if (submittingRef.current) return;
+    submittingRef.current = true;
     setLoading(true);
+    setSaveError(null);
     confetti({});
-    const result = await saveTest({
-      testId: 'b5-120',
-      lang: language,
-      invalid: false,
-      timeElapsed: seconds,
-      dateStamp: new Date(),
-      answers
-    });
-    localStorage.removeItem('inProgress');
-    localStorage.removeItem('b5data');
-    console.log(result);
-    saveCompletedTestResult(result.id);
-    router.push(`/result/${result.id}`);
+    try {
+      const result = await saveTest({
+        testId: 'b5-120',
+        lang: language,
+        invalid: false,
+        timeElapsed: seconds,
+        dateStamp: new Date(),
+        answers
+      });
+      localStorage.removeItem('inProgress');
+      localStorage.removeItem('b5data');
+      console.log(result);
+      saveCompletedTestResult(result.id);
+      // Full document navigation with an explicit locale path. The client
+      // router must not be involved here: cached router states have
+      // intermittently surfaced as fake not-found pages for freshly saved
+      // results (same treatment as the personality return link in a12b8f6).
+      window.location.assign(`/${locale}/result/${result.id}`);
+    } catch (error) {
+      console.error('Failed to save test result:', error);
+      submittingRef.current = false;
+      setLoading(false);
+      setSaveError(getErrorMessages(locale).unexpectedDescription);
+    }
   }
 
   function dataInLocalStorage() {
@@ -183,6 +199,13 @@ export const Survey = ({
 
   return (
     <div className='mt-2'>
+      {saveError && (
+        <div className='mb-6'>
+          <Alert title={getErrorMessages(locale).unexpectedTitle}>
+            <p>{saveError}</p>
+          </Alert>
+        </div>
+      )}
       <div className='w-full'>
         <div className='mb-1 flex justify-between text-sm text-default-600'>
           <span>{formatTimer(seconds)}</span>
